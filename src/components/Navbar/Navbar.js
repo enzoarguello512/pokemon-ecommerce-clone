@@ -1,6 +1,7 @@
 import React, {useState} from "react"
+import CartWidget from "./../CartWidget/CartWidget"
 
-function navbar() {
+function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
@@ -12,7 +13,7 @@ function navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul className="navbar-nav">
+          <ul className="navbar-nav w-100">
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="#">Home</a>
             </li>
@@ -32,6 +33,7 @@ function navbar() {
                 <li><a className="dropdown-item" href="#">Something else here</a></li>
               </ul>
             </li>
+            <CartWidget />
           </ul>
         </div>
       </div>
@@ -39,4 +41,4 @@ function navbar() {
   )
 }
 
-export default navbar
+export default Navbar
