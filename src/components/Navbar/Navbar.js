@@ -1,44 +1,57 @@
 import React, {useState} from "react"
 import CartWidget from "./../CartWidget/CartWidget"
+import './Navbar.css';
+
+import pikachu from './../../icons/pikachu-2.svg';
 
 function Navbar() {
-  return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          <img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" className="d-inline-block align-text-top" />
-          MysE-commerce
-        </a>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
+  return <>
+    <figure className="text-center main-navbar__figure">
+      <img className="main-navbar__img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png" alt="pokemon-logo" />
+    </figure>
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light main-navbar">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul className="navbar-nav w-100">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Features</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Pricing</a>
-            </li>
-            <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown link
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+            <li class="nav-item">
+              <a class="nav-link active main-navbar__inicio" aria-current="page" href="#">
+                <span className="mx-4">
+                  <img className="main-navbar__icon" src={pikachu} alt="pikachu" />
+                </span>
+                <span className="fw-bold">Inicio</span>
               </a>
-              <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a className="dropdown-item" href="#">Action</a></li>
-                <li><a className="dropdown-item" href="#">Another action</a></li>
-                <li><a className="dropdown-item" href="#">Something else here</a></li>
-              </ul>
             </li>
-            <CartWidget />
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pokédex</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Aplicaciones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Juego de cartas coleccionables</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">TV Pokémon</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Play! Pokémon</a>
+            </li>
           </ul>
         </div>
+        <CartWidget />
       </div>
     </nav>
-  )
+  </>
 }
 
+//<div>Icons made by <a href="https://www.flaticon.com/authors/roundicons-freebies" title="Roundicons Freebies">Roundicons Freebies</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+//
+//
+
+//<li className="nav-item ms-auto d-flex align-items-center">
+//<i class="fas fa-shopping-cart fa-fw fs-4 h-pointer"></i>
+//</li>
 export default Navbar
