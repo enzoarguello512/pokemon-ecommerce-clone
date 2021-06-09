@@ -3,6 +3,11 @@ import CartWidget from "./../CartWidget/CartWidget"
 import './Navbar.css';
 
 import pikachu from './../../icons/pikachu-2.svg';
+import pokeball from './../../icons/pokeball.svg';
+import smartphone from './../../icons/smartphone.svg';
+import cards from './../../icons/backpack.svg';
+import tv from './../../icons/new.svg';
+import play from './../../icons/blue-team.svg';
 
 function Navbar() {
   return <>
@@ -19,25 +24,50 @@ function Navbar() {
             <li class="nav-item">
               <a class="nav-link active main-navbar__inicio" aria-current="page" href="#">
                 <span className="mx-4">
-                  <img className="main-navbar__icon" src={pikachu} alt="pikachu" />
+                  <img className="main-navbar__icon" src={pikachu} alt="inicio-logo" />
                 </span>
                 <span className="fw-bold">Inicio</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pokédex</a>
+              <a class="nav-link main-navbar__pokedex" href="#">
+                <span className="mx-4">
+                  <img className="main-navbar__icon" src={pokeball} alt="pokedex-logo" />
+                </span>
+                <span className="fw-bold">Pokédex</span>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Aplicaciones</a>
+              <a class="nav-link main-navbar__aplicaciones" href="#">
+                <span className="mx-4">
+                  <img className="main-navbar__icon" src={smartphone} alt="aplicaciones-logo" />
+                </span>
+                <span className="fw-bold">Aplicaciones</span>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Juego de cartas coleccionables</a>
+              <a class="nav-link main-navbar__juego" href="#">
+                <span className="mx-4">
+                  <img className="main-navbar__icon" src={cards} alt="juego-logo" />
+                </span>
+                <span className="fw-bold">Juego de cartas coleccionables</span>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">TV Pokémon</a>
+              <a class="nav-link main-navbar__tv" href="#">
+                <span className="mx-4">
+                  <img className="main-navbar__icon" src={tv} alt="tv-logo" />
+                </span>
+                <span className="fw-bold">TV Pokémon</span>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Play! Pokémon</a>
+              <a class="nav-link main-navbar__play" href="#">
+                <span className="mx-4">
+                  <img className="main-navbar__icon" src={play} alt="play-logo" />
+                </span>
+                <span className="fw-bold">Play! Pokémon</span>
+              </a>
             </li>
           </ul>
         </div>

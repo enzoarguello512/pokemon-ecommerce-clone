@@ -1,9 +1,10 @@
 import React, {useState} from "react"
 
-function ItemListContainer({greeting}) {
+function ItemListContainer() {
   return <>
-    <h1>{greeting}</h1>
-    <p>Item</p>
+    <div className="list-container">
+
+    </div>
   </>;
 }
 

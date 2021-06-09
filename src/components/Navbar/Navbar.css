@@ -14,11 +14,42 @@
   max-width: 100%;
   height: 150px;
 }
+
+/*li tags*/
 .main-navbar__inicio {
   border-left: 7px solid #919191;
   border-bottom: 1px solid #dedede;
 }
+.main-navbar__pokedex {
+  border-left: 7px solid #E3350D;
+  border-bottom: 1px solid #dedede;
+}
+.main-navbar__aplicaciones {
+  border-left: 7px solid #ee6b2f;
+  border-bottom: 1px solid #dedede;
+}
+.main-navbar__juego {
+  border-left: 7px solid #e6bc2f;
+  border-bottom: 1px solid #dedede;
+}
+.main-navbar__tv {
+  border-left: 7px solid #4dad5b;
+  border-bottom: 1px solid #dedede;
+}
+.main-navbar__play {
+  border-left: 7px solid #30a7d7;
+  border-bottom: 1px solid #dedede;
+}
+
+
 .main-navbar__icon {
   max-width: 100%;
   height: 30px;
+}
+
+/*bootstrap X-Small*/
+@media (max-width: 575px) {
+.main-navbar__img {
+  height: 100px;
+  }
 }
