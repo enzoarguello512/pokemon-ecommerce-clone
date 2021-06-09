@@ -1,4 +1,4 @@
-# placeholder
+# pokemon-ecommerce-clone
 
 A mini e-commerce made mainly with react
 
