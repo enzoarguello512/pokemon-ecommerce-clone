@@ -1,24 +1,29 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 
 function ItemCount({stock, initial, onAdd}) {
 
   const [count, setCount] = useState(initial);
 
-  const countHandler = (value, action) => {
-    if (value <= stock && action === 'add') {
-      count++;
+  const countHandler = (action) => {
+    if (count < stock && action === 'add') {
+      setCount(count + 1);
     }
-    if (value >= stock && action === 'substract') {
-      count++;
+    if (count > 0 && action === 'substract') {
+      setCount(count - 1);
     }
   }
 
+  const countInput = (value) => {
+    value = parseInt(value)
+    if (value >= 0 && value <= stock) setCount(value);
+  }
+
   return (
-    <div class="input-group">
-      <button className="btn btn-danger px-4" type="button" onClick={console.log("asd")}>-</button>
-      <input type="text" className="form-control text-center" aria-label="item quantity" defaultValue={initial} />
-      <button className="btn btn-danger px-4" type="button">+</button>
-    </div>
+    <div className="input-group">
+      <button className="btn btn-danger px-4" type="button" onClick={() => {countHandler('substract')}}>-</button>
+      <input className="form-control text-center" type="number" aria-label="item quantity" value={count} onChange={event => {countInput(event.target.value)}} />
+      <button className="btn btn-danger px-4" type="button" onClick={() => {countHandler('add')}}>+</button>
+    </div >
   )
 }
 
