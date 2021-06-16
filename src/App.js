@@ -1,17 +1,22 @@
 //import logo from './logo.svg';
+import './../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemList from './components/ItemList/ItemList';
 import ItemDetail from './components/ItemDetail/ItemDetail';
-import './../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
   return <>
     <Navbar />
 
     <ItemListContainer>
-      <ItemDetail name="Snivy" />
+
+      <ItemDetailContainer>
+        <ItemDetail name="Snivy" />
+      </ItemDetailContainer>
+
     </ItemListContainer>
 
   </>
