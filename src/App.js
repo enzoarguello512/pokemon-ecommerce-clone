@@ -2,6 +2,7 @@
 import Navbar from './components/Navbar/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemCount from "./components/ItemCount/ItemCount";
+import Item from "./components/Item/Item";
 import './../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -10,7 +11,7 @@ function App() {
     <Navbar />
 
     <ItemListContainer>
-      <ItemCount stock={26} initial={1} />
+      <Item />
     </ItemListContainer>
 
   </>
