@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React from "react"
 import CartWidget from "./../CartWidget/CartWidget"
 import './Navbar.css';
 

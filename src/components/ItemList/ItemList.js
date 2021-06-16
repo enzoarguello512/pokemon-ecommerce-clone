@@ -19,15 +19,18 @@ function ItemList({url}) {
 
   useEffect(() => {
 
-    fetchData()
+    //fetchData()
 
   });
 
-  return <>
+  return (
     <ul className="list-unstyled">
-      {items.map(obj => <Item name={obj.name} />)}
+      <Item name={'asd'} />
     </ul>
-  </>
+    //<ul className="list-unstyled">
+    //{items.map(obj => <Item name={obj.name} />)}
+    //</ul>
+  )
 }
 
 export default ItemList

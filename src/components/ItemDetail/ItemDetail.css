@@ -1,0 +1,13 @@
+.item-description__item-title {
+  border-radius: 5px 5px 0 0;
+  background-color: #a4a4a4;
+  color: #F2F2F2;
+  padding: 0.4em 0.6em;
+}
+.item-description__item-basic-info {
+  background: #F2F2F2;
+  color: #313131;
+  clear: both;
+  padding: 1.2em;
+  overflow: hidden;
+}

@@ -1,4 +1,5 @@
-import React, {useState, useEffect} from "react"
+import React, {useState} from "react"
+import './ItemCount.css';
 
 function ItemCount({stock, initial, onAdd}) {
 
@@ -20,9 +21,9 @@ function ItemCount({stock, initial, onAdd}) {
 
   return (
     <div className="input-group">
-      <button className="btn btn-danger px-4" type="button" onClick={() => countHandler('substract')}>-</button>
+      <button className="btn btn-orange px-4" type="button" onClick={() => countHandler('substract')}>-</button>
       <input className="form-control text-center" type="number" aria-label="item quantity" value={count} onChange={event => {countInput(event.target.value)}} />
-      <button className="btn btn-danger px-4" type="button" onClick={() => countHandler('add')}>+</button>
+      <button className="btn btn-orange px-4" type="button" onClick={() => countHandler('add')}>+</button>
     </div >
   )
 }
