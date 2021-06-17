@@ -13,14 +13,16 @@ function App() {
 
     <ItemListContainer>
 
-      <ItemDetailContainer>
-        <ItemDetail name="Snivy" />
-      </ItemDetailContainer>
+      <ItemList />
 
     </ItemListContainer>
 
   </>
 }
+
+//<ItemDetailContainer>
+//<ItemDetail name="Snivy" />
+//</ItemDetailContainer>
 
 //<ItemList url={'https://pokeapi.co/api/v2/pokemon?limit=100&offset=200'} />
 export default App;
