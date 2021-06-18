@@ -2,13 +2,6 @@ import React from "react"
 import CartWidget from "./../CartWidget/CartWidget"
 import './Navbar.css';
 
-import pikachu from './../../icons/pikachu-2.svg';
-import pokeball from './../../icons/pokeball.svg';
-import smartphone from './../../icons/smartphone.svg';
-import cards from './../../icons/backpack.svg';
-import tv from './../../icons/new.svg';
-import play from './../../icons/blue-team.svg';
-
 function Navbar() {
   return <>
     <figure className="text-center main-navbar__figure">
@@ -24,7 +17,7 @@ function Navbar() {
             <li className="nav-item">
               <a className="nav-link active main-navbar__inicio" aria-current="page" href="#">
                 <span className="mx-4">
-                  <img className="main-navbar__icon" src={pikachu} alt="inicio-logo" />
+                  <img className="main-navbar__icon" src="/icons/pikachu-2.svg" alt="inicio-logo" />
                 </span>
                 <span className="fw-bold">Inicio</span>
               </a>
@@ -32,7 +25,7 @@ function Navbar() {
             <li className="nav-item">
               <a className="nav-link main-navbar__pokedex" href="#">
                 <span className="mx-4">
-                  <img className="main-navbar__icon" src={pokeball} alt="pokedex-logo" />
+                  <img className="main-navbar__icon" src="/icons/pokeball.svg" alt="pokedex-logo" />
                 </span>
                 <span className="fw-bold">Pokédex</span>
               </a>
@@ -40,7 +33,7 @@ function Navbar() {
             <li className="nav-item">
               <a className="nav-link main-navbar__aplicaciones" href="#">
                 <span className="mx-4">
-                  <img className="main-navbar__icon" src={smartphone} alt="aplicaciones-logo" />
+                  <img className="main-navbar__icon" src="/icons/smartphone.svg" alt="aplicaciones-logo" />
                 </span>
                 <span className="fw-bold">Aplicaciones</span>
               </a>
@@ -48,7 +41,7 @@ function Navbar() {
             <li className="nav-item">
               <a className="nav-link main-navbar__juego" href="#">
                 <span className="mx-4">
-                  <img className="main-navbar__icon" src={cards} alt="juego-logo" />
+                  <img className="main-navbar__icon" src="/icons/backpack.svg" alt="juego-logo" />
                 </span>
                 <span className="fw-bold">Juego de cartas coleccionables</span>
               </a>
@@ -56,7 +49,7 @@ function Navbar() {
             <li className="nav-item">
               <a className="nav-link main-navbar__tv" href="#">
                 <span className="mx-4">
-                  <img className="main-navbar__icon" src={tv} alt="tv-logo" />
+                  <img className="main-navbar__icon" src="/icons/new.svg" alt="tv-logo" />
                 </span>
                 <span className="fw-bold">TV Pokémon</span>
               </a>
@@ -64,7 +57,7 @@ function Navbar() {
             <li className="nav-item">
               <a className="nav-link main-navbar__play" href="#">
                 <span className="mx-4">
-                  <img className="main-navbar__icon" src={play} alt="play-logo" />
+                  <img className="main-navbar__icon" src="/icons/blue-team.svg" alt="play-logo" />
                 </span>
                 <span className="fw-bold">Play! Pokémon</span>
               </a>

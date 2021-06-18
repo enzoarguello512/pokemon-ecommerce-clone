@@ -1,13 +1,12 @@
 import React from "react"
 import ItemCount from "../ItemCount/ItemCount";
-import test from './../../img/BWP_ES_BW01.png';
 import './ItemDetail.css';
 
 function ItemDetail({name}) {
   return <>
     <div className="item-image my-3">
       <div className="text-center">
-        <img src={test} alt="test" />
+        <img src="/images/BWP_ES_BW01.png" alt="test" />
       </div>
     </div>
     <div className="item-description my-3">
