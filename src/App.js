@@ -6,6 +6,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemList from './components/ItemList/ItemList';
 import ItemDetail from './components/ItemDetail/ItemDetail';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import Button from './components/Atoms/Button/Button';
 
 function App() {
   return <>
@@ -13,16 +14,16 @@ function App() {
 
     <ItemListContainer>
 
-      <ItemList />
+      <ItemDetailContainer>
+        <ItemDetail name="Snivy" />
+      </ItemDetailContainer>
 
+      <Button />
     </ItemListContainer>
-
   </>
 }
 
-//<ItemDetailContainer>
-//<ItemDetail name="Snivy" />
-//</ItemDetailContainer>
+//<ItemList />
 
 //<ItemList url={'https://pokeapi.co/api/v2/pokemon?limit=100&offset=200'} />
 export default App;
