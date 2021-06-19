@@ -9,10 +9,15 @@ function Image({imgClass, src, alt}) {
   )
 }
 
+Image.defaultProps = {
+  imgClass: "",
+  alt: "",
+};
+
 Image.propTypes = {
   imgClass: PropTypes.string,
   src: PropTypes.string.isRequired,
-  alt: PropTypes.string
+  alt: PropTypes.string,
 };
 
 export default Image

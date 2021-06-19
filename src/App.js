@@ -6,12 +6,13 @@ import './App.css';
 //import ItemList from './components/ItemList/ItemList';
 //import ItemDetail from './components/ItemDetail/ItemDetail';
 //import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-import Button from './components/Atoms/Button/Button';
 import ItemCount from './components/Molecules/ItemCount/ItemCount';
+import Item from './components/Molecules/Item/Item';
 
 function App() {
   return <>
-    <ItemCount stock={2} initial={24} />
+    <ItemCount stock={24} initial={4} />
+    <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png'}} />
   </>
 }
 
