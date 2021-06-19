@@ -2,6 +2,8 @@ import React from "react"
 import CartWidget from "./../CartWidget/CartWidget"
 import './Navbar.css';
 
+const context = React.createContext();
+
 function Navbar() {
   return <>
     <figure className="text-center main-navbar__figure">

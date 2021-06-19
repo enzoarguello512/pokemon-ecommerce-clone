@@ -1,8 +1,20 @@
 import React from "react"
+import './Button.css';
 
-function Button({bgColor, text}) {
+function Button({
+  bgColor = "btn-orange",
+  textColor = "text-white",
+  btnSize = "",
+  text,
+  onClick
+}) {
   return (
-    <button type="button">{text}</button>
+    <button
+      className={`btn px-4 bg-gradient ${bgColor} ${textColor} ${btnSize}`}
+      type="button"
+      onClick={onClick}>
+      {text}
+    </button>
   )
 }
 
