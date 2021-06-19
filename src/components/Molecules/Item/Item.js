@@ -5,10 +5,9 @@ import Image from './../../Atoms/Image/Image';
 
 function Item({item}) {
   return (
-    <li className="text-center">
+    <li className="text-center" style={{width: '23.82813%'}}>
       <A href={item.url}>
-        <Image src={item.imgSrc} alt={item.imgAlt} />
-        <h5>{item.title}</h5>
+        <Image imgClass={item.imgClass} src={item.imgSrc} alt={item.imgAlt} />
       </A>
     </li>
   )

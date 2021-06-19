@@ -8,7 +8,6 @@ function App() {
   return <>
     <Navbar />
     <ItemList urlPokemonType={'https://jsonplaceholder.typicode.com/posts'}></ItemList>
-
   </>
 }
 

@@ -24,23 +24,26 @@ function ItemList({urlPokemonType}) {
   }, [urlPokemonType]);
 
   return (
-    <ul className="list-unstyled d-flex flex-wrap justify-content-evenly mx-auto" style={{width: 1100}}>
-      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png'}} />
-      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png'}} />
-      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png'}} />
-      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png'}} />
-      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png'}} />
-      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png'}} />
-      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png'}} />
-      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png'}} />
-      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png'}} />
-      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png'}} />
-      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png'}} />
-      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png'}} />
-      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png'}} />
-      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png'}} />
-      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png'}} />
-      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png'}} />
+    <ul className="list-unstyled d-flex flex-wrap justify-content-evenly mx-auto" style={{width: 1024}}>
+      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png', imgClass: 'img-fluid'}} />
+      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png', imgClass: 'img-fluid'}} />
+      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png', imgClass: 'img-fluid'}} />
+      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png', imgClass: 'img-fluid'}} />
+      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png', imgClass: 'img-fluid'}} />
+      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png', imgClass: 'img-fluid'}} />
+      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png', imgClass: 'img-fluid'}} />
+      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png', imgClass: 'img-fluid'}} />
+      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png', imgClass: 'img-fluid'}} />
+      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png', imgClass: 'img-fluid'}} />
+      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png', imgClass: 'img-fluid'}} />
+      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png', imgClass: 'img-fluid'}} />
+      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png', imgClass: 'img-fluid'}} />
+      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png', imgClass: 'img-fluid'}} />
+      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png', imgClass: 'img-fluid'}} />
+      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png', imgClass: 'img-fluid'}} />
+      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png', imgClass: 'img-fluid'}} />
+      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png', imgClass: 'img-fluid'}} />
+      <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png', imgClass: 'img-fluid'}} />
     </ul>
   )
 }

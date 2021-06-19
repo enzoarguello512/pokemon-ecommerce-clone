@@ -58,6 +58,30 @@
 }
 /*bootstrap Medium*/
 @media (min-width: 768px) {
+.main-navbar__inicio {
+  border-left: none;
+  border-bottom: 6px solid #919191;
+}
+.main-navbar__pokedex {
+  border-left: none;
+  border-bottom: 6px solid #E3350D;
+}
+.main-navbar__aplicaciones {
+  border-left: none;
+  border-bottom: 6px solid #ee6b2f;
+}
+.main-navbar__juego {
+  border-left: none;
+  border-bottom: 6px solid #e6bc2f;
+}
+.main-navbar__tv {
+  border-left: none;
+  border-bottom: 6px solid #4dad5b;
+}
+.main-navbar__play {
+  border-left: none;
+  border-bottom: 6px solid #30a7d7;
+}
 }
 /*bootstrap Large*/
 @media (min-width: 992px) {
