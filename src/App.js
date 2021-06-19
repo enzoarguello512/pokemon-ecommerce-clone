@@ -1,21 +1,18 @@
-//import logo from './logo.svg';
 import './../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-//import Navbar from './components/Navbar/Navbar';
-//import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-//import ItemList from './components/ItemList/ItemList';
-//import ItemDetail from './components/ItemDetail/ItemDetail';
-//import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-import ItemCount from './components/Molecules/ItemCount/ItemCount';
 import Item from './components/Molecules/Item/Item';
+import ItemList from './components/Organisms/ItemList/ItemList';
+import Navbar from './components/Organisms/Navbar/Navbar';
 
 function App() {
   return <>
-    <ItemCount stock={24} initial={4} />
-    <Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png'}} />
+    <Navbar />
+    <ItemList urlPokemonType={'https://jsonplaceholder.typicode.com/posts'}></ItemList>
+
   </>
 }
 
+//<Item item={{url: "asd", imgAlt: "asd", imgSrc: '/images/BWP_ES_BW01.png'}} />
 //<Navbar />
 
 //<ItemListContainer>

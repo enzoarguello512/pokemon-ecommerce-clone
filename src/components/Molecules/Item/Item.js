@@ -5,9 +5,10 @@ import Image from './../../Atoms/Image/Image';
 
 function Item({item}) {
   return (
-    <li className="list-unstyled text-center">
+    <li className="text-center">
       <A href={item.url}>
         <Image src={item.imgSrc} alt={item.imgAlt} />
+        <h5>{item.title}</h5>
       </A>
     </li>
   )
