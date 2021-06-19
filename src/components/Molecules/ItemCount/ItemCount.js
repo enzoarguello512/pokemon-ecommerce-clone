@@ -1,6 +1,9 @@
 import React, {useState} from "react"
+import PropTypes from 'prop-types';
 import Button from './../../Atoms/Button/Button';
-import './ItemCount.css';
+import Input from './../../Atoms/Input/Input';
+
+require('./ItemCount.css');
 
 function ItemCount({stock, initial}) {
 
@@ -16,24 +19,27 @@ function ItemCount({stock, initial}) {
   }
 
   const countInput = (value) => {
-    value = parseInt(value)
     if (value >= 0 && value <= stock) setCount(value);
   }
 
   return (
     <div className="input-group">
       <Button text="-" onClick={() => countHandler('substract')} />
-      <input className="form-control text-center" type="number" aria-label="item quantity" value={count} onChange={event => {countInput(event.target.value)}} />
+      <Input textAlign="text-center" type="number" ariaLabel="item quantity" value={count} onChange={event => {countInput(event.target.value)}} />
       <Button text="+" onClick={() => countHandler('add')} />
-    </div >
+    </div>
   )
 }
 
 ItemCount.defaultProps = {
-  stock: 1,
-  initial: 1,
+  stock: 0,
+  initial: 0,
 }
 
-export default ItemCount
+ItemCount.propTypes = {
+  stock: PropTypes.number.isRequired,
+  initial: PropTypes.number.isRequired
+}
 
-      //<button className="btn btn-orange px-4" type="button">-</button>
+
+export default ItemCount

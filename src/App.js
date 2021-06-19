@@ -11,6 +11,7 @@ import ItemCount from './components/Molecules/ItemCount/ItemCount';
 
 function App() {
   return <>
+    <ItemCount stock={2} initial={24} />
   </>
 }
 
