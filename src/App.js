@@ -1,13 +1,12 @@
 import './../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Item from './components/Molecules/Item/Item';
-import ItemList from './components/Organisms/ItemList/ItemList';
+import ItemListContainer from './components/Organisms/ItemListContainer/ItemListContainer';
 import Navbar from './components/Organisms/Navbar/Navbar';
 
 function App() {
   return <>
     <Navbar />
-    <ItemList urlPokemonType={'https://jsonplaceholder.typicode.com/posts'}></ItemList>
+    <ItemListContainer />
   </>
 }
 

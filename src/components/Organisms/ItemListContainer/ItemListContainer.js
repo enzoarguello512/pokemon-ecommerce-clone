@@ -1,10 +1,12 @@
 import React from "react"
-import './ItemListContainer.css';
+import ItemList from "../ItemList/ItemList";
 
-function ItemListContainer({children}) {
+require('./ItemListContainer.css');
+
+function ItemListContainer() {
   return <>
     <div className="list-container">
-      {children}
+      <ItemList urlPokemonType=''></ItemList>
     </div>
   </>;
 }

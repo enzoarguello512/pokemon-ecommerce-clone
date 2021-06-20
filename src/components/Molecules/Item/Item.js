@@ -7,6 +7,7 @@ function Item({item}) {
   return (
     <li className="text-center" style={{width: '23.82813%'}}>
       <A href={item.url}>
+        <h5 className="text-dark fw-bold text-decoration-underline">{item.name}</h5>
         <Image imgClass={item.imgClass} src={item.imgSrc} alt={item.imgAlt} />
       </A>
     </li>
