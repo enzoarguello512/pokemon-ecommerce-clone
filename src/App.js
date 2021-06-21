@@ -1,10 +1,10 @@
 import './../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import Home from './components/Pages/Home/Home';
+import GameCards from './components/Pages/GameCards/GameCards';
 
 
 function App() {
   return <>
-    <Home />
+    <GameCards />
   </>
 }
 

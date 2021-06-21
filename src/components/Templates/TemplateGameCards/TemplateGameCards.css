@@ -1,0 +1,14 @@
+.main-sections__title {
+  min-height: 80px;
+  background-color: orange;
+}
+.main-sections__filters {
+  min-height: 700px;
+  background-color: gray;
+}
+.main-sections__filteredItems {
+  min-height: 1300px;
+  max-width: 1024px;
+  margin: auto;
+  background-color: plum;
+}
