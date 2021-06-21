@@ -2,13 +2,16 @@ import React from "react"
 import CartWidget from "../../Atoms/CartWidget/CartWidget";
 import A from "../../Atoms/A/A";
 import Image from "../../Atoms/Image/Image";
+import {Link} from "react-router-dom";
 
 require('./Navbar.css');
 
 function Navbar() {
   return <>
     <figure className="text-center main-navbar__figure">
-      <Image imgClass="main-navbar__img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png" alt="pokemon-logo" />
+      <Link to="/">
+        <Image imgClass="main-navbar__img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png" alt="pokemon-logo" />
+      </Link>
     </figure>
     <nav className="navbar navbar-expand-lg sticky-top navbar-light main-navbar">
       <div className="container-xxl">
@@ -21,57 +24,57 @@ function Navbar() {
           <ul className="navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll">
 
             <li className="nav-item">
-              <A aClass="nav-link active main-navbar__inicio">
+              <Link to="/" className="nav-link active main-navbar__inicio">
                 <span className="mx-4">
                   <Image imgClass="main-navbar__icon" src="/icons/pikachu-2.svg" alt="inicio-logo" />
                 </span>
                 <span className="fw-bold">Inicio</span>
-              </A>
+              </Link>
             </li>
 
             <li className="nav-item">
-              <A aClass="nav-link main-navbar__pokedex">
+              <Link to="/pokedex" className="nav-link main-navbar__pokedex">
                 <span className="mx-4">
                   <Image imgClass="main-navbar__icon" src="/icons/pokeball.svg" alt="pokedex-logo" />
                 </span>
                 <span className="fw-bold">Pokédex</span>
-              </A>
+              </Link>
             </li>
 
             <li className="nav-item">
-              <A aClass="nav-link main-navbar__aplicaciones">
+              <Link to="/apps" className="nav-link main-navbar__aplicaciones">
                 <span className="mx-4">
                   <Image imgClass="main-navbar__icon" src="/icons/smartphone.svg" alt="aplicaciones-logo" />
                 </span>
                 <span className="fw-bold">Aplicaciones</span>
-              </A>
+              </Link>
             </li>
 
             <li className="nav-item">
-              <A aClass="nav-link main-navbar__juego">
+              <Link to="/gamecards/type-grass" className="nav-link main-navbar__juego">
                 <span className="mx-4">
                   <Image imgClass="main-navbar__icon" src="/icons/backpack.svg" alt="juego-logo" />
                 </span>
                 <span className="fw-bold">Juego de cartas coleccionables</span>
-              </A>
+              </Link>
             </li>
 
             <li className="nav-item">
-              <A aClass="nav-link main-navbar__tv">
+              <Link to="/tv-pokemon" className="nav-link main-navbar__tv">
                 <span className="mx-4">
                   <Image imgClass="main-navbar__icon" src="/icons/new.svg" alt="tv-logo" />
                 </span>
                 <span className="fw-bold">TV Pokémon</span>
-              </A>
+              </Link>
             </li>
 
             <li className="nav-item">
-              <A aClass="nav-link main-navbar__play">
+              <Link to="/play-pokemon" className="nav-link main-navbar__play">
                 <span className="mx-4">
                   <Image imgClass="main-navbar__icon" src="/icons/blue-team.svg" alt="play-logo" />
                 </span>
                 <span className="fw-bold">Play! Pokémon</span>
-              </A>
+              </Link>
             </li>
 
           </ul>
