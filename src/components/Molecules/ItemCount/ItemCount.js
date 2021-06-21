@@ -24,9 +24,9 @@ function ItemCount({stock, initial}) {
 
   return (
     <div className="input-group">
-      <Button text="-" onClick={() => countHandler('substract')} />
+      <Button onClick={() => countHandler('substract')}>-</Button>
       <Input textAlign="text-center" type="number" ariaLabel="item quantity" value={count} onChange={event => {countInput(event.target.value)}} />
-      <Button text="+" onClick={() => countHandler('add')} />
+      <Button onClick={() => countHandler('add')}>+</Button>
     </div>
   )
 }
