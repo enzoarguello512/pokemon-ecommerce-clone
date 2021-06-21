@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from 'prop-types';
-import A from './../../Atoms/A/A';
 import Image from './../../Atoms/Image/Image';
 import {Link} from 'react-router-dom';
 
