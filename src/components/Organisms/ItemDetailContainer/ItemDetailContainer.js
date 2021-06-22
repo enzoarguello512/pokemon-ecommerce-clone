@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ItemDetail from './../ItemDetail/ItemDetail';
 import H5 from './../../Atoms/H5/H5';
 //import axios from 'axios';
-import {pokemons} from './../../../json-data-text';
+import {pokemonsGrass} from './../../../json-data-grass';
 
 function ItemDetailContainer({match}) {
 
@@ -17,7 +17,8 @@ function ItemDetailContainer({match}) {
   //}, []);
 
   useEffect(() => {
-    const poke = pokemons.find(elem => elem.url === match.url);
+    window.scrollTo(0, 0);
+    const poke = pokemonsGrass.find(elem => elem.url === match.url);
     setItem(poke);
   }, [match])
 
