@@ -1,19 +1,18 @@
-/*.btn-gray {*/
-  /*background-color: #919191;*/
-/*}*/
-/*.btn-red {*/
-  /*background-color: #E3350D;*/
-/*}*/
+.btn-gray {
+  background-color: #919191;
+}
+.btn-red {
+  background-color: #E3350D;
+}
 .btn-orange {
   background-color: #ee6b2f;
 }
-/*.btn-yellow {*/
-  /*background-color: #e6bc2f;*/
-/*}*/
-/*.btn-green {*/
-  /*background-color: #4dad5b;*/
-/*}*/
-/*.btn-cyan {*/
-  /*background-color: #30a7d7;*/
-/*}*/
-/*.btn-size-lg*/
+.btn-yellow {
+  background-color: #e6bc2f;
+}
+.btn-green {
+  background-color: #4dad5b;
+}
+.btn-cyan {
+  background-color: #30a7d7;
+}

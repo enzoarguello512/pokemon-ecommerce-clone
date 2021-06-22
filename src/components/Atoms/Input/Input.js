@@ -1,10 +1,11 @@
 import React from "react"
 import PropTypes from 'prop-types';
 
-function Input({textAlign, type, ariaLabel, value, onChange}) {
+function Input({inputClass, id, type, ariaLabel, value, onChange}) {
   return (
     <input
-      className={`form-control ${textAlign}`}
+      className={inputClass}
+      id={id}
       type={type}
       aria-label={ariaLabel}
       value={value}
@@ -17,7 +18,8 @@ Input.defaultProps = {
 }
 
 Input.propTypes = {
-  textAlign: PropTypes.string,
+  inputClass: PropTypes.string,
+  id: PropTypes.string,
   type: PropTypes.string.isRequired,
   ariaLabel: PropTypes.string.isRequired,
   value: PropTypes.any,

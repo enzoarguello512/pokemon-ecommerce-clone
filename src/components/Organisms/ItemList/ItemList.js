@@ -2,7 +2,6 @@ import React, {useState, useEffect} from "react"
 import PropTypes from 'prop-types';
 import Item from './../../Molecules/Item/Item';
 import H5 from './../../Atoms/H5/H5';
-import {pokemonsGrass} from './../../../json-data-grass';
 
 require('./ItemList.css');
 
@@ -26,8 +25,8 @@ function ItemList({urlPokemonType}) {
   //}, [urlPokemonType]);
 
   useEffect(() => {
-    setItems(pokemonsGrass)
-  }, [])
+    setItems(urlPokemonType)
+  }, [urlPokemonType])
 
   return (
     <ul className="list-unstyled d-flex flex-wrap justify-content-evenly mx-auto">
