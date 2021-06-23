@@ -6,7 +6,7 @@ import ItemCategories from '../../Organisms/ItemCategories/ItemCategories';
 
 export const categoryContext = React.createContext();
 
-function GameCards() {
+function GameCards({match}) {
 
   const [activeCategories, setCategory] = useState([]);
 
@@ -15,7 +15,7 @@ function GameCards() {
       <TemplateGameCards
         header={<Navbar />}
         mainTitle={'title'}
-        filters={<ItemCategories />}
+        filters={<ItemCategories match={match} />}
         filteredItems={<ItemListContainer categories={activeCategories} />}
         slider={'slider'}
         footer={'footer'}

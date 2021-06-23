@@ -12,6 +12,8 @@ function App() {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/gamecards" exact component={GameCards} />
+        <Route path="/gamecards/type-lightning" exact component={GameCards} />
+        <Route path="/gamecards/type-lightning/:id" exact component={GameCardId} />
         <Route path="/gamecards/type-grass" exact component={GameCards} />
         <Route path="/gamecards/type-grass/:id" component={GameCardId} />
       </Switch>

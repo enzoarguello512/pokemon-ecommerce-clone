@@ -50,7 +50,7 @@ function Navbar() {
             </li>
 
             <li className="nav-item">
-              <Link to="/gamecards/type-grass" className="nav-link main-navbar__juego">
+              <Link to="/gamecards" className="nav-link main-navbar__juego">
                 <span className="mx-4">
                   <Image imgClass="main-navbar__icon" src="/icons/backpack.svg" alt="juego-logo" />
                 </span>
