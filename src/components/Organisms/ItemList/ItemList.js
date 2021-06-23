@@ -30,7 +30,11 @@ function ItemList({urlPokemonType}) {
 
   return (
     <ul className="list-unstyled d-flex flex-wrap justify-content-evenly mx-auto">
-      {items && items.length > 0 ? items.map(obj => <Item item={obj} key={obj.id} />) : <H5 titleClass='text-center'>"Items not found"</H5>}
+      {items && items.length > 0 ? (
+        items.sort((obj1, obj2) => parseInt(obj1.cardNumber) - parseInt(obj2.cardNumber)).map(obj => <Item item={obj} key={obj.id} />)
+      ) : (
+        <H5 titleClass='text-center'>"Items not found"</H5>
+      )}
     </ul>
   )
 }

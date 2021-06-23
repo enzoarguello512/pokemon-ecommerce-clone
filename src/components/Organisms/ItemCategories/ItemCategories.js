@@ -9,13 +9,17 @@ require('./ItemCategories.css')
 
 function ItemCategories() {
 
+  //LOCAL STATE
   const [form, setForm] = useState([]);
 
+  //CONTEXT
   const context = useContext(categoryContext);
 
+  //API's
   const grassUrl = pokemonsGrass;
   const lightningUrl = pokemonsLightning;
 
+  //FUNCTIONS
   const addToList = value => {
     setForm([...value, ...form])
   }
@@ -46,13 +50,5 @@ function ItemCategories() {
     </form>
   </>
 }
-
-//ItemCategories.defaultProps = {
-//:
-//};
-
-//ItemCategories.propTypes = {
-//: PropTypes.
-//};
 
 export default ItemCategories

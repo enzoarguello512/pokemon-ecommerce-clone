@@ -10,8 +10,6 @@ function GameCards() {
 
   const [activeCategories, setCategory] = useState([]);
 
-  console.log(activeCategories);
-
   return (
     <categoryContext.Provider value={{activeCategories, setCategory}}>
       <TemplateGameCards

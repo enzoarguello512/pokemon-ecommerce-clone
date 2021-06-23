@@ -9,6 +9,7 @@ export const pokemonsGrass = [
     "imgClass": "img-fluid",
     "price": 234,
     "stock": 50,
+    "cardNumber": "BW01",
   },
   {
     "id": 2,
@@ -20,6 +21,7 @@ export const pokemonsGrass = [
     "imgClass": "img-fluid",
     "price": 535,
     "stock": 35,
+    "cardNumber": "BW06",
   },
   {
     "id": 3,
@@ -31,6 +33,7 @@ export const pokemonsGrass = [
     "imgClass": "img-fluid",
     "price": 14,
     "stock": 670,
+    "cardNumber": "BW11",
   },
   {
     "id": 4,
@@ -42,6 +45,7 @@ export const pokemonsGrass = [
     "imgClass": "img-fluid",
     "price": 23,
     "stock": 243,
+    "cardNumber": "BW14",
   },
   {
     "id": 5,
@@ -53,6 +57,7 @@ export const pokemonsGrass = [
     "imgClass": "img-fluid",
     "price": 342,
     "stock": 350,
+    "cardNumber": "BW20",
   },
   {
     "id": 6,
@@ -64,6 +69,7 @@ export const pokemonsGrass = [
     "imgClass": "img-fluid",
     "price": 134,
     "stock": 9,
+    "cardNumber": "BW49",
   },
   {
     "id": 7,
@@ -75,6 +81,7 @@ export const pokemonsGrass = [
     "imgClass": "img-fluid",
     "price": 264,
     "stock": 90,
+    "cardNumber": "BW70",
   },
   {
     "id": 8,
@@ -86,6 +93,7 @@ export const pokemonsGrass = [
     "imgClass": "img-fluid",
     "price": 634,
     "stock": 47,
+    "cardNumber": "BW86",
   },
   {
     "id": 9,
@@ -97,6 +105,7 @@ export const pokemonsGrass = [
     "imgClass": "img-fluid",
     "price": 54,
     "stock": 20,
+    "cardNumber": "BW87",
   },
   {
     "id": 10,
@@ -108,6 +117,7 @@ export const pokemonsGrass = [
     "imgClass": "img-fluid",
     "price": 644,
     "stock": 95,
+    "cardNumber": "BW99",
   },
   {
     "id": 11,
@@ -119,6 +129,7 @@ export const pokemonsGrass = [
     "imgClass": "img-fluid",
     "price": 435,
     "stock": 12,
+    "cardNumber": "BW101",
   },
   {
     "id": 12,
@@ -130,6 +141,7 @@ export const pokemonsGrass = [
     "imgClass": "img-fluid",
     "price": 944,
     "stock": 5,
+    "cardNumber": "SM10",
   },
 ]
 
@@ -143,4 +155,5 @@ export const pokemonsGrass = [
     //"imgClass": "img-fluid",
     //"price": 234,
     //"stock": 50,
+    //"cardNumber": "",
   //},
