@@ -49,6 +49,7 @@ function ItemCategories({match}) {
   })
 
   return <>
+
     <div style={{backgroundColor: "yellow"}}>
       <h1>Categories</h1>
       <div className="d-grid gap-2">

@@ -1,6 +1,7 @@
 import './../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import GameCards from './components/Pages/GameCards/GameCards';
 import Home from './components/Pages/Home/Home';
+import Pokedex from './components/Pages/Pokedex/Pokedex';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import GameCardId from './components/Pages/GameCardId/GameCardId';
 
@@ -11,6 +12,7 @@ function App() {
     <Router>
       <Switch>
         <Route path="/" exact component={Home} />
+        <Route path="/pokedex" exact component={Pokedex} />
         <Route path="/gamecards" exact component={GameCards} />
         <Route path="/gamecards/type-lightning" exact component={GameCards} />
         <Route path="/gamecards/type-lightning/:id" exact component={GameCardId} />

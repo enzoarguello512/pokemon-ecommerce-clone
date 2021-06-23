@@ -39,3 +39,7 @@ input[type=number] {
   min-height: 680px;
   background-color: aqua;
 }
+.main-sections__title {
+  min-height: 80px;
+  background-color: orange;
+}

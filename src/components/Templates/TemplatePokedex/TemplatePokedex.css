@@ -1,0 +1,12 @@
+.main-sections__pokedex-search {
+  background-color: blue;
+  min-height: 250px;
+}
+.main-sections__sortby {
+  background-color: beige;
+  min-height: 130px;
+}
+.main-sections__pokedex-results {
+  background-color: teal;
+  min-height: 1140px;
+}
