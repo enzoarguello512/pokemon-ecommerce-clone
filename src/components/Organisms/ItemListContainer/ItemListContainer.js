@@ -1,13 +1,12 @@
 import React from "react"
 import ItemList from "../ItemList/ItemList";
-import {pokemonsGrass} from './../../../json-data-grass';
 
 require('./ItemListContainer.css');
 
-function ItemListContainer() {
+function ItemListContainer({categories}) {
   return <>
     <div className="list-container">
-      <ItemList urlPokemonType={pokemonsGrass}></ItemList>
+      <ItemList urlPokemonType={categories}></ItemList>
     </div>
   </>;
 }

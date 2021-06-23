@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react"
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import Item from './../../Molecules/Item/Item';
 import H5 from './../../Atoms/H5/H5';
 
@@ -36,7 +36,7 @@ function ItemList({urlPokemonType}) {
 }
 
 ItemList.propTypes = {
-  urlPokemonType: PropTypes.string.isRequired,
+  //urlPokemonType: PropTypes.string.isRequired,
 };
 
 export default ItemList

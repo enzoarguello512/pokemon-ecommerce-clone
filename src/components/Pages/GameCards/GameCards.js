@@ -4,23 +4,21 @@ import Navbar from './../../Organisms/Navbar/Navbar';
 import ItemListContainer from './../../Organisms/ItemListContainer/ItemListContainer';
 import ItemCategories from '../../Organisms/ItemCategories/ItemCategories';
 
-const categories = [];
-
 export const categoryContext = React.createContext();
 
 function GameCards() {
 
-  const [activeCategories, setCategory] = useState(categories);
+  const [activeCategories, setCategory] = useState([]);
 
-
+  console.log(activeCategories);
 
   return (
-    <categoryContext.Provider value={categories}>
+    <categoryContext.Provider value={{activeCategories, setCategory}}>
       <TemplateGameCards
         header={<Navbar />}
         mainTitle={'title'}
         filters={<ItemCategories />}
-        filteredItems={<ItemListContainer />}
+        filteredItems={<ItemListContainer categories={activeCategories} />}
         slider={'slider'}
         footer={'footer'}
       />
