@@ -20,7 +20,7 @@ function Navbar() {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarScroll">
-          <ul className="navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll">
+          <ul className="navbar-nav mx-auto my-2 my-lg-0">
 
             <li className="nav-item">
               <Link to="/" className="nav-link active main-navbar__inicio">

@@ -1,10 +1,19 @@
-import React from "react"
+import React, {useState} from "react"
 import Image from "../../Atoms/Image/Image";
 import ItemCount from './../../Molecules/ItemCount/ItemCount';
 
 require('./ItemDetail.css');
 
 function ItemDetail({item}) {
+
+  const [quantity, setQuantity] = useState(0);
+
+  const onAdd = quantityToAdd => {
+    setQuantity(quantityToAdd);
+  }
+
+  console.log(quantity);
+
   return <>
     <div className="item-image my-3">
       <div className="text-center">
@@ -19,9 +28,8 @@ function ItemDetail({item}) {
         {item.desc}
       </div>
     </div>
-    <div className="my-3">
-      <h2 className="text-center">{`$${item.price}`}</h2>
-      <ItemCount stock={item.stock} initial={1} />
+    <div className="my-3 text-center">
+      <ItemCount price={item.price} stock={item.stock} initial={1} onAdd={onAdd} />
     </div>
   </>
 }
