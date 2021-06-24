@@ -20,7 +20,11 @@ function ItemCount({price, stock, initial, onAdd}) {
   }
 
   const countInput = (value) => {
-    if (value >= 0 && value <= stock) setCount(parseInt(value));
+    if (value >= 0 && value <= stock) {
+      value.replace(/\D/g, '');
+      if (value === '') value = 0;
+      setCount(parseInt(value))
+    };
   }
 
   return <>
