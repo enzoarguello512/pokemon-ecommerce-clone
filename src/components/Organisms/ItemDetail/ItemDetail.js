@@ -1,6 +1,7 @@
-import React, {useState} from "react"
+import React, {useState, useContext} from "react"
 import Image from "../../Atoms/Image/Image";
 import ItemCount from './../../Molecules/ItemCount/ItemCount';
+import {cartContext} from './../../Contexts/CartContext/CartContext';
 
 require('./ItemDetail.css');
 
@@ -8,8 +9,11 @@ function ItemDetail({item}) {
 
   const [quantity, setQuantity] = useState(0);
 
+  const [, setCart] = useContext(cartContext);
+
   const onAdd = quantityToAdd => {
     setQuantity(quantityToAdd);
+    setCart(item, quantity)
   }
 
   console.log(quantity);

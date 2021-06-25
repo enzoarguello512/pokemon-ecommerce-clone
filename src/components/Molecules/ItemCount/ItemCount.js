@@ -43,7 +43,6 @@ function ItemCount({price, stock, initial, onAdd}) {
 }
 
 ItemCount.defaultProps = {
-  price: 0,
   stock: 0,
   initial: 0,
 }

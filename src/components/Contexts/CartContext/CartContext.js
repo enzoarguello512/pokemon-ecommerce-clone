@@ -4,7 +4,7 @@ export const cartContext = createContext();
 
 function CartProvider({children}) {
 
-  const [items, setItems] = useState([]);
+  const [cart, setCart] = useState([]);
 
   //const cart = localStorage.getItem('cart');
 
@@ -12,8 +12,28 @@ function CartProvider({children}) {
   //setItems(JSON.parse(cart));
   //}
 
+  const addItem = (item, quantity) => {
+    setCart([...cart, {'item': item, 'quantity': quantity}]);
+  }
+
+  const removeItem = (item) => {
+    cart.splice(cart.indexOf(item), 1);
+  }
+
+  const clearCart = () => {
+    setCart([]);
+  }
+
+  const isInCart = (item) => {
+    const result = cart.findIndex((obj) => obj.id === item.id);
+    if (result !== 1) return true;
+    return false;
+  }
+
+  console.log(cart);
+
   return (
-    <cartContext.Provider value={[items, setItems]}>
+    <cartContext.Provider value={[cart, setCart, addItem, removeItem, clearCart, isInCart]}>
       {children}
     </cartContext.Provider>
   )
