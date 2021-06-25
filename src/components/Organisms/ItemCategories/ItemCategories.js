@@ -3,7 +3,7 @@ import InputCheckbox from "../../Molecules/InputCheckbox/InputCheckbox";
 import Button from './../../Atoms/Button/Button';
 import {pokemonsGrass} from './../../../json-data-grass';
 import {pokemonsLightning} from './../../../json-data-lightning';
-import {categoryContext} from './../../Pages/GameCards/GameCards';
+import {categoriesContext} from './../../Contexts/GameCards/GameCards';
 import {Link} from 'react-router-dom';
 
 require('./ItemCategories.css')
@@ -14,7 +14,7 @@ function ItemCategories({match}) {
   const [form, setForm] = useState([]);
 
   //CONTEXT
-  const context = useContext(categoryContext);
+  const [, setCategory] = useContext(categoriesContext);
 
   //API's
   const grassUrl = pokemonsGrass;
@@ -31,17 +31,17 @@ function ItemCategories({match}) {
 
   const filterElements = e => {
     e.preventDefault();
-    context.setCategory(form);
+    setCategory(form);
   }
 
   useEffect(() => {
     const category = match.url.split('/').pop();
     switch (category) {
       case "type-grass":
-        context.setCategory(grassUrl)
+        setCategory(grassUrl)
         break;
       case "type-lightning":
-        context.setCategory(lightningUrl)
+        setCategory(lightningUrl)
         break;
       default:
         break;

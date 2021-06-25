@@ -1,12 +1,12 @@
 import React, {useContext} from "react"
 import PropTypes from 'prop-types';
-import {categoryContext} from './../../Pages/GameCards/GameCards';
+import {categoriesContext} from './../../Contexts/GameCards/GameCards';
 
 require('./TemplateGameCards.css')
 
 function TemplateGameCards({header, mainTitle, filters, filteredItems, slider, footer}) {
 
-  const context = useContext(categoryContext);
+  const [activeCategories] = useContext(categoriesContext);
 
   return <>
     <header className="main-header">{header}</header>
@@ -17,7 +17,7 @@ function TemplateGameCards({header, mainTitle, filters, filteredItems, slider, f
       <section className="container-xxl">
         <div className="main-sections__filters">{filters}</div>
         {
-          context.activeCategories && context.activeCategories.length > 0 && <div className="main-sections__filteredItems">{filteredItems}</div>
+          activeCategories && activeCategories.length > 0 && <div className="main-sections__filteredItems">{filteredItems}</div>
         }
       </section>
       <section className="container-xxl main-sections__slider">{slider}</section>
