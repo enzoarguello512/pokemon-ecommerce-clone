@@ -9,7 +9,7 @@ function TemplateGameCards({header, mainTitle, filters, filteredItems, slider, f
   const [activeCategories] = useContext(categoriesContext);
 
   return <>
-    <header className="main-header">{header}</header>
+    {header}
     <main className="main-sections">
       <section className="container-xxl">
         <div className="main-sections__title mb-3">{mainTitle}</div>

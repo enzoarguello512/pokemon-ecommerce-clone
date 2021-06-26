@@ -5,7 +5,7 @@ require('./TemplateHome.css')
 
 function TemplateHome({header, hero, news, slider, footer}) {
   return <>
-    <header className="main-header">{header}</header>
+    {header}
     <main className="main-sections">
       <section className="container-xxl main-sections__main-info">
         <div>{hero}</div>

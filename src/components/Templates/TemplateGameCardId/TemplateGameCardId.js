@@ -5,7 +5,7 @@ require('./TemplateGameCardId.css')
 
 function TemplateGameCardId({header, cardDetail, slider, footer}) {
   return <>
-    <header className="main-header">{header}</header>
+    {header}
     <main className="main-sections">
       <section className="container-xxl main-sections__card-detail">{cardDetail}</section>
       <section className="container-xxl main-sections__slider">{slider}</section>

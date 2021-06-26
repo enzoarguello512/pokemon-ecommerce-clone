@@ -5,7 +5,7 @@ require('./TemplatePokedex.css')
 
 function TemplatePokedex({header, mainTitle, searcher, sortby, listedPokemons, footer}) {
   return <>
-    <header className="main-header">{header}</header>
+    {header}
     <main className="main-sections">
       <section className="container-xxl">
         <div className="main-sections__title mb-3">{mainTitle}</div>
