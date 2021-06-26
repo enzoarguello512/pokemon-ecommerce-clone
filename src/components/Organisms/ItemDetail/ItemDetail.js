@@ -7,16 +7,14 @@ require('./ItemDetail.css');
 
 function ItemDetail({item}) {
 
-  const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState(1);
 
-  const [, setCart] = useContext(cartContext);
+  const ctx = useContext(cartContext);
 
   const onAdd = quantityToAdd => {
     setQuantity(quantityToAdd);
-    setCart(item, quantity)
+    ctx.addItem(item, quantityToAdd);
   }
-
-  console.log(quantity);
 
   return <>
     <div className="item-image my-3">
@@ -33,7 +31,7 @@ function ItemDetail({item}) {
       </div>
     </div>
     <div className="my-3 text-center">
-      <ItemCount price={item.price} stock={item.stock} initial={1} onAdd={onAdd} />
+      <ItemCount price={item.price} stock={item.stock} initial={quantity} onAdd={onAdd} />
     </div>
   </>
 }

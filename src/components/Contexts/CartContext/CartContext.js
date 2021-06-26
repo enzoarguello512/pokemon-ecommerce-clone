@@ -13,7 +13,14 @@ function CartProvider({children}) {
   //}
 
   const addItem = (item, quantity) => {
-    setCart([...cart, {'item': item, 'quantity': quantity}]);
+    const resultId = cart.findIndex((obj) => obj.item.id === item.id);
+    console.log('soy result', resultId);
+    if (resultId !== -1) {
+      cart[resultId].quantity = quantity;
+    } else {
+      setCart([...cart, {'item': item, 'quantity': quantity}]);
+    }
+    console.log('soy carro', cart);
   }
 
   const removeItem = (item) => {
@@ -24,16 +31,9 @@ function CartProvider({children}) {
     setCart([]);
   }
 
-  const isInCart = (item) => {
-    const result = cart.findIndex((obj) => obj.id === item.id);
-    if (result !== 1) return true;
-    return false;
-  }
-
-  console.log(cart);
 
   return (
-    <cartContext.Provider value={[cart, setCart, addItem, removeItem, clearCart, isInCart]}>
+    <cartContext.Provider value={{cart, setCart, addItem, removeItem, clearCart}}>
       {children}
     </cartContext.Provider>
   )
