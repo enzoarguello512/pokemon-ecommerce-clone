@@ -13,7 +13,8 @@ function ItemDetail({item}) {
 
   const onAdd = quantityToAdd => {
     setQuantity(quantityToAdd);
-    ctx.addItem(item, quantityToAdd);
+    item.quantityOnCart = quantityToAdd;
+    ctx.addItem(item);
   }
 
   return <>

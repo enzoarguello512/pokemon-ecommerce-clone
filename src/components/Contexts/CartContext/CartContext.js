@@ -6,21 +6,11 @@ function CartProvider({children}) {
 
   const [cart, setCart] = useState([]);
 
-  //const cart = localStorage.getItem('cart');
-
-  //if (cart) {
-  //setItems(JSON.parse(cart));
-  //}
-
-  const addItem = (item, quantity) => {
-    const resultId = cart.findIndex((obj) => obj.item.id === item.id);
-    console.log('soy result', resultId);
-    if (resultId !== -1) {
-      cart[resultId].quantity = quantity;
-    } else {
-      setCart([...cart, {'item': item, 'quantity': quantity}]);
-    }
-    console.log('soy carro', cart);
+  const addItem = (item) => {
+    //if the item already exists, it will be replaced/updated with the new values that come from the parameters
+    if (cart.includes(item)) cart[cart.indexOf(item)] = item;
+    //otherwise, it will be added directly to the shopping cart
+    else setCart([...cart, item]);
   }
 
   const removeItem = (item) => {
@@ -32,8 +22,16 @@ function CartProvider({children}) {
   }
 
 
+  const value = {
+    cart,
+    setCart,
+    addItem,
+    removeItem,
+    clearCart,
+  }
+
   return (
-    <cartContext.Provider value={{cart, setCart, addItem, removeItem, clearCart}}>
+    <cartContext.Provider value={value}>
       {children}
     </cartContext.Provider>
   )
