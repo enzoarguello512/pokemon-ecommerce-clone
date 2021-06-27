@@ -1,5 +1,5 @@
 import React from "react"
-import CartWidget from "../../Atoms/CartWidget/CartWidget";
+import CartWidget from "../../Molecules/CartWidget/CartWidget";
 import Image from "../../Atoms/Image/Image";
 import {Link} from "react-router-dom";
 
