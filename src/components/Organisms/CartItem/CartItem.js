@@ -45,7 +45,7 @@ function CartItem({item}) {
     <div className="shadow rounded row my-3">
       <div className="col-2 text-center rounded-start">
         <figure className="m-0">
-          <Image imgClass="img-fluid altura-2 my-2 shadow" src={item.imgSrc} alt={item.imgAlt} />
+          <Image imgClass="img-fluid h-100px my-2 shadow" src={item.imgSrc} alt={item.imgAlt} />
         </figure>
       </div>
       <div className="col-4">
@@ -60,11 +60,9 @@ function CartItem({item}) {
         <div className="d-flex flex-column justify-content-center h-100">
           <label htmlFor="quantity" className="text-center">Cantidad:</label>
           <div className="input-group justify-content-center">
-
             <Button btnClass="btn-red text-white border" onClick={() => countHandler('substract')}>-</Button>
             <Input inputClass="form-control text-center border" id="quantity" ariaLabel="item quantity" value={count} onChange={e => {countInput(e.target.value)}} />
             <Button btnClass="btn-red text-white border" onClick={() => countHandler('add')}>+</Button>
-
           </div>
         </div>
       </div>

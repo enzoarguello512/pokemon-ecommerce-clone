@@ -44,3 +44,12 @@ input[type=number] {
   min-height: 80px;
   background-color: orange;
 }
+.min-h-300px {
+  min-height: 300px !important;
+}
+.h-100px {
+  height: 100px !important;
+}
+.h-200px {
+  height: 200px !important;
+}

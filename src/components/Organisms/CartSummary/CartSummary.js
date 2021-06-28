@@ -18,7 +18,7 @@ function CartSummary() {
   return (
     <div className="container-xxl my-5">
       <h1 className="text-center fs-2 fw-bold text-decoration-underline border-bottom pb-3 m-0">Resumen de la compra</h1>
-      <div className="clase-alta-300px">
+      <div className="min-h-300px">
 
         {ctx.cart && ctx.cart.length > 0
           ? ctx.cart.map(item => <CartItem item={item} key={item.id} />)
@@ -63,6 +63,7 @@ function CartSummary() {
               </div>
             </div>
           )}
+
       </div>
     </div >
   )
