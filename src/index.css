@@ -30,7 +30,8 @@ input[type=number] {
 
 .main-footer {
   min-height: 240px;
-  background-color: blue;
+  background-color: black;
+  color: white;
 }
 .main-sections {
   /*background-color: lime;*/
