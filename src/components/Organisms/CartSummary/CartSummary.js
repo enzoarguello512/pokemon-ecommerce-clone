@@ -35,19 +35,31 @@ function CartSummary() {
         {ctx.cart && ctx.cart.length > 0 &&
           (
             <div className="border-top pt-3">
-              <div className="text-end">
-                <h3 className="mb-4"><span className="fw-bold text-decoration-underline">Total:</span> {`${ctx.cart.reduce((acc, elem) => acc + elem.price * elem.quantityOnCart, 0)}.00 $`}</h3>
-                <Button btnClass="btn-primary bg-gradient">
-                  <span className="pe-2">
-                    <i className="fas fa-lock"></i>
-                  </span>
-                  <span className="pe-3">
-                    Checkout
-                  </span>
-                  <span>
-                    <i className="fas fa-long-arrow-alt-right"></i>
-                  </span>
-                </Button>
+              <div className="row">
+                <div className="col-12 text-end mb-4">
+                  <h3><span className="fw-bold text-decoration-underline">Total:</span> {`${ctx.cart.reduce((acc, elem) => acc + elem.price * elem.quantityOnCart, 0)}.00 $`}</h3>
+                </div>
+                <div className="col-6 text-start">
+                  <Button btnClass="btn-primary bg-gradient" onClick={() => ctx.clearCart()}>
+                    <span className="pe-2">
+                      <i class="far fa-times-circle"></i>
+                    </span>
+                    Limpiar carrito
+                  </Button>
+                </div>
+                <div className="col-6 text-end">
+                  <Button btnClass="btn-primary bg-gradient">
+                    <span className="pe-2">
+                      <i className="fas fa-lock"></i>
+                    </span>
+                    <span className="pe-3">
+                      Checkout
+                    </span>
+                    <span>
+                      <i className="fas fa-long-arrow-alt-right"></i>
+                    </span>
+                  </Button>
+                </div>
               </div>
             </div>
           )}
