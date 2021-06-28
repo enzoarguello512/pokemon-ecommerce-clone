@@ -32,7 +32,7 @@ function ItemCount({price, stock, initial, onAdd}) {
     <label className="fw-bold" htmlFor="quantity">Cantidad: {count} - <span className="text-muted">{`(${stock} disponibles)`}</span></label>
     <div className="input-group">
       <Button onClick={() => countHandler('substract')}>-</Button>
-      <Input inputClass="form-control text-center" id="quantity" type="number" ariaLabel="item quantity" value={count} onChange={event => {countInput(event.target.value)}} />
+      <Input inputClass="form-control text-center" id="quantity" type="number" ariaLabel="item quantity" value={count} onChange={e => {countInput(e.target.value)}} />
       <Button onClick={() => countHandler('add')}>+</Button>
     </div>
     <div className="d-grid gap-3 mt-4">

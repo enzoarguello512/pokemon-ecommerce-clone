@@ -11,11 +11,13 @@ function CartWidget() {
   return <>
     <Link to="/cart" className="position-relative">
       <Image imgClass="cart-widget-icon" src="/icons/cart.svg" alt="cart-icon" />
-      <span
-        className="position-absolute top-0 start-100 translate-middle badge rounded bg-danger">
-        <span>{ctx.totalQuantity}</span>
-        <span className="visually-hidden">cart</span>
-      </span>
+      {ctx.cart.length > 0 &&
+        <span
+          className="position-absolute top-0 start-100 translate-middle badge rounded bg-danger">
+          <span>{ctx.totalQuantity}</span>
+          <span className="visually-hidden">cart</span>
+        </span>
+      }
     </Link>
   </>
 }
