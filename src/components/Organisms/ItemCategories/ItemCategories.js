@@ -5,6 +5,7 @@ import {pokemonsGrass} from './../../../json-data-grass';
 import {pokemonsLightning} from './../../../json-data-lightning';
 import {categoriesContext} from './../../Contexts/GameCards/GameCards';
 import {Link} from 'react-router-dom';
+import Image from "../../Atoms/Image/Image";
 
 require('./ItemCategories.css')
 
@@ -51,17 +52,25 @@ function ItemCategories({match}) {
   return <>
     <div>
       <h1>Categories</h1>
-      <div className="d-grid gap-2">
+      <div className="d-flex gap-2">
+
         <div>
-          <Link to="/gamecards/type-grass">
-            <Button btnClass="btn-red text-white">Tipo planta</Button>
+          <Link to="/gamecards/type-grass" className="text-decoration-none">
+            <Button btnClass="btn-red text-white d-flex flex-column justify-content-center align-items-center">
+              <Image imgClass="categories__img--medium" src="/icons/bullbasaur.svg" alt="Tipo planta icono" />
+              <span>Tipo planta</span>
+            </Button>
           </Link>
         </div>
         <div>
-          <Link to="/gamecards/type-lightning">
-            <Button btnClass="btn-red text-white">Tipo rayo</Button>
+          <Link to="/gamecards/type-lightning" className="text-decoration-none">
+            <Button btnClass="btn-red text-white d-flex flex-column justify-content-center align-items-center">
+              <Image imgClass="categories__img--medium" src="/icons/pikachu-2.svg" alt="Tipo rayo icono" />
+              <span>Tipo rayo</span>
+            </Button>
           </Link>
         </div>
+
       </div>
     </div>
 

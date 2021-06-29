@@ -9,7 +9,7 @@ export const pokemonsLightning = [
     "imgClass": "img-fluid",
     "price": 234,
     "stock": 50,
-    "cardNumber": "24a",
+    "cardNumber": 24,
   },
   {
     "id": 14,
@@ -21,7 +21,7 @@ export const pokemonsLightning = [
     "imgClass": "img-fluid",
     "price": 234,
     "stock": 50,
-    "cardNumber": "28a",
+    "cardNumber": 28,
   },
   {
     "id": 15,
@@ -33,7 +33,7 @@ export const pokemonsLightning = [
     "imgClass": "img-fluid",
     "price": 234,
     "stock": 50,
-    "cardNumber": "BW05",
+    "cardNumber": 5,
   },
   {
     "id": 16,
@@ -45,7 +45,7 @@ export const pokemonsLightning = [
     "imgClass": "img-fluid",
     "price": 234,
     "stock": 50,
-    "cardNumber": "BW24",
+    "cardNumber": 24,
   },
   {
     "id": 17,
@@ -57,7 +57,7 @@ export const pokemonsLightning = [
     "imgClass": 'img-fluid',
     "price": 98,
     "stock": 372,
-    "cardNumber": 'BW34'
+    "cardNumber": 34
   },
   {
     "id": 18,
@@ -69,7 +69,7 @@ export const pokemonsLightning = [
     "imgClass": 'img-fluid',
     "price": 319,
     "stock": 16,
-    "cardNumber": 'BW38'
+    "cardNumber": 38
   },
   {
     "id": 19,
@@ -81,7 +81,7 @@ export const pokemonsLightning = [
     "imgClass": 'img-fluid',
     "price": 177,
     "stock": 341,
-    "cardNumber": 'BW41'
+    "cardNumber": 41
   },
   {
     "id": 20,
@@ -93,7 +93,7 @@ export const pokemonsLightning = [
     "imgClass": 'img-fluid',
     "price": 685,
     "stock": 470,
-    "cardNumber": 'BW54'
+    "cardNumber": 54
   },
   {
     "id": 21,
@@ -105,7 +105,7 @@ export const pokemonsLightning = [
     "imgClass": 'img-fluid',
     "price": 77,
     "stock": 251,
-    "cardNumber": 'BW67'
+    "cardNumber": 67
   },
   {
     "id": 22,
@@ -117,7 +117,7 @@ export const pokemonsLightning = [
     "imgClass": 'img-fluid',
     "price": 941,
     "stock": 405,
-    "cardNumber": 'BW76'
+    "cardNumber": 76
   },
   {
     "id": 23,
@@ -129,7 +129,7 @@ export const pokemonsLightning = [
     "imgClass": 'img-fluid',
     "price": 428,
     "stock": 112,
-    "cardNumber": 'BW91'
+    "cardNumber": 91
   },
   {
     "id": 24,
@@ -141,7 +141,7 @@ export const pokemonsLightning = [
     "imgClass": 'img-fluid',
     "price": 660,
     "stock": 267,
-    "cardNumber": 'SM28'
+    "cardNumber": 28
   },
 ]
 
@@ -156,5 +156,5 @@ export const pokemonsLightning = [
   //"imgClass": "img-fluid",
   //"price": 234,
   //"stock": 50,
-    //"cardNumber": "24a",
+    //"cardNumber": 24,
   //},
