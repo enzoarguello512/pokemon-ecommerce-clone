@@ -12,7 +12,7 @@ function TemplateGameCards({header, mainTitle, filters, filteredItems, slider, f
     {header}
     <main className="main-sections">
       <section className="container-xxl">
-        <div className="main-sections__title mb-3">{mainTitle}</div>
+        <div className="main-sections__title">{mainTitle}</div>
       </section>
       <section className="container-xxl">
         <div className="main-sections__filters">{filters}</div>

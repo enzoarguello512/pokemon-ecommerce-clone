@@ -1,9 +1,9 @@
 import React, {useContext, useEffect} from "react"
 import CartItem from "../CartItem/CartItem";
-//import PropTypes from 'prop-types';
 import {CartContext} from './../../Contexts/CartContext/CartContext';
 import {Link} from 'react-router-dom';
 import Button from "../../Atoms/Button/Button";
+import H1 from "../../Atoms/H1/H1";
 
 require('./CartSummary.css')
 
@@ -17,7 +17,7 @@ function CartSummary() {
 
   return (
     <div className="container-xxl my-5">
-      <h1 className="text-center fs-2 fw-bold text-decoration-underline border-bottom pb-3 m-0">Resumen de la compra</h1>
+      <H1 titleClass="text-center text-decoration-underline border-bottom pb-3 m-0">Resumen de la compra</H1>
       <div className="min-h-300px">
 
         {ctx.cart && ctx.cart.length > 0

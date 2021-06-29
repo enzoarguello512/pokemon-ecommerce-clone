@@ -49,7 +49,7 @@ function ItemCategories({match}) {
   })
 
   return <>
-    <div style={{backgroundColor: "yellow"}}>
+    <div>
       <h1>Categories</h1>
       <div className="d-grid gap-2">
         <div>
@@ -65,7 +65,7 @@ function ItemCategories({match}) {
       </div>
     </div>
 
-    <form className="row g-3 m-auto" style={{backgroundColor: "white"}} onSubmit={e => filterElements(e)}>
+    <form className="row g-3 m-auto" onSubmit={e => filterElements(e)}>
       <div className="col-12">
         <h3>Custom search (only works in <Link to="/gamecards">/gamecards</Link>)</h3>
       </div>

@@ -4,6 +4,7 @@ import Navbar from './../../Organisms/Navbar/Navbar';
 import ItemListContainer from './../../Organisms/ItemListContainer/ItemListContainer';
 import ItemCategories from '../../Organisms/ItemCategories/ItemCategories';
 import {categoriesContext} from './../../Contexts/GameCards/GameCards';
+import H1 from './../../Atoms/H1/H1'
 
 function GameCards({match}) {
 
@@ -12,7 +13,7 @@ function GameCards({match}) {
   return (
     <TemplateGameCards
       header={<Navbar />}
-      mainTitle={'title'}
+      mainTitle={<H1 titleClass="text-secondary">Base de datos de cartas de JCC</H1>}
       filters={<ItemCategories match={match} />}
       filteredItems={<ItemListContainer categories={activeCategories} />}
       slider={'slider'}
