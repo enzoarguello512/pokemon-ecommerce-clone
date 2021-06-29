@@ -1,3 +1,4 @@
+/*------------ BASE ------------ */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -28,6 +29,9 @@ input[type=number] {
   height: 35px;
 }
 
+
+
+/*------------ TEMPLATES ------------ */
 .main-footer {
   min-height: 240px;
   background-color: black;
@@ -44,6 +48,52 @@ input[type=number] {
   min-height: 80px;
   background-color: orange;
 }
+.main-sections__main-banner {
+  min-height: 333px;
+  background-color: coral;
+}
+.main-sections__mosaic-grid {
+  min-height: 1034px;
+  background-color: brown;
+}
+.main-sections__card-detail{
+  min-height: 640px;
+  background-color: ivory;
+}
+.main-sections__filters {
+  min-height: 700px;
+  background-color: gray;
+}
+.main-sections__filteredItems {
+  min-height: 1300px;
+  max-width: 1024px;
+  margin: auto;
+  background-color: plum;
+}
+.main-sections__main-info {
+  min-height: 650px;
+  background-color: sienna;
+}
+.main-sections__news {
+  min-height: 320px;
+  background-color: teal;
+}
+.main-sections__pokedex-search {
+  background-color: blue;
+  min-height: 250px;
+}
+.main-sections__sortby {
+  background-color: beige;
+  min-height: 130px;
+}
+.main-sections__pokedex-results {
+  background-color: teal;
+  min-height: 1140px;
+}
+
+
+
+/*------------ HEIGHT/WIDTH ------------ */
 .min-h-300px {
   min-height: 300px !important;
 }
