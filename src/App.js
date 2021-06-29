@@ -8,6 +8,7 @@ import Pokedex from './components/Pages/Pokedex/Pokedex';
 import GameCardId from './components/Pages/GameCardId/GameCardId';
 import Cart from './components/Pages/Cart/Cart';
 import Apps from './components/Pages/Apps/Apps';
+import TvPokemon from './components/Pages/TvPokemon/TvPokemon';
 
 //CONTEXTS
 import CategoryProvider from './components/Contexts/GameCards/GameCards';
@@ -23,6 +24,7 @@ function App() {
           <Route path="/pokedex" exact component={Pokedex} />
           <Route path="/cart" exact component={Cart} />
           <Route path="/apps" exact component={Apps} />
+          <Route path="/tv-pokemon" exact component={TvPokemon} />
           <CategoryProvider>
             <Route path="/gamecards" exact component={GameCards} />
             <Route path="/gamecards/type-lightning" exact component={GameCards} />

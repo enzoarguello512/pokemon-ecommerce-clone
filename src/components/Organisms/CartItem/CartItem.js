@@ -4,7 +4,7 @@ import Button from "../../Atoms/Button/Button"
 import Input from './../../Atoms/Input/Input';
 import Image from './../../Atoms/Image/Image';
 import {Link} from 'react-router-dom';
-import {cartContext} from './../../Contexts/CartContext/CartContext';
+import {CartContext} from './../../Contexts/CartContext/CartContext';
 
 
 require('./CartItem.css')
@@ -13,7 +13,7 @@ function CartItem({item}) {
 
   let [count, setCount] = useState(item.quantityOnCart);
 
-  const ctx = useContext(cartContext);
+  const ctx = useContext(CartContext);
 
   useEffect(() => {
     item.quantityOnCart = count;

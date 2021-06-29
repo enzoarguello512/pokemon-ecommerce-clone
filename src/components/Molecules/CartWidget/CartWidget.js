@@ -1,12 +1,12 @@
 import React, {useContext} from "react"
-import {cartContext} from './../../Contexts/CartContext/CartContext';
+import {CartContext} from './../../Contexts/CartContext/CartContext';
 import {Link} from 'react-router-dom';
 import Image from './../../Atoms/Image/Image';
 
 
 function CartWidget() {
 
-  const ctx = useContext(cartContext);
+  const ctx = useContext(CartContext);
 
   return <>
     <Link to="/cart" className="position-relative">

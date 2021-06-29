@@ -1,7 +1,7 @@
 import React, {useState, useContext} from "react"
 import Image from "../../Atoms/Image/Image";
 import ItemCount from './../../Molecules/ItemCount/ItemCount';
-import {cartContext} from './../../Contexts/CartContext/CartContext';
+import {CartContext} from './../../Contexts/CartContext/CartContext';
 
 require('./ItemDetail.css');
 
@@ -9,7 +9,7 @@ function ItemDetail({item}) {
 
   const [quantity, setQuantity] = useState(1);
 
-  const ctx = useContext(cartContext);
+  const ctx = useContext(CartContext);
 
   const onAdd = quantityToAdd => {
     setQuantity(quantityToAdd);

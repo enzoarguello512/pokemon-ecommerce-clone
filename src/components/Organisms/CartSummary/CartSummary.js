@@ -1,7 +1,7 @@
 import React, {useContext, useEffect} from "react"
 import CartItem from "../CartItem/CartItem";
 //import PropTypes from 'prop-types';
-import {cartContext} from './../../Contexts/CartContext/CartContext';
+import {CartContext} from './../../Contexts/CartContext/CartContext';
 import {Link} from 'react-router-dom';
 import Button from "../../Atoms/Button/Button";
 
@@ -9,7 +9,7 @@ require('./CartSummary.css')
 
 function CartSummary() {
 
-  const ctx = useContext(cartContext);
+  const ctx = useContext(CartContext);
 
   useEffect(() => {
     window.scrollTo(0, 0);
