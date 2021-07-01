@@ -1,0 +1,37 @@
+.footer {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 1024px;
+  width: 100%;
+}
+.footer__list-item {
+  position: relative;
+}
+.footer__list-link {
+  color: #616161;
+  font-size: 87.5%;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 100%;
+  text-transform: none;
+  vertical-align: middle;
+}
+.footer__list-link:hover {
+  color: #FFF !important;
+}
+.footer__list-link::before {
+  padding-right: 5px;
+  color: #616161;
+  content: "\25B6";
+  font-size: 55%;
+  opacity: 0.4;
+  left: 6px;
+  top: 3px;
+}
+.footer__list-link:hover::before {
+  color: #FFF !important;
+  opacity: 1;
+}
+.footer__border-div {
+  border-right: solid 2px black;
+}

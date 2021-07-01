@@ -5,6 +5,7 @@ import ItemListContainer from './../../Organisms/ItemListContainer/ItemListConta
 import ItemCategories from '../../Organisms/ItemCategories/ItemCategories';
 import {categoriesContext} from './../../Contexts/GameCards/GameCards';
 import H1 from './../../Atoms/H1/H1'
+import Footer from '../../Organisms/Footer/Footer';
 
 function GameCards({match}) {
 
@@ -17,7 +18,7 @@ function GameCards({match}) {
       filters={<ItemCategories match={match} />}
       filteredItems={<ItemListContainer categories={activeCategories} />}
       slider={'slider'}
-      footer={'footer'}
+      footer={<Footer />}
     />
   )
 }
