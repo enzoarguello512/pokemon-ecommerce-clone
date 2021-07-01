@@ -35,3 +35,28 @@
 .footer__border-div {
   border-right: solid 2px black;
 }
+.footer__social-icons {
+  display: inline-block;
+  height: 40px;
+  margin: 0 0.4em 0.5em 0;
+  width: 40px;
+  text-align: center;
+}
+.footer__privacy {
+  margin-right: -100%;
+  width: 85.49%;
+  margin-left: 7.2525%;
+  color: #525252;
+  font-size: 68.8%;
+  margin-top: 20%;
+}
+.footer__privacy-img {
+  margin-top: 1em;
+}
+.footer__privacy-link {
+  color: #525252 !important;
+  text-decoration: underline !important;
+}
+.footer__privacy-list-item {
+  padding: 0.5em 0;
+}

@@ -106,3 +106,12 @@ input[type=number] {
 .h-200px {
   height: 200px !important;
 }
+.bg-facebook {
+  background-color: #3b5998;
+}
+.bg-twitter {
+  background-color: #44ccf6;
+}
+.bg-youtube {
+  background-color: #ff0000;
+}

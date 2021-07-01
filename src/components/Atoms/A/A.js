@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 require('./A.css')
 
-function A({href, aClass, children, ariaCurrent}) {
+function A({href, aClass, children, ariaCurrent, ariaLabel}) {
   return (
-    <a href={href} className={`text-decoration-none ${aClass}`} aria-current={ariaCurrent}>{children}</a>
+    <a href={href} className={`text-decoration-none ${aClass}`} aria-current={ariaCurrent} aria-label={ariaLabel}>{children}</a>
   )
 }
 
