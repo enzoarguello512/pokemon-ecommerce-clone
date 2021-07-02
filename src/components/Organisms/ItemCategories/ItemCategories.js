@@ -51,7 +51,7 @@ function ItemCategories({match}) {
 
   return <>
     <div>
-      <h1>Categories</h1>
+      <h1>Categorías</h1>
       <div className="d-flex gap-2">
 
         <div>
@@ -76,7 +76,7 @@ function ItemCategories({match}) {
 
     <form className="row g-3 m-auto" onSubmit={e => filterElements(e)}>
       <div className="col-12">
-        <h3>Custom search (only works in <Link to="/gamecards">/gamecards</Link>)</h3>
+        <h3>Búsqueda custom (solo funciona en <Link to="/gamecards">/gamecards</Link>)</h3>
       </div>
       <div className="col-12">
         <InputCheckbox id="typeGrass" ariaLabel="Tipo planta" onChange={e => e.target.checked ? addToList(grassUrl) : removeFromList(grassUrl)}>Tipo planta</InputCheckbox>

@@ -47,7 +47,9 @@ input[type=number] {
 }
 .main-sections__title {
   min-height: 80px;
-  padding: 30px;
+  max-width: 1024px;
+  margin: auto;
+  padding: 30px 20px;
   background-color: white;
 }
 .main-sections__main-banner {
@@ -64,14 +66,16 @@ input[type=number] {
 }
 .main-sections__filters {
   min-height: 700px;
-  background-color: #313131;
-  padding: 30px;
+  max-width: 1024px;
+  margin: auto;
+  padding: 30px 20px;
   color: white;
 }
 .main-sections__filteredItems {
   min-height: 1300px;
   max-width: 1024px;
   margin: auto;
+  padding: 30px 20px;
   background-color: white;
 }
 .main-sections__main-info {
@@ -125,6 +129,9 @@ input[type=number] {
 
 .white-striped-background {
   background: #fff url(https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png);
+}
+.bg-darker-1 {
+  background-color: #313131;
 }
 
 

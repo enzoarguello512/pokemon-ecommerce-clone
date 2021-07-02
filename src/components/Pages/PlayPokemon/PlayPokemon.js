@@ -1,6 +1,7 @@
 import React from 'react';
 import TemplatePlayPokemon from './../../Templates/TemplatePlayPokemon/TemplatePlayPokemon';
 import Navbar from './../../Organisms/Navbar/Navbar';
+import Footer from '../../Organisms/Footer/Footer';
 
 function PlayPokemon() {
   return (
@@ -11,7 +12,7 @@ function PlayPokemon() {
       subHero={'subHero'}
       newsColumn={'newsColumn'}
       slider={'slider'}
-      footer={'footer'}
+      footer={<Footer />}
     />
   )
 }

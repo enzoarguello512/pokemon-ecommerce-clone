@@ -1,6 +1,7 @@
 import React from 'react';
 import TemplateTvPokemon from '../../Templates/TemplateTvPokemon/TemplateTvPokemon';
 import Navbar from './../../Organisms/Navbar/Navbar';
+import Footer from '../../Organisms/Footer/Footer';
 
 function TvPokemon() {
   return (
@@ -10,7 +11,7 @@ function TvPokemon() {
       hero={'hero'}
       newsColumn={'newsColumn'}
       news={'newsColumn'}
-      footer={'footer'}
+      footer={<Footer />}
     />
   );
 }
