@@ -6,6 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #424242 url(https://assets.pokemon.com/static2/_ui/img/chrome/body_bg.png);
 }
 
 code {
@@ -42,12 +43,12 @@ input[type=number] {
 }
 .main-sections__slider {
   min-height: 680px;
-  background-color: aqua;
+  background-color: #424242;
 }
 .main-sections__title {
   min-height: 80px;
   padding: 30px;
-  /*background-color: orange;*/
+  background-color: white;
 }
 .main-sections__main-banner {
   min-height: 333px;
@@ -71,7 +72,7 @@ input[type=number] {
   min-height: 1300px;
   max-width: 1024px;
   margin: auto;
-  background-color: plum;
+  background-color: white;
 }
 .main-sections__main-info {
   min-height: 650px;
@@ -106,6 +107,10 @@ input[type=number] {
 .h-200px {
   height: 200px !important;
 }
+
+
+
+/*------------ BACKGROUNDS ------------ */
 .bg-facebook {
   background-color: #3b5998;
 }
@@ -115,3 +120,15 @@ input[type=number] {
 .bg-youtube {
   background-color: #ff0000;
 }
+
+
+
+.white-striped-background {
+  background: #fff url(https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png);
+}
+
+
+
+
+
+
