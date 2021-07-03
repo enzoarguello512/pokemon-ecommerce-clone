@@ -6,10 +6,13 @@ import {pokemonsLightning} from './../../../json-data-lightning';
 import {categoriesContext} from './../../Contexts/GameCards/GameCards';
 import {Link} from 'react-router-dom';
 import Image from "../../Atoms/Image/Image";
+//import {getFirestore} from './../../../firebase';
 
 require('./ItemCategories.css')
 
 function ItemCategories({match}) {
+
+  //const db = getFirestore();
 
   //LOCAL STATE
   const [form, setForm] = useState([]);
@@ -18,6 +21,8 @@ function ItemCategories({match}) {
   const [, setCategory] = useContext(categoriesContext);
 
   //API's
+  //const grassUrl = db.collection("data-grass");
+  //const lightningUrl = db.collection("data-lightning");
   const grassUrl = pokemonsGrass;
   const lightningUrl = pokemonsLightning;
 
@@ -35,10 +40,23 @@ function ItemCategories({match}) {
     setCategory(form);
   }
 
+  //grassUrl.get().then((querySnapshot) => {
+  //console.log(querySnapshot);
+  //setCategory(querySnapshot.docs)
+  //});
+
+  //const getDocs = category => {
+  //category.get().then((querySnapshot) => {
+  //setCategory(querySnapshot.docs.map(doc => doc.data()));
+  //});
+  //}
+
   useEffect(() => {
     const category = match.url.split('/').pop();
     switch (category) {
       case "type-grass":
+        //getDocs(grassUrl);
+        console.log('asd');
         setCategory(grassUrl)
         break;
       case "type-lightning":

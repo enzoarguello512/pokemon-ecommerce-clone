@@ -26,3 +26,4 @@ yarn-error.log*
 #personal
 maker.js
 /src/firebase.js
+/src/firebase-data-uploader.js
