@@ -1,24 +1,13 @@
 import React, {useState, useContext, useEffect} from "react"
 import InputCheckbox from "../../Molecules/InputCheckbox/InputCheckbox";
 import Button from './../../Atoms/Button/Button';
-//import {pokemonsGrass} from './../../../json-data-grass';
-//import {pokemonsLightning} from './../../../json-data-lightning';
 import {categoriesContext} from './../../Contexts/GameCards/GameCards';
 import {Link} from 'react-router-dom';
 import Image from "../../Atoms/Image/Image";
-import {getFirestore} from './../../../firebase';
 
 require('./ItemCategories.css')
 
-const db = getFirestore();
-
-//API's
-const grassUrl = db.collection("data-grass");
-const lightningUrl = db.collection("data-lightning");
-
-
 function ItemCategories({match}) {
-
 
   //LOCAL STATE
   const [form, setForm] = useState([]);
@@ -26,12 +15,9 @@ function ItemCategories({match}) {
   //CONTEXT
   const [, setCategory] = useContext(categoriesContext);
 
-  //const grassUrl = pokemonsGrass;
-  //const lightningUrl = pokemonsLightning;
-
   //FUNCTIONS
   const addToList = value => {
-    setForm([...value, ...form])
+    setForm([value, ...form])
   }
 
   const removeFromList = value => {
@@ -43,29 +29,18 @@ function ItemCategories({match}) {
     setCategory(form);
   }
 
-
   useEffect(() => {
     const category = match.url.split('/').pop();
 
-    const getDocs = async (category) => {
-      try {
-        const response = await category.get();
-        const responseData = response.docs.map(doc => doc.data());
-        setCategory(responseData);
-      }
-      catch (error) {
-        console.log(error);
-      }
-    }
-
     switch (category) {
       case "type-grass":
-        getDocs(grassUrl)
+        setCategory(["data-grass"])
         break;
       case "type-lightning":
-        getDocs(lightningUrl)
+        setCategory(["data-lightning"])
         break;
       default:
+        setCategory([])
         break;
     }
   }, [match.url, setCategory])
@@ -97,11 +72,17 @@ function ItemCategories({match}) {
 
     <form className="row g-3 m-auto" onSubmit={e => filterElements(e)}>
       <div className="col-12">
-        <h3>Búsqueda custom (solo funciona en <Link to="/gamecards">/gamecards</Link>)</h3>
+        <h3>Búsqueda custom</h3>
       </div>
       <div className="col-12">
+        <InputCheckbox id="typeGrass" ariaLabel="Tipo planta" onChange={e => e.target.checked
+          ? addToList("data-grass")
+          : removeFromList("data-grass")}>Tipo planta</InputCheckbox>
       </div>
       <div className="col-12">
+        <InputCheckbox id="typeLightning" ariaLabel="Tipo rayo" onChange={e => e.target.checked
+          ? addToList("data-lightning")
+          : removeFromList("data-lightning")}>Tipo rayo</InputCheckbox>
       </div>
       <div className="col-12 text-center">
         <Button btnClass="btn-orange text-white w-25" type="submit">
@@ -113,6 +94,4 @@ function ItemCategories({match}) {
   </>
 }
 
-//<InputCheckbox id="typeGrass" ariaLabel="Tipo planta" onChange={e => e.target.checked ? addToList(grassUrl) : removeFromList(grassUrl)}>Tipo planta</InputCheckbox>
-//<InputCheckbox id="typeLightning" ariaLabel="Tipo rayo" onChange={e => e.target.checked ? addToList(lightningUrl) : removeFromList(lightningUrl)}>Tipo rayo</InputCheckbox>
 export default ItemCategories

@@ -4,9 +4,10 @@ import ItemList from "../ItemList/ItemList";
 require('./ItemListContainer.css');
 
 function ItemListContainer({categories}) {
+
   return <>
     <div className="list-container">
-      <ItemList urlPokemonType={categories}></ItemList>
+      <ItemList categories={categories}></ItemList>
     </div>
   </>;
 }
