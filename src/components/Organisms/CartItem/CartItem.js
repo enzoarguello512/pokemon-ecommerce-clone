@@ -39,8 +39,6 @@ function CartItem({item}) {
     };
   }
 
-  console.log(item);
-
   return (
     <div className="shadow rounded row my-3">
       <div className="col-2 text-center rounded-start">
@@ -58,10 +56,10 @@ function CartItem({item}) {
       </div>
       <div className="col-3">
         <div className="d-flex flex-column justify-content-center h-100">
-          <label htmlFor="quantity" className="text-center">Cantidad:</label>
+          <label className="text-center">Cantidad:</label>
           <div className="input-group justify-content-center">
             <Button btnClass="btn-red text-white border" onClick={() => countHandler('substract')}>-</Button>
-            <Input inputClass="form-control text-center border" id="quantity" ariaLabel="item quantity" value={count} onChange={e => {countInput(e.target.value)}} />
+            <Input inputClass="form-control text-center border" ariaLabel="item quantity" value={count} onChange={e => {countInput(e.target.value)}} />
             <Button btnClass="btn-red text-white border" onClick={() => countHandler('add')}>+</Button>
           </div>
         </div>

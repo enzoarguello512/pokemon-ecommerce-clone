@@ -16,19 +16,23 @@ function ItemList({categories}) {
 
     let localData = [];
 
-    const getDocs = async (category) => {
-      try {
-        const response = await db.collection(category).get();
-        const responseData = response.docs.map(doc => doc.data());
-        localData = [...responseData, ...localData]
-        setItems(localData);
-      }
-      catch (error) {
-        console.log(error);
-      }
-    }
+    if (categories.length > 0) {
 
-    categories.forEach(category => getDocs(category));
+      const getDocs = async (category) => {
+        try {
+          const response = await db.collection(category).get();
+          const responseData = response.docs.map(doc => doc.data());
+          localData = [...responseData, ...localData]
+          setItems(localData);
+        }
+        catch (error) {
+          console.log(error);
+        }
+      }
+
+      categories.forEach(category => getDocs(category));
+
+    }
 
   }, [categories])
 
