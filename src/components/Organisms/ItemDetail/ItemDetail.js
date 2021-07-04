@@ -28,7 +28,7 @@ function ItemDetail({item}) {
         <h1>{item.name}</h1>
       </div>
       <div className="item-description__item-basic-info">
-        {item.desc}
+        {item.description}
       </div>
     </div>
     <div className="my-3 text-center">

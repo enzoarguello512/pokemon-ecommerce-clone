@@ -40,7 +40,6 @@ function ItemCategories({match}) {
         setCategory(["data-lightning"])
         break;
       default:
-        setCategory([])
         break;
     }
   }, [match.url, setCategory])

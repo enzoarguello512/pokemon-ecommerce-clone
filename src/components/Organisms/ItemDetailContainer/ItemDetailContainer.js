@@ -2,28 +2,33 @@ import React, {useEffect, useState} from "react"
 import PropTypes from 'prop-types';
 import ItemDetail from './../ItemDetail/ItemDetail';
 import H5 from './../../Atoms/H5/H5';
-//import axios from 'axios';
-import {pokemonsGrass} from './../../../json-data-grass';
-import {pokemonsLightning} from './../../../json-data-lightning';
+import {getFirestore} from './../../../firebase';
 
-const combo = [...pokemonsGrass, ...pokemonsLightning];
+const db = getFirestore();
 
 function ItemDetailContainer({match}) {
 
   const [item, setItem] = useState({});
 
-
-  //useEffect(() => {
-  //axios('url').then(res => {
-  //console.log(res);
-  //setItem(res);
-  //});
-  //}, []);
-
   useEffect(() => {
     window.scrollTo(0, 0);
-    const poke = combo.find(elem => elem.url === match.url);
-    setItem(poke);
+
+    const getDocs = async (category, id) => {
+      try {
+        const response = await db.collection(category).get();
+        const responseData = response.docs.map(doc => doc.data());
+        const pokemon = responseData.find(elem => elem.id === id);
+        setItem(pokemon);
+      }
+      catch (error) {
+        console.log(error);
+      }
+    }
+
+    const selectedCategory = match.url.split('/')[2].replace('type', 'data');
+    const selectedId = match.url.split('/')[3];
+    getDocs(selectedCategory, parseInt(selectedId));
+
   }, [match])
 
   return <>

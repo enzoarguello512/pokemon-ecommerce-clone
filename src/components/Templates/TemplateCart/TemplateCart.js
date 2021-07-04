@@ -6,7 +6,7 @@ require('./TemplateCart.css')
 function TemplateCart({header, cart, footer}) {
   return <>
     {header}
-    <main className="main-sections">
+    <main className="main-sections bg-white">
       {cart}
     </main>
     <footer className="main-footer">{footer}</footer>

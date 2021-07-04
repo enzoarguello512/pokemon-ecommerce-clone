@@ -17,7 +17,7 @@ function CartSummary() {
 
   return (
     <div className="container-xxl my-5">
-      <H1 titleClass="text-center text-decoration-underline border-bottom pb-3 m-0">Resumen de la compra</H1>
+      <H1 titleClass="text-center text-decoration-underline border-bottom pb-3 pt-4 m-0">Resumen de la compra</H1>
       <div className="min-h-300px">
 
         {ctx.cart && ctx.cart.length > 0
@@ -34,15 +34,15 @@ function CartSummary() {
 
         {ctx.cart && ctx.cart.length > 0 &&
           (
-            <div className="border-top pt-3">
+            <div className="border-top pb-4">
               <div className="row">
-                <div className="col-12 text-end mb-4">
+                <div className="col-12 text-end mb-4 mt-3">
                   <h3><span className="fw-bold text-decoration-underline">Total:</span> {`${ctx.cart.reduce((acc, elem) => acc + elem.price * elem.quantityOnCart, 0)}.00 $`}</h3>
                 </div>
                 <div className="col-6 text-start">
                   <Button btnClass="btn-primary bg-gradient" onClick={() => ctx.clearCart()}>
                     <span className="pe-2">
-                      <i class="far fa-times-circle"></i>
+                      <i className="far fa-times-circle"></i>
                     </span>
                     Limpiar carrito
                   </Button>

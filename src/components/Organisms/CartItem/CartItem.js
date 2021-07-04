@@ -53,7 +53,7 @@ function CartItem({item}) {
           <h3 className="fw-bold text-truncate">
             <Link to={item.url} className="text-dark text-decoration-none">{item.name}</Link>
           </h3>
-          <p className="text-truncate">{item.desc}</p>
+          <p className="text-truncate">{item.description}</p>
         </div>
       </div>
       <div className="col-3">
