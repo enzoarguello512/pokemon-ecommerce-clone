@@ -14,85 +14,100 @@ function CartSummary() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    const forms = document.querySelectorAll('.needs-validation')
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+          form.classList.add('was-validated')
+        }, false)
+      })
   }, [])
 
   return (
 
     <div className="container-xxl my-5">
+      <ol className="breadcrumb m-0 pt-4">
+        <li className="breadcrumb-item"><Link to="/cart">Cart</Link></li>
+        <li className="breadcrumb-item active" aria-current="page">Checkout</li>
+      </ol>
       <H1 titleClass="text-decoration-underline border-bottom pb-3 pt-4 m-0">Checkout</H1>
-      <div className="min-h-300px row justify-content-evenly">
-        <div className="col-8 bg-info my-3 rounded">
+      <div className="min-h-300px">
+        <form className="needs-validation row justify-content-evenly" noValidate>
+          <div className="col-8 my-3 bg-light border rounded">
 
-          <form className="row g-3 needs-validation">
+            <div className="row g-3">
 
-            <div class="col-12">
-              <label for="cardOwnerName" class="form-label">Card Owner</label>
-              <input type="text" class="form-control" id="cardOwnerName" placeholder="Card owner name"
-                aria-describedby="cardOwnerName-feedback" required />
-              <div id="cardOwnerName-feedback" class="invalid-feedback">
-                Please fill in the name of the card owner
-              </div>
-            </div>
-
-            <div class="col-12">
-              <label for="cardNumber" class="form-label">Card Number</label>
-              <div className="input-group">
-                <input type="text" class="form-control" id="cardNumber" placeholder="Valid card number"
-                  aria-describedby="cardNumber-feedback" required />
-                <span class="input-group-text text-muted">
-                  <i class="fab fa-cc-visa mx-1"></i>
-                  <i class="fab fa-cc-mastercard mx-1"></i>
-                  <i class="fab fa-cc-amex mx-1"></i>
-                </span>
-              </div>
-              <div id="cardNumber-feedback" class="invalid-feedback">
-                Please fill in a valid number
-              </div>
-            </div>
-
-            <div class="col-8">
-              <label htmlFor="expirationDateMonth" className="form-label">Fecha de expiracion</label>
-              <div className="input-group">
-                <input type="number" class="form-control" id="expirationDateMonth" placeholder="Mes"
-                  aria-describedby="expirationDate-feedback" required />
-                <input type="number" class="form-control" id="expirationDateYear" placeholder="Año"
-                  aria-describedby="expirationDate-feedback" required />
-                <div id="expirationDate-feedback" class="invalid-feedback">
-                  Please fill in the expiration date
+              <div className="col-12">
+                <label htmlFor="cardOwnerName" className="form-label">Titular</label>
+                <input type="text" className="form-control" id="cardOwnerName" placeholder="Titular de la tarjeta"
+                  aria-describedby="cardOwnerName-feedback" required />
+                <div id="cardOwnerName-feedback" className="invalid-feedback">
+                  Ingrese el nombre del propietario de la tarjeta
                 </div>
               </div>
-            </div>
 
-            <div class="col-4">
-              <label for="cardNumber" class="form-label" data-tip="Código CVV de tres dígitos en el reverso de su tarjeta">
-                <span className="me-1">CVV</span>
-                <i class="fa fa-question-circle"></i>
-              </label>
-              <input type="text" class="form-control" id="cvvNumber" placeholder="CVV"
-                aria-describedby="cvvNumber-feedback" required />
-              <div id="cvvNumber-feedback" class="invalid-feedback">
-                Please fill in the cvv number
+              <div className="col-12">
+                <label htmlFor="cardNumber" className="form-label">Número de tarjeta</label>
+                <div className="input-group">
+                  <input type="text" className="form-control" id="cardNumber" placeholder="Número valido de tarjeta"
+                    aria-describedby="cardNumber-feedback" required />
+                  <span className="input-group-text text-muted fs-5">
+                    <i className="fab fa-cc-visa mx-1 fa-fw"></i>
+                    <i className="fab fa-cc-mastercard mx-1 fa-fw"></i>
+                    <i className="fab fa-cc-amex mx-1 fa-fw"></i>
+                  </span>
+                  <div id="cardNumber-feedback" className="invalid-feedback">
+                    Por favor ingrese un número de tarjeta válido
+                  </div>
+                </div>
               </div>
-              <ReactTooltip place="top" type="dark" effect="solid" />
+
+              <div className="col-8 mb-3">
+                <label htmlFor="expirationDateMonth" className="form-label">Fecha de vencimiento</label>
+                <div className="input-group">
+                  <input type="number" className="form-control" id="expirationDateMonth" placeholder="Mes"
+                    aria-describedby="expirationDate-feedback" required />
+                  <input type="number" className="form-control" id="expirationDateYear" placeholder="Año"
+                    aria-describedby="expirationDate-feedback" required />
+                  <div id="expirationDate-feedback" className="invalid-feedback">
+                    Por favor complete la fecha de vencimiento
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-4 mb-3">
+                <label htmlFor="cardNumber" className="form-label" data-tip="Código CVV de tres dígitos en el reverso de su tarjeta">
+                  <span className="me-1">CVV</span>
+                  <i className="fa fa-question-circle"></i>
+                </label>
+                <input type="text" className="form-control" id="cvvNumber" placeholder="CVV"
+                  aria-describedby="cvvNumber-feedback" required />
+                <div id="cvvNumber-feedback" className="invalid-feedback">
+                  Por favor ingrese el número de cvv
+                </div>
+                <ReactTooltip place="top" type="dark" effect="solid" />
+              </div>
+
             </div>
-
-          </form>
-
-        </div>
-        <div className="col-3 bg-light border my-3 rounded">
-          <h2>Resumen del carro</h2>
-          <div className="border-bottom pb-3 mb-3 border-dark">
-            <span>Precio final: 4733,09 ARS</span>
           </div>
-          <span>TOTAL: $3000</span>
-          <div className="my-2">
-            <Button>Completar orden</Button>
-          </div>
-        </div>
 
-        <div className="col-12 text-center">
-          asd
-        </div>
+          <div className="col-3 bg-light border my-3 rounded">
+            <h2>Resumen del carro</h2>
+            <div className="border-bottom pb-3 mb-3 border-dark">
+              <span>Precio final: 4733,09 ARS</span>
+            </div>
+            <span>TOTAL: $3000</span>
+            <div className="my-2">
+              <Button type="submit">Confirmar pago</Button>
+            </div>
+          </div>
+
+          <div className="col-12 border-top mb-5"></div>
+        </form>
 
       </div>
     </div >
