@@ -41,7 +41,7 @@ function CartSummary() {
 
             <div className="row g-3">
 
-              <div className="col-12">
+              <div className="col-12 pt-3">
                 <label htmlFor="cardOwnerName" className="form-label">Titular</label>
                 <input type="text" className="form-control" id="cardOwnerName" placeholder="Titular de la tarjeta"
                   aria-describedby="cardOwnerName-feedback" required />
@@ -96,13 +96,21 @@ function CartSummary() {
           </div>
 
           <div className="col-3 bg-light border my-3 rounded">
-            <h2>Resumen del carro</h2>
-            <div className="border-bottom pb-3 mb-3 border-dark">
-              <span>Precio final: 4733,09 ARS</span>
-            </div>
-            <span>TOTAL: $3000</span>
-            <div className="my-2">
-              <Button type="submit">Confirmar pago</Button>
+            <div className="row align-items-center justify-content-center h-100">
+              <div className="col-12">
+                <h4 className="pt-3 pb-2">Resumen del carro</h4>
+                <div className="border-bottom pb-3 border-dark d-flex justify-content-between">
+                  <div>Precio final:</div>
+                  <div>4733,09 ARS</div>
+                </div>
+                <div className="pt-3 d-flex justify-content-between">
+                  <div className="fw-bold">TOTAL:</div>
+                  <div>$3000</div>
+                </div>
+                <div className="py-3">
+                  <Button btnClass="btn-green text-white w-100" type="submit">Confirmar pago</Button>
+                </div>
+              </div>
             </div>
           </div>
 
