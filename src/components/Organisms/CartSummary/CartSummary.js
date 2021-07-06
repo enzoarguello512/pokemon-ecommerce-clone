@@ -1,16 +1,54 @@
-import React, {useContext, useEffect} from "react"
+import React, {useContext, useEffect, useState} from "react"
 import CartItem from "../CartItem/CartItem";
 import {CartContext} from './../../Contexts/CartContext/CartContext';
 import {Link} from 'react-router-dom';
 import Button from "../../Atoms/Button/Button";
 import H1 from "../../Atoms/H1/H1";
 import ReactTooltip from 'react-tooltip';
+import {getFirestore, getFirestoreDate} from './../../../firebase';
 
 require('./CartSummary.css')
 
 function CartSummary() {
 
   const ctx = useContext(CartContext);
+  const [loading, setLoading] = useState(false);
+
+  //input's state
+  const [cardOwnerNameState, setCardOwnerNameState] = useState("");
+  const [cardNumberState, setCardNumberState] = useState("");
+  const [expirationDateMonthState, setExpirationDateMonthState] = useState("");
+  const [expirationDateYearState, setExpirationDateYearState] = useState("");
+  const [cvvNumberState, setCvvNumberState] = useState("");
+
+  const completeOrder = () => {
+
+    if (cardOwnerNameState
+      && cardNumberState
+      && expirationDateMonthState
+      && expirationDateYearState
+      && cvvNumberState) {
+
+      const db = getFirestore();
+      const orders = db.collection("orders");
+
+      setLoading(true)
+
+      const actualDate = getFirestoreDate();
+
+      const newOrder = {
+        items: ctx.cart,
+        date: actualDate,
+        total: ctx.cart.reduce((acc, elem) => acc + elem.price * elem.quantityOnCart, 0),
+
+      }
+
+      orders.add(newOrder)
+        .then(({id}) => console.log(id))
+        .catch(err => console.log(err))
+    }
+
+  }
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -48,7 +86,7 @@ function CartSummary() {
         {ctx.cart && ctx.cart.length > 0 &&
           <>
 
-            <form className="needs-validation row justify-content-evenly py-5 border-top" noValidate>
+            <form className="needs-validation row justify-content-evenly py-5 border-top" noValidate onSubmit={(e) => e.preventDefault()}>
               <div className="col-8 bg-light border rounded">
 
                 <div className="row g-3">
@@ -56,7 +94,7 @@ function CartSummary() {
                   <div className="col-12 pt-3">
                     <label htmlFor="cardOwnerName" className="form-label">Titular</label>
                     <input type="text" className="form-control" id="cardOwnerName" placeholder="Titular de la tarjeta"
-                      aria-describedby="cardOwnerName-feedback" required />
+                      aria-describedby="cardOwnerName-feedback" required onChange={(e) => setCardOwnerNameState(e.target.value)} />
                     <div id="cardOwnerName-feedback" className="invalid-feedback">
                       Ingrese el nombre del propietario de la tarjeta
                     </div>
@@ -66,7 +104,7 @@ function CartSummary() {
                     <label htmlFor="cardNumber" className="form-label">Número de tarjeta</label>
                     <div className="input-group">
                       <input type="text" className="form-control" id="cardNumber" placeholder="Número valido de tarjeta"
-                        aria-describedby="cardNumber-feedback" required />
+                        aria-describedby="cardNumber-feedback" required onChange={(e) => setCardNumberState(e.target.value)} />
                       <span className="input-group-text text-muted fs-5">
                         <i className="fab fa-cc-visa mx-1 fa-fw"></i>
                         <i className="fab fa-cc-mastercard mx-1 fa-fw"></i>
@@ -82,9 +120,9 @@ function CartSummary() {
                     <label htmlFor="expirationDateMonth" className="form-label">Fecha de vencimiento</label>
                     <div className="input-group">
                       <input type="number" className="form-control" id="expirationDateMonth" placeholder="Mes"
-                        aria-describedby="expirationDate-feedback" required />
+                        aria-describedby="expirationDate-feedback" required onChange={(e) => setExpirationDateMonthState(e.target.value)} />
                       <input type="number" className="form-control" id="expirationDateYear" placeholder="Año"
-                        aria-describedby="expirationDate-feedback" required />
+                        aria-describedby="expirationDate-feedback" required onChange={(e) => setExpirationDateYearState(e.target.value)} />
                       <div id="expirationDate-feedback" className="invalid-feedback">
                         Por favor complete la fecha de vencimiento
                       </div>
@@ -97,7 +135,7 @@ function CartSummary() {
                       <i className="fa fa-question-circle"></i>
                     </label>
                     <input type="text" className="form-control" id="cvvNumber" placeholder="CVV"
-                      aria-describedby="cvvNumber-feedback" required />
+                      aria-describedby="cvvNumber-feedback" required onChange={(e) => setCvvNumberState(e.target.value)} />
                     <div id="cvvNumber-feedback" className="invalid-feedback">
                       Por favor ingrese el número de cvv
                     </div>
@@ -120,13 +158,30 @@ function CartSummary() {
                       <div>{`${ctx.cart.reduce((acc, elem) => acc + elem.price * elem.quantityOnCart, 0)}.00 $`}</div>
                     </div>
                     <div className="py-3 d-grid gap-2">
-                      <Button btnClass="btn-primary bg-gradient" onClick={() => ctx.clearCart()}>
-                        <span className="pe-2">
-                          <i className="far fa-times-circle"></i>
-                        </span>
-                        Limpiar carrito
+                      <Button btnClass="btn-primary bg-gradient d-flex" onClick={() => ctx.clearCart()}>
+                        <div>
+                          <i className="far fa-times-circle fa-fw"></i>
+                        </div>
+                        <div className="flex-grow-1">Limpiar carrito</div>
                       </Button>
-                      <Button btnClass="btn-green text-white" type="submit">Confirmar pago</Button>
+                      <Button btnClass="btn-green text-white text-center" type="submit" onClick={e => completeOrder(e)}>
+                        {
+                          !loading
+                            ? (
+                              <div className="d-flex">
+                                <div>
+                                  <i className="fas fa-lock fa-fw"></i>
+                                </div>
+                                <div className="flex-grow-1">Confirmar pago</div>
+                              </div>
+                            )
+                            : (
+                              <div className="spinner-border text-light" role="status">
+                                <span className="visually-hidden">Loading...</span>
+                              </div>
+                            )
+                        }
+                      </Button>
                     </div>
                   </div>
                 </div>
