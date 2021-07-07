@@ -37,14 +37,23 @@ function CartSummary() {
       const actualDate = getFirestoreDate();
 
       const newOrder = {
+        buyer: {
+          cardOwnerName: cardOwnerNameState,
+          cardNumber: cardNumberState,
+          expirationDateMonth: expirationDateMonthState,
+          expirationDateYear: expirationDateYearState,
+          cvvNumber: cvvNumberState,
+        },
         items: ctx.cart,
         date: actualDate,
         total: ctx.cart.reduce((acc, elem) => acc + elem.price * elem.quantityOnCart, 0),
-
       }
 
       orders.add(newOrder)
-        .then(({id}) => console.log(id))
+        .then(({id}) => {
+          window.location.href = `${window.location.href}/${id}`;
+          setLoading(false);
+        })
         .catch(err => console.log(err))
     }
 

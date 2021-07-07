@@ -98,6 +98,11 @@ input[type=number] {
   background-color: teal;
   min-height: 1140px;
 }
+.main-sections__order-detail {
+  min-height: 500px;
+  max-width: 1024px;
+  margin: auto;
+}
 
 
 
