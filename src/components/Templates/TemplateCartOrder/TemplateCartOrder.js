@@ -7,9 +7,7 @@ function TemplateCartOrder({header, order, footer}) {
   return <>
     {header}
     <main className="main-sections">
-      <section className="container-xxl white-striped-background">
-        <div className="main-sections__order-detail">{order}</div>
-      </section>
+      <section className="container-xxl">{order}</section>
     </main>
     <footer className="main-footer">{footer}</footer>
   </>
