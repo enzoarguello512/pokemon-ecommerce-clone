@@ -29,3 +29,6 @@ export function getFirestore() {
 export function getFirestoreDate() {
   return firebase.firestore.Timestamp.fromDate(new Date());
 }
+export function convertTimestamp(firebaseDate) {
+  return firebaseDate.toDate();
+}

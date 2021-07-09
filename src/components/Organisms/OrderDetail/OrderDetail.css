@@ -1,0 +1,29 @@
+.order-table__date {
+  width: 45%;
+}
+.order-table__min-data {
+  width: 10%;
+}
+.order-table__order-id {
+  width: 25%;
+}
+
+/*items*/
+.order-table__item-id {
+  width: 10%;
+}
+.order-table__item-name {
+  width: 15%;
+}
+.order-table__item-desc {
+  width: 40%;
+}
+.order-table__item-qty {
+  width: 10%;
+}
+.order-table__item-price {
+  width: 10%;
+}
+.order-table__item-total-price {
+  widows: 15%;
+}

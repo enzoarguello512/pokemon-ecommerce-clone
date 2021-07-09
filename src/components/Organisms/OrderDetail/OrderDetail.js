@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react"
 import PropTypes from 'prop-types';
 import H1 from './../../Atoms/H1/H1';
 import Button from "./../../Atoms/Button/Button";
-import {getFirestore} from './../../../firebase';
+import {getFirestore, convertTimestamp} from './../../../firebase';
 
 require('./OrderDetail.css')
 
@@ -11,16 +11,17 @@ const db = getFirestore();
 function OrderDetail({match}) {
 
   const [order, setOrder] = useState({});
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
 
     const getOrder = async (id) => {
       try {
         const response = await db.collection("orders").doc(id).get();
-        //const responseData = response.docs.map(doc => doc.data());
-        //const pokemon = responseData.find(elem => elem.id === id);
-        console.log(response);
-        //setOrder(pokemon);
+        const responseData = response.data();
+        const fullData = {...responseData, 'id': response.id};
+        setOrder(fullData);
+        setLoading(false);
       }
       catch (error) {
         console.log(error);
@@ -30,70 +31,78 @@ function OrderDetail({match}) {
     getOrder(match.params.id);
   }, [match.params.id])
 
+  console.log(order);
   return (
     <div className="my-5">
       <div className="text-center bg-white border rounded">
-        <H1 titleClass="border-bottom m-0 py-2">Order detail</H1>
+        <H1 titleClass="border-bottom m-0 py-2">Detalle de la orden</H1>
         <div className="table-responsive">
-          <table class="table m-0">
+          <table className="table m-0 order-table">
             <thead className="table-light">
               <tr>
-                <th scope="col">
-                  <div className="text-secondary">Order Placed</div>
-                  <div className="pt-2">28-AUG-2017</div>
+                <th className="order-table__date" scope="col">
+                  <div className="text-secondary">Pedido realizado</div>
+                  <div className="pt-2">{!loading ? convertTimestamp(order.date).toString() : 'loading'}</div>
                 </th>
-                <th scope="col">
-                  <div className="text-secondary">Status</div>
-                  <div className="pt-2">Closed</div>
+                <th className="order-table__min-data" scope="col">
+                  <div className="text-secondary">Estado</div>
+                  <div className="pt-2">Cerrado</div>
                 </th>
-                <th scope="col">
+                <th className="order-table__min-data" scope="col">
                   <div className="text-secondary">Total</div>
-                  <div className="pt-2">$2000</div>
+                  <div className="pt-2">{`${order.total} $`}</div>
                 </th>
-                <th scope="col">
-                  <div className="text-secondary">Ship to</div>
-                  <div className="pt-2">Unknown</div>
+                <th className="order-table__min-data" scope="col">
+                  <div className="text-secondary">Enviar a</div>
+                  <div className="pt-2">Desconocido</div>
                 </th>
-                <th scope="col">
-                  <div className="text-secondary">Order #</div>
-                  <div className="pt-2">55239593</div>
+                <th className="order-table__order-id" scope="col">
+                  <div className="text-secondary">Orden #</div>
+                  <div className="pt-2">{order.id}</div>
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td colspan="5">
+                <td colSpan="5">
                   <div className="table-responsive">
-                    <table class="table m-0">
+                    <table className="table m-0">
                       <thead>
                         <tr>
                           <th scope="col">Item #</th>
-                          <th scope="col">Name</th>
-                          <th scope="col">Description</th>
-                          <th scope="col">Quantity</th>
-                          <th scope="col">Price</th>
+                          <th scope="col">Nombre</th>
+                          <th scope="col">Descripcion</th>
+                          <th scope="col">Cantidad</th>
+                          <th scope="col">Precio</th>
                           <th scope="col">Total</th>
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <th scope="row">id</th>
-                          <td>Name</td>
-                          <td>Description</td>
-                          <td>Quantity</td>
-                          <td>Price</td>
-                          <td>Total</td>
-                        </tr>
+                        {
+                          !loading
+                            ? order.items.map(item =>
+                              <tr key={item.id}>
+                                <th className="order-table__item-id" scope="row">{item.id}</th>
+                                <td className="order-table__item-name">{item.name}</td>
+                                <td className="order-table__item-desc">{item.description}</td>
+                                <td className="order-table__item-qty">{item.quantityOnCart}</td>
+                                <td className="order-table__item-price">{`${item.price} $`}</td>
+                                <td className="order-table__item-total-price">{`${item.price * item.quantityOnCart} $`}</td>
+                              </tr>)
+                            : <tr className="text-center">
+                              <th colSpan="6" scope="col">Loading</th>
+                            </tr>
+                        }
                       </tbody>
                     </table>
                   </div>
                 </td>
               </tr>
             </tbody>
-            <tfoot class="table-light">
+            <tfoot className="table-light">
               <tr>
-                <td className="py-3" colspan="5">
-                  <Button><i class="fas fa-certificate"></i> View orders</Button>
+                <td className="py-3" colSpan="5">
+                  <Button><i className="fas fa-certificate"></i> View orders</Button>
                 </td>
               </tr>
             </tfoot>
