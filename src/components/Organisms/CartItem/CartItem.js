@@ -56,7 +56,7 @@ function CartItem({item}) {
       </div>
       <div className="col-3">
         <div className="d-flex flex-column justify-content-center h-100">
-          <label className="text-center">Cantidad:</label>
+          <label className="text-center">{`Cantidad: (max ${item.stock})`}</label>
           <div className="input-group justify-content-center">
             <Button btnClass="btn-red text-white border" onClick={() => countHandler('substract')}>-</Button>
             <Input inputClass="form-control text-center border" ariaLabel="item quantity" value={count} onChange={e => {countInput(e.target.value)}} />

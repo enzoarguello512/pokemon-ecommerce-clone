@@ -37,7 +37,7 @@ function ItemCount({price, stock, initial, onAdd}) {
     </div>
     <div className="d-grid gap-3 mt-4">
       <Button onClick={() => onAdd(count)}>Agregar al carrito</Button>
-      <Link to="/cart" className="btn btn-primary bg-gradient px-4">Comprar ahora</Link>
+      <Link to="/cart" onClick={() => onAdd(count)} className="btn btn-primary bg-gradient px-4">Comprar ahora</Link>
     </div>
   </>
 }

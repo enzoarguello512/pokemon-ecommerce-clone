@@ -31,7 +31,6 @@ function OrderDetail({match}) {
     getOrder(match.params.id);
   }, [match.params.id])
 
-  console.log(order);
   return (
     <div className="my-5">
       <div className="text-center bg-white border rounded">
@@ -112,10 +111,6 @@ function OrderDetail({match}) {
     </div>
   )
 }
-
-//<h3>Titular:</h3>
-//<h3>Numero de tarjeta:</h3>
-//<h3>Articulos:</h3>
 
 OrderDetail.propTypes = {
   match: PropTypes.object.isRequired,

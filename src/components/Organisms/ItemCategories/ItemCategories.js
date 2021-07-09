@@ -39,6 +39,18 @@ function ItemCategories({match}) {
       case "type-lightning":
         setCategory(["data-lightning"])
         break;
+      case "type-fire":
+        setCategory(["data-fire"])
+        break;
+      case "type-dragon":
+        setCategory(["data-dragon"])
+        break;
+      case "type-fairy":
+        setCategory(["data-fairy"])
+        break;
+      case "type-aqua":
+        setCategory(["data-aqua"])
+        break;
       default:
         setCategory([])
         break;
@@ -63,6 +75,38 @@ function ItemCategories({match}) {
             <Button btnClass="btn-red text-white d-flex flex-column justify-content-center align-items-center">
               <Image imgClass="categories__img--medium" src="/icons/pikachu-2.svg" alt="Tipo rayo icono" />
               <span>Tipo rayo</span>
+            </Button>
+          </Link>
+        </div>
+        <div>
+          <Link to="/gamecards/type-fire" className="text-decoration-none">
+            <Button btnClass="btn-red text-white d-flex flex-column justify-content-center align-items-center">
+              <Image imgClass="categories__img--medium" src="/icons/charmander.svg" alt="Tipo fuego icono" />
+              <span>Tipo Fuego</span>
+            </Button>
+          </Link>
+        </div>
+        <div>
+          <Link to="/gamecards/type-dragon" className="text-decoration-none">
+            <Button btnClass="btn-red text-white d-flex flex-column justify-content-center align-items-center">
+              <Image imgClass="categories__img--medium" src="/icons/dratini.svg" alt="Tipo dragon icono" />
+              <span>Tipo Dragon</span>
+            </Button>
+          </Link>
+        </div>
+        <div>
+          <Link to="/gamecards/type-fairy" className="text-decoration-none">
+            <Button btnClass="btn-red text-white d-flex flex-column justify-content-center align-items-center">
+              <Image imgClass="categories__img--medium" src="/icons/jigglypuff.svg" alt="Tipo hada icono" />
+              <span>Tipo Hada</span>
+            </Button>
+          </Link>
+        </div>
+        <div>
+          <Link to="/gamecards/type-aqua" className="text-decoration-none">
+            <Button btnClass="btn-red text-white d-flex flex-column justify-content-center align-items-center">
+              <Image imgClass="categories__img--medium" src="/icons/squirtle.svg" alt="Tipo agua icono" />
+              <span>Tipo agua</span>
             </Button>
           </Link>
         </div>
