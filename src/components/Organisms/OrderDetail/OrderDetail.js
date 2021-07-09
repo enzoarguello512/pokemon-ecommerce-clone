@@ -1,11 +1,35 @@
-import React from "react"
+import React, {useEffect, useState} from "react"
 import PropTypes from 'prop-types';
 import H1 from './../../Atoms/H1/H1';
 import Button from "./../../Atoms/Button/Button";
+import {getFirestore} from './../../../firebase';
 
 require('./OrderDetail.css')
 
+const db = getFirestore();
+
 function OrderDetail({match}) {
+
+  const [order, setOrder] = useState({});
+
+  useEffect(() => {
+
+    const getOrder = async (id) => {
+      try {
+        const response = await db.collection("orders").doc(id).get();
+        //const responseData = response.docs.map(doc => doc.data());
+        //const pokemon = responseData.find(elem => elem.id === id);
+        console.log(response);
+        //setOrder(pokemon);
+      }
+      catch (error) {
+        console.log(error);
+      }
+    }
+
+    getOrder(match.params.id);
+  }, [match.params.id])
+
   return (
     <div className="my-5">
       <div className="text-center bg-white border rounded">
