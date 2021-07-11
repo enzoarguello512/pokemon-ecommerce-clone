@@ -1,0 +1,8 @@
+.list-item {
+  background-color: beige;
+  border: 1px orange solid;
+  border-radius: 12px;
+}
+.list-item__link {
+  color: #525252;
+}

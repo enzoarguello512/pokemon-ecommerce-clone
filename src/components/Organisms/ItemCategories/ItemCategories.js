@@ -118,17 +118,37 @@ function ItemCategories({match}) {
       <div className="col-12">
         <h3>Búsqueda custom</h3>
       </div>
-      <div className="col-12">
+      <div className="col-6">
         <InputCheckbox id="typeGrass" ariaLabel="Tipo planta" onChange={e => e.target.checked
           ? addToList("data-grass")
           : removeFromList("data-grass")}>Tipo planta</InputCheckbox>
       </div>
-      <div className="col-12">
+      <div className="col-6">
         <InputCheckbox id="typeLightning" ariaLabel="Tipo rayo" onChange={e => e.target.checked
           ? addToList("data-lightning")
           : removeFromList("data-lightning")}>Tipo rayo</InputCheckbox>
       </div>
-      <div className="col-12 text-center">
+      <div className="col-6">
+        <InputCheckbox id="typeFire" ariaLabel="Tipo fuego" onChange={e => e.target.checked
+          ? addToList("data-fire")
+          : removeFromList("data-fire")}>Tipo fuego</InputCheckbox>
+      </div>
+      <div className="col-6">
+        <InputCheckbox id="typeDragon" ariaLabel="Tipo dragon" onChange={e => e.target.checked
+          ? addToList("data-dragon")
+          : removeFromList("data-dragon")}>Tipo dragon</InputCheckbox>
+      </div>
+      <div className="col-6">
+        <InputCheckbox id="typeFairy" ariaLabel="Tipo hada" onChange={e => e.target.checked
+          ? addToList("data-fairy")
+          : removeFromList("data-fairy")}>Tipo hada</InputCheckbox>
+      </div>
+      <div className="col-6">
+        <InputCheckbox id="typeAqua" ariaLabel="Tipo agua" onChange={e => e.target.checked
+          ? addToList("data-aqua")
+          : removeFromList("data-aqua")}>Tipo agua</InputCheckbox>
+      </div>
+      <div className="col-12 text-center py-4">
         <Button btnClass="btn-orange text-white w-25" type="submit">
           <i className="fas fa-search"></i>
           <span className="ms-2">Buscar</span>

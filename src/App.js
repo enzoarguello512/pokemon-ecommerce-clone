@@ -35,6 +35,14 @@ function App() {
             <Route path="/gamecards/type-lightning/:id" component={GameCardId} />
             <Route path="/gamecards/type-grass" exact component={GameCards} />
             <Route path="/gamecards/type-grass/:id" component={GameCardId} />
+            <Route path="/gamecards/type-fire" exact component={GameCards} />
+            <Route path="/gamecards/type-fire/:id" component={GameCardId} />
+            <Route path="/gamecards/type-dragon" exact component={GameCards} />
+            <Route path="/gamecards/type-dragon/:id" component={GameCardId} />
+            <Route path="/gamecards/type-fairy" exact component={GameCards} />
+            <Route path="/gamecards/type-fairy/:id" component={GameCardId} />
+            <Route path="/gamecards/type-aqua" exact component={GameCards} />
+            <Route path="/gamecards/type-aqua/:id" component={GameCardId} />
           </CategoryProvider>
         </Switch>
       </Router>
