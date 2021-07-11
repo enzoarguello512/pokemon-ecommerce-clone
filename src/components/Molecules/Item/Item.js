@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 function Item({item}) {
   return (
     <li className="text-center" style={{width: '23.82813%'}}>
-      <Link to={item.url}>
+      <Link to={`/gamecards/${item.url.split('/')[2]}/${item.id}`}>
         <h5 className="text-dark fw-bold text-decoration-underline">{item.name}</h5>
         <Image imgClass={item.imgClass} src={item.imgSrc} alt={item.imgAlt} />
       </Link>

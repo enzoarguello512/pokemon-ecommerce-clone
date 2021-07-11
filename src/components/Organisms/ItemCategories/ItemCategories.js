@@ -82,7 +82,7 @@ function ItemCategories({match}) {
           <Link to="/gamecards/type-fire" className="text-decoration-none">
             <Button btnClass="btn-red text-white d-flex flex-column justify-content-center align-items-center">
               <Image imgClass="categories__img--medium" src="/icons/charmander.svg" alt="Tipo fuego icono" />
-              <span>Tipo Fuego</span>
+              <span>Tipo fuego</span>
             </Button>
           </Link>
         </div>
@@ -90,7 +90,7 @@ function ItemCategories({match}) {
           <Link to="/gamecards/type-dragon" className="text-decoration-none">
             <Button btnClass="btn-red text-white d-flex flex-column justify-content-center align-items-center">
               <Image imgClass="categories__img--medium" src="/icons/dratini.svg" alt="Tipo dragon icono" />
-              <span>Tipo Dragon</span>
+              <span>Tipo dragon</span>
             </Button>
           </Link>
         </div>
@@ -98,7 +98,7 @@ function ItemCategories({match}) {
           <Link to="/gamecards/type-fairy" className="text-decoration-none">
             <Button btnClass="btn-red text-white d-flex flex-column justify-content-center align-items-center">
               <Image imgClass="categories__img--medium" src="/icons/jigglypuff.svg" alt="Tipo hada icono" />
-              <span>Tipo Hada</span>
+              <span>Tipo hada</span>
             </Button>
           </Link>
         </div>

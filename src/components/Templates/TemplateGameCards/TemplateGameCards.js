@@ -20,18 +20,7 @@ function TemplateGameCards({header, mainTitle, filters, filteredItems, slider, f
       <section className="container-xxl white-striped-background">
         {
           activeCategories && activeCategories.length > 0 &&
-          <div className="main-sections__filteredItems">
-            {filteredItems}
-
-            <div className="text-center">
-              <div className="input-group mt-5">
-                <span className="input-group-text">$</span>
-                <span className="input-group-text">0.00</span>
-                <span className="input-group-text">0.00</span>
-              </div>
-            </div>
-
-          </div>
+          <div className="main-sections__filteredItems">{filteredItems}</div>
         }
       </section>
       <section className="container-xxl main-sections__slider">{slider}</section>
