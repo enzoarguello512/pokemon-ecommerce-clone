@@ -62,7 +62,9 @@ input[type=number] {
 }
 .main-sections__card-detail{
   min-height: 640px;
-  background-color: ivory;
+  max-width: 1024px;
+  margin: auto;
+  background-color: white;
 }
 .main-sections__filters {
   min-height: 700px;

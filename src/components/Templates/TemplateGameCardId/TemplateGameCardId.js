@@ -7,7 +7,11 @@ function TemplateGameCardId({header, cardDetail, slider, footer}) {
   return <>
     {header}
     <main className="main-sections">
-      <section className="container-xxl main-sections__card-detail">{cardDetail}</section>
+      <section className="container-xxl white-striped-background">
+        <div className="main-sections__card-detail">
+          {cardDetail}
+        </div>
+      </section>
       <section className="container-xxl main-sections__slider">{slider}</section>
     </main>
     <footer className="main-footer">{footer}</footer>

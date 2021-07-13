@@ -32,7 +32,9 @@ function ItemDetailContainer({match}) {
   }, [match])
 
   return <>
-    {Object.values(item).length > 0 ? <ItemDetail item={item} /> : <H5 titleClass='text-center'>Loading</H5>}
+    <div className="">
+      {Object.values(item).length > 0 ? <ItemDetail item={item} /> : <H5 titleClass='text-center'>Loading</H5>}
+    </div>
   </>
 }
 

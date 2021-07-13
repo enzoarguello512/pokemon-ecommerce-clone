@@ -4,10 +4,31 @@
   color: #F2F2F2;
   padding: 0.4em 0.6em;
 }
-.item-description__item-basic-info {
+.item-description__pokemon-type {
   background: #F2F2F2;
   color: #313131;
   clear: both;
   padding: 1.2em;
   overflow: hidden;
+}
+.item-description__basic-info {
+  background: white;
+  color: #313131;
+  clear: both;
+  padding: 1.2em;
+  overflow: hidden;
+}
+.item-description__card-series {
+  background: #F2F2F2;
+  color: #313131;
+  clear: both;
+  padding: 1.2em 1.2em .8em;
+  overflow: hidden;
+}
+.series {
+  background-image: url(https://assets.pokemon.com/assets/cms-es-xl/img/tcg/expansion-symbols/_40x40/black-star-promo.png);
+  display: inline-block;
+  margin-left: .8em;
+  width: 40px;
+  height: 40px;
 }
