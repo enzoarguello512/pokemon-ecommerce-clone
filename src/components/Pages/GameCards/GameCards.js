@@ -6,6 +6,7 @@ import ItemCategories from '../../Organisms/ItemCategories/ItemCategories';
 import {categoriesContext} from './../../Contexts/GameCards/GameCards';
 import H1 from './../../Atoms/H1/H1'
 import Footer from '../../Organisms/Footer/Footer';
+import CardSlider from './../../Molecules/CardSlider/CardSlider';
 
 function GameCards({match}) {
 
@@ -17,7 +18,7 @@ function GameCards({match}) {
       mainTitle={<H1 titleClass="text-secondary">Base de datos de cartas de JCC</H1>}
       filters={<ItemCategories match={match} />}
       filteredItems={<ItemListContainer categories={activeCategories} />}
-      slider={'slider'}
+      slider={<CardSlider />}
       footer={<Footer />}
     />
   )
