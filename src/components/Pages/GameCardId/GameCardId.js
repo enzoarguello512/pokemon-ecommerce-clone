@@ -3,13 +3,14 @@ import TemplateGameCardId from "../../Templates/TemplateGameCardId/TemplateGameC
 import Navbar from './../../Organisms/Navbar/Navbar';
 import ItemDetailContainer from './../../Organisms/ItemDetailContainer/ItemDetailContainer';
 import Footer from '../../Organisms/Footer/Footer';
+import CardSlider from './../../Organisms/CardSlider/CardSlider';
 
 function GameCardId({match}) {
   return (
     <TemplateGameCardId
       header={<Navbar />}
       cardDetail={<ItemDetailContainer match={match} />}
-      slider={'slider'}
+      slider={<CardSlider />}
       footer={<Footer />}
     />
   )

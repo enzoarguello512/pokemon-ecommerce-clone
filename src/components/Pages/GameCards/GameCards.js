@@ -6,7 +6,7 @@ import ItemCategories from '../../Organisms/ItemCategories/ItemCategories';
 import {categoriesContext} from './../../Contexts/GameCards/GameCards';
 import H1 from './../../Atoms/H1/H1'
 import Footer from '../../Organisms/Footer/Footer';
-import CardSlider from './../../Molecules/CardSlider/CardSlider';
+import CardSlider from './../../Organisms/CardSlider/CardSlider';
 
 function GameCards({match}) {
 
