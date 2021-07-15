@@ -17,12 +17,12 @@ function TemplateGameCards({header, mainTitle, filters, filteredItems, slider, f
       <section className="container-xxl bg-darker-1">
         <div className="main-sections__filters">{filters}</div>
       </section>
-      <section className="container-xxl white-striped-background">
-        {
-          activeCategories && activeCategories.length > 0 &&
-          <div className="main-sections__filteredItems">{filteredItems}</div>
-        }
-      </section>
+      {
+        activeCategories && activeCategories.length > 0 &&
+        <section className="container-xxl white-striped-background pb-5">
+          <div className="main-sections__filteredItems py-5">{filteredItems}</div>
+        </section>
+      }
       <section className="container-xxl main-sections__slider">{slider}</section>
     </main>
     <footer className="main-footer">{footer}</footer>

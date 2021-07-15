@@ -42,7 +42,7 @@ input[type=number] {
   /*background-color: lime;*/
 }
 .main-sections__slider {
-  min-height: 600px;
+  min-height: 630px;
   background-color: rgb(49, 49, 49);
 }
 .main-sections__title {
@@ -74,7 +74,6 @@ input[type=number] {
   color: white;
 }
 .main-sections__filteredItems {
-  min-height: 1300px;
   max-width: 1024px;
   margin: auto;
   padding: 30px 20px;
@@ -112,6 +111,9 @@ input[type=number] {
 .min-h-300px {
   min-height: 300px !important;
 }
+.h-40px {
+  height: 40px !important;
+}
 .h-100px {
   height: 100px !important;
 }
@@ -145,10 +147,17 @@ input[type=number] {
   background-color: #313131;
 }
 
-.center .slick-current {
+.slick-slide .center__link {
+ pointer-events: none;
+ cursor: default;
+}
+.slick-slide.slick-current .center__link {
   background-color: #232323;
   border-radius: .25rem!important;
+  cursor: pointer;
+  pointer-events: auto;
 }
+
 .slick-slide .center__desc {
   display: none;
 }
