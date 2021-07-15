@@ -29,7 +29,17 @@ function ItemDetail({item}) {
           </div>
           <div className="text-center">
             <div className="mt-5 mb-2">
-              <a href={`https://www.pokemon.com/el/pokedex/${item.name.toLowerCase().replace('-ex', '')}`} className="btn px-4 bg-gradient btn-orange text-white">{`Buscar a ${item.name} en la Pokédex`}</a>
+              <a
+                href={`https://www.pokemon.com/el/pokedex/${item.name.toLowerCase()
+                  .replace('-ex', '')
+                  .replace('-gx', '')
+                  .replace('m ', '')
+                  .split(' ').shift()
+                  }`}
+
+                className="btn px-4 bg-gradient btn-orange text-white">
+                {`Buscar a ${item.name} en la Pokédex`}
+              </a>
             </div>
             <Link to="/gamecards" className="btn px-4 bg-gradient btn-orange text-white">Explorar más cartas</Link>
           </div>

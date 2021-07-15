@@ -43,7 +43,7 @@ input[type=number] {
 }
 .main-sections__slider {
   min-height: 600px;
-  background-color: #424242;
+  background-color: rgb(49, 49, 49);
 }
 .main-sections__title {
   min-height: 80px;
@@ -118,6 +118,9 @@ input[type=number] {
 .h-200px {
   height: 200px !important;
 }
+.h-460px {
+  height: 460px !important;
+}
 
 
 
@@ -134,6 +137,7 @@ input[type=number] {
 
 
 
+
 .white-striped-background {
   background: #fff url(https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png);
 }
@@ -141,8 +145,36 @@ input[type=number] {
   background-color: #313131;
 }
 
-
-
-
-
-
+.center .slick-current {
+  background-color: #232323;
+  border-radius: .25rem!important;
+}
+.slick-slide .center__desc {
+  display: none;
+}
+.slick-slide.slick-current .center__desc {
+  display: block;
+}
+.slick-slide .center__image {
+  opacity: 0.4;
+}
+.slick-slide.slick-current .center__image {
+  opacity: 1;
+}
+.slick-prev, .slick-next {
+  background-color: #616161;
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 20px;
+  height: 100%;
+  padding: 0;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+}
