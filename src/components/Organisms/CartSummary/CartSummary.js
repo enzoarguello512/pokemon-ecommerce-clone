@@ -51,6 +51,7 @@ function CartSummary() {
 
       orders.add(newOrder)
         .then(({id}) => {
+          ctx.clearCart();
           window.location.href = `${window.location.href}/${id}`;
           setLoading(false);
         })
