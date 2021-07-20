@@ -11,6 +11,7 @@ import Apps from './components/Pages/Apps/Apps';
 import TvPokemon from './components/Pages/TvPokemon/TvPokemon';
 import PlayPokemon from './components/Pages/PlayPokemon/PlayPokemon';
 import CartOrder from './components/Pages/CartOrder/CartOrder';
+import Error404 from './components/Pages/Error404/Error404';
 
 //CONTEXTS
 import CategoryProvider from './components/Contexts/GameCards/GameCards';
@@ -43,6 +44,7 @@ function App() {
             <Route path="/gamecards/type-fairy/:id" component={GameCardId} />
             <Route path="/gamecards/type-aqua" exact component={GameCards} />
             <Route path="/gamecards/type-aqua/:id" component={GameCardId} />
+            <Route path="*" component={Error404} />
           </CategoryProvider>
         </Switch>
       </Router>
