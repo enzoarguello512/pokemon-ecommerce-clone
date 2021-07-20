@@ -21,16 +21,16 @@ import CartProvider from './components/Contexts/CartContext/CartContext';
 function App() {
   return <>
     <CartProvider>
-      <Router>
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/pokedex" exact component={Pokedex} />
-          <Route path="/cart" exact component={Cart} />
-          <Route path="/cart/:id" component={CartOrder} />
-          <Route path="/apps" exact component={Apps} />
-          <Route path="/tv-pokemon" exact component={TvPokemon} />
-          <Route path="/play-pokemon" exact component={PlayPokemon} />
-          <CategoryProvider>
+      <CategoryProvider>
+        <Router>
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/pokedex" exact component={Pokedex} />
+            <Route path="/cart" exact component={Cart} />
+            <Route path="/cart/:id" component={CartOrder} />
+            <Route path="/apps" exact component={Apps} />
+            <Route path="/tv-pokemon" exact component={TvPokemon} />
+            <Route path="/play-pokemon" exact component={PlayPokemon} />
             <Route path="/gamecards" exact component={GameCards} />
             <Route path="/gamecards/type-lightning" exact component={GameCards} />
             <Route path="/gamecards/type-lightning/:id" component={GameCardId} />
@@ -45,9 +45,9 @@ function App() {
             <Route path="/gamecards/type-aqua" exact component={GameCards} />
             <Route path="/gamecards/type-aqua/:id" component={GameCardId} />
             <Route path="*" component={Error404} />
-          </CategoryProvider>
-        </Switch>
-      </Router>
+          </Switch>
+        </Router>
+      </CategoryProvider>
     </CartProvider>
   </>
 }
