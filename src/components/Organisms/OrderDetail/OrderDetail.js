@@ -11,6 +11,7 @@ const db = getFirestore();
 function OrderDetail({match}) {
 
   const [order, setOrder] = useState({});
+  const [renderError, setRenderError] = useState(false)
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -19,8 +20,34 @@ function OrderDetail({match}) {
       try {
         const response = await db.collection("orders").doc(id).get();
         const responseData = response.data();
-        const fullData = {...responseData, 'id': response.id};
-        setOrder(fullData);
+        if (responseData !== undefined) {
+          const fullData = {...responseData, 'id': match.params.id};
+          fullData.date = convertTimestamp(fullData.date).toString();
+          setOrder(fullData);
+        } else {
+          setOrder({
+            'buyer': '-',
+            'date': '-',
+            'id': match.params.id,
+            'items': [
+              {
+                cardNumber: '-',
+                description: "-",
+                id: '-',
+                imgAlt: "-",
+                imgClass: "-",
+                imgSrc: "-",
+                name: "-",
+                price: 0,
+                quantityOnCart: 0,
+                stock: '-',
+                url: "-",
+              },
+            ],
+            'total': '-'
+          });
+          setRenderError(true)
+        }
         setLoading(false);
       }
       catch (error) {
@@ -31,17 +58,25 @@ function OrderDetail({match}) {
     getOrder(match.params.id);
   }, [match.params.id])
 
+  console.log(order);
+
   return (
     <div className="my-5">
       <div className="text-center bg-white border rounded">
         <H1 titleClass="border-bottom m-0 py-2">Detalle de la orden</H1>
+        {
+          renderError && !loading &&
+          <div className="bg-danger text-white py-2">
+            <h3>{`No se encontró una orden con el ID: ${order.id}`}</h3>
+          </div>
+        }
         <div className="table-responsive">
           <table className="table m-0 order-table">
             <thead className="table-light">
               <tr>
                 <th className="order-table__date" scope="col">
                   <div className="text-secondary">Pedido realizado</div>
-                  <div className="pt-2">{!loading ? convertTimestamp(order.date).toString() : 'loading'}</div>
+                  <div className="pt-2">{!loading ? order.date : 'Cargando...'}</div>
                 </th>
                 <th className="order-table__min-data" scope="col">
                   <div className="text-secondary">Estado</div>
@@ -49,7 +84,7 @@ function OrderDetail({match}) {
                 </th>
                 <th className="order-table__min-data" scope="col">
                   <div className="text-secondary">Total</div>
-                  <div className="pt-2">{`${order.total} $`}</div>
+                  <div className="pt-2">{!loading ? `${order.total} $` : 'Cargando...'}</div>
                 </th>
                 <th className="order-table__min-data" scope="col">
                   <div className="text-secondary">Enviar a</div>
@@ -57,7 +92,7 @@ function OrderDetail({match}) {
                 </th>
                 <th className="order-table__order-id" scope="col">
                   <div className="text-secondary">Orden #</div>
-                  <div className="pt-2">{order.id}</div>
+                  <div className="pt-2">{!loading ? order.id : 'Cargando...'}</div>
                 </th>
               </tr>
             </thead>
@@ -89,7 +124,7 @@ function OrderDetail({match}) {
                                 <td className="order-table__item-total-price">{`${item.price * item.quantityOnCart} $`}</td>
                               </tr>)
                             : <tr className="text-center">
-                              <th colSpan="6" scope="col">Loading</th>
+                              <th colSpan="6" scope="col">Cargando...</th>
                             </tr>
                         }
                       </tbody>
@@ -101,7 +136,7 @@ function OrderDetail({match}) {
             <tfoot className="table-light">
               <tr>
                 <td className="py-3" colSpan="5">
-                  <Button><i className="fas fa-certificate"></i> View orders</Button>
+                  <Button><i className="fas fa-certificate"></i> Ver ordenes</Button>
                 </td>
               </tr>
             </tfoot>
