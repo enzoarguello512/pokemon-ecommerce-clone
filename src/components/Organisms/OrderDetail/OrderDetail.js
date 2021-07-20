@@ -6,6 +6,30 @@ import {getFirestore, convertTimestamp} from './../../../firebase';
 
 require('./OrderDetail.css')
 
+const defaultOrder = id => {
+  return {
+    'buyer': '-',
+    'date': '-',
+    'id': id,
+    'items': [
+      {
+        cardNumber: '-',
+        description: "-",
+        id: '-',
+        imgAlt: "-",
+        imgClass: "-",
+        imgSrc: "-",
+        name: "-",
+        price: 0,
+        quantityOnCart: 0,
+        stock: '-',
+        url: "-",
+      },
+    ],
+    'total': '-'
+  }
+}
+
 const db = getFirestore();
 
 function OrderDetail({match}) {
@@ -25,40 +49,20 @@ function OrderDetail({match}) {
           fullData.date = convertTimestamp(fullData.date).toString();
           setOrder(fullData);
         } else {
-          setOrder({
-            'buyer': '-',
-            'date': '-',
-            'id': match.params.id,
-            'items': [
-              {
-                cardNumber: '-',
-                description: "-",
-                id: '-',
-                imgAlt: "-",
-                imgClass: "-",
-                imgSrc: "-",
-                name: "-",
-                price: 0,
-                quantityOnCart: 0,
-                stock: '-',
-                url: "-",
-              },
-            ],
-            'total': '-'
-          });
+          setOrder(defaultOrder(match.params.id));
           setRenderError(true)
         }
         setLoading(false);
       }
       catch (error) {
         console.log(error);
+        setOrder(defaultOrder(match.params.id));
+        setRenderError(true)
       }
     }
 
     getOrder(match.params.id);
   }, [match.params.id])
-
-  console.log(order);
 
   return (
     <div className="my-5">
