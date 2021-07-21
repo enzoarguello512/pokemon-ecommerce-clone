@@ -49,7 +49,7 @@ function CartItem({item}) {
       <div className="col-4">
         <div className="d-flex flex-column justify-content-center h-100">
           <h3 className="fw-bold text-truncate">
-            <Link to={item.url} className="text-dark text-decoration-none">{item.name}</Link>
+            <Link to={`/gamecards/${item.url.split('/')[2]}/${item.id}`} className="text-dark text-decoration-none">{item.name}</Link>
           </h3>
           <p className="text-truncate">{item.description}</p>
         </div>

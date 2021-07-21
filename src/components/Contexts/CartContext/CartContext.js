@@ -16,13 +16,12 @@ function CartProvider({children}) {
   }, [cart]);
 
   const addItem = (item) => {
-    //if the item already exists, it will be replaced/updated with the new values that come from the parameters
-    if (cart.includes(item)) {
-      cart[cart.indexOf(item)] = item;
+    const itemIndex = cart.findIndex(obj => obj.id === item.id);
+    if (itemIndex !== -1) {
+      cart[itemIndex].quantityOnCart += item.quantityOnCart;
       setCart(cart);
       setValue(cart);
     }
-    //otherwise, it will be added directly to the shopping cart
     else {
       setCart([...cart, item]);
       setValue([...cart, item]);

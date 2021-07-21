@@ -91,7 +91,7 @@ function ItemDetail({item}) {
             <span className="me-2">
               <i className="far fa-check-circle"></i>
             </span>
-            <strong className="me-auto fw-bold">{item.name}</strong>
+            <strong className="me-auto">{item.name}</strong>
             <small className="text-muted">Hace menos de 1 minuto</small>
             <button type="button" className="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
           </div>
