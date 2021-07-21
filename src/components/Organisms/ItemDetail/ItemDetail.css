@@ -32,3 +32,13 @@
   width: 40px;
   height: 40px;
 }
+.toast-container {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 1000;
+}
+
+.toast:not(.showing):not(.show) {
+  display: none !important;
+}

@@ -1,8 +1,11 @@
-import React, {useState, useContext} from "react"
+import React, {useState, useContext, useRef} from "react"
 import Image from "../../Atoms/Image/Image";
 import ItemCount from './../../Molecules/ItemCount/ItemCount';
 import {CartContext} from './../../Contexts/CartContext/CartContext';
 import {Link} from 'react-router-dom';
+import * as bootstrap from 'bootstrap';
+
+const {Toast} = bootstrap
 
 require('./ItemDetail.css');
 
@@ -10,9 +13,16 @@ function ItemDetail({item}) {
 
   const [quantity, setQuantity] = useState(1);
 
+  const toastRef = useRef();
+
   const ctx = useContext(CartContext);
 
   const onAdd = quantityToAdd => {
+    const myToast = toastRef.current
+    let bsToast = bootstrap.Toast.getInstance(myToast)
+    bsToast = new Toast(myToast, {autohide: true, animation: true, delay: 4500})
+    bsToast.show();
+
     setQuantity(quantityToAdd);
     item.quantityOnCart = quantityToAdd;
     ctx.addItem(item);
@@ -73,6 +83,23 @@ function ItemDetail({item}) {
           </div>
         </div>
       </div>
+
+      <div className="toast-container p-3">
+
+        <div className="toast" role="alert" aria-live="assertive" aria-atomic="true" ref={toastRef}>
+          <div className="toast-header">
+            <span className="me-2">
+              <i className="far fa-check-circle"></i>
+            </span>
+            <strong className="me-auto fw-bold">{item.name}</strong>
+            <small className="text-muted">Hace menos de 1 minuto</small>
+            <button type="button" className="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div className="toast-body fw-bold text-center">{`${item.quantityOnCart}x unidades - Agregadas al carrito`}</div>
+        </div>
+
+      </div>
+
     </div>
   </>
 }
