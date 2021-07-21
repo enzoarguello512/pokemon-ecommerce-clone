@@ -1,11 +1,16 @@
-import React from "react"
+import React, {useContext} from "react"
 import CartWidget from "../../Molecules/CartWidget/CartWidget";
 import Image from "../../Atoms/Image/Image";
 import {Link} from "react-router-dom";
+import {categoriesContext} from './../../Contexts/GameCards/GameCards';
 
 require('./Navbar.css');
 
 function Navbar() {
+
+  //CONTEXT
+  const [, setCategory] = useContext(categoriesContext);
+
   return <>
     <figure className="text-center main-navbar__figure">
       <Link to="/">
@@ -50,7 +55,7 @@ function Navbar() {
             </li>
 
             <li className="nav-item">
-              <Link to="/gamecards" className="nav-link main-navbar__juego">
+              <Link to="/gamecards" className="nav-link main-navbar__juego" onClick={() => setCategory([])}>
                 <span className="mx-4">
                   <Image imgClass="main-navbar__icon" src="/icons/backpack.svg" alt="juego-logo" />
                 </span>

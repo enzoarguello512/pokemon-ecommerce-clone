@@ -63,7 +63,7 @@ function ItemCategories({match}) {
       <div className="d-flex gap-2">
 
         <div>
-          <Link to="/gamecards/type-grass" className="text-decoration-none">
+          <Link to="/gamecards/type-grass" className="text-decoration-none" onClick={() => setCategory(["data-grass"])}>
             <Button btnClass="btn-red text-white d-flex flex-column justify-content-center align-items-center">
               <Image imgClass="categories__img--medium" src="/icons/bullbasaur.svg" alt="Tipo planta icono" />
               <span>Tipo planta</span>
@@ -71,7 +71,7 @@ function ItemCategories({match}) {
           </Link>
         </div>
         <div>
-          <Link to="/gamecards/type-lightning" className="text-decoration-none">
+          <Link to="/gamecards/type-lightning" className="text-decoration-none" onClick={() => setCategory(["data-lightning"])}>
             <Button btnClass="btn-red text-white d-flex flex-column justify-content-center align-items-center">
               <Image imgClass="categories__img--medium" src="/icons/pikachu-2.svg" alt="Tipo rayo icono" />
               <span>Tipo rayo</span>
@@ -79,7 +79,7 @@ function ItemCategories({match}) {
           </Link>
         </div>
         <div>
-          <Link to="/gamecards/type-fire" className="text-decoration-none">
+          <Link to="/gamecards/type-fire" className="text-decoration-none" onClick={() => setCategory(["data-fire"])}>
             <Button btnClass="btn-red text-white d-flex flex-column justify-content-center align-items-center">
               <Image imgClass="categories__img--medium" src="/icons/charmander.svg" alt="Tipo fuego icono" />
               <span>Tipo fuego</span>
@@ -87,7 +87,7 @@ function ItemCategories({match}) {
           </Link>
         </div>
         <div>
-          <Link to="/gamecards/type-dragon" className="text-decoration-none">
+          <Link to="/gamecards/type-dragon" className="text-decoration-none" onClick={() => setCategory(["data-dragon"])}>
             <Button btnClass="btn-red text-white d-flex flex-column justify-content-center align-items-center">
               <Image imgClass="categories__img--medium" src="/icons/dratini.svg" alt="Tipo dragon icono" />
               <span>Tipo dragon</span>
@@ -95,7 +95,7 @@ function ItemCategories({match}) {
           </Link>
         </div>
         <div>
-          <Link to="/gamecards/type-fairy" className="text-decoration-none">
+          <Link to="/gamecards/type-fairy" className="text-decoration-none" onClick={() => setCategory(["data-fairy"])}>
             <Button btnClass="btn-red text-white d-flex flex-column justify-content-center align-items-center">
               <Image imgClass="categories__img--medium" src="/icons/jigglypuff.svg" alt="Tipo hada icono" />
               <span>Tipo hada</span>
@@ -103,7 +103,7 @@ function ItemCategories({match}) {
           </Link>
         </div>
         <div>
-          <Link to="/gamecards/type-aqua" className="text-decoration-none">
+          <Link to="/gamecards/type-aqua" className="text-decoration-none" onClick={() => setCategory(["data-aqua"])}>
             <Button btnClass="btn-red text-white d-flex flex-column justify-content-center align-items-center">
               <Image imgClass="categories__img--medium" src="/icons/squirtle.svg" alt="Tipo agua icono" />
               <span>Tipo agua</span>
