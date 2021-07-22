@@ -11,6 +11,8 @@ const db = getFirestore();
 function ItemList({categories}) {
 
   const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [renderError, setRenderError] = useState(false);
 
   useEffect(() => {
 
@@ -24,9 +26,11 @@ function ItemList({categories}) {
           const responseData = response.docs.map(doc => doc.data());
           localData = [...responseData, ...localData]
           setItems(localData);
+          setLoading(false)
         }
         catch (error) {
           console.log(error);
+          setRenderError(true);
         }
       }
 
@@ -38,10 +42,9 @@ function ItemList({categories}) {
 
   return (
     <ul className="list-unstyled d-flex flex-wrap justify-content-evenly mx-auto">
-      {items && items.length > 0
-        ? (items.sort((obj1, obj2) => obj1.cardNumber - obj2.cardNumber).map(obj => <Item item={obj} key={obj.id} />))
-        : (<H5 titleClass='text-center'>Loading</H5>
-        )}
+      {loading && <H5 titleClass='text-center'>Loading</H5>}
+      {items && items.length > 0 && (items.sort((obj1, obj2) => obj1.cardNumber - obj2.cardNumber).map(obj => <Item item={obj} key={obj.id} />))}
+      {renderError && !loading && <H5 titleClass='text-center bg-danger text-white py-2 rounded'>No se puede conectar con el servidor en estos momentos, puede intentarlo más tarde, disculpe las molestias :(</H5>}
     </ul>
   )
 }
