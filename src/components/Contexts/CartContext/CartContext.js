@@ -18,7 +18,7 @@ function CartProvider({children}) {
   const addItem = (item) => {
     const itemIndex = cart.findIndex(obj => obj.id === item.id);
     if (itemIndex !== -1) {
-      cart[itemIndex].quantityOnCart += item.quantityOnCart;
+      cart[itemIndex] = item;
       setCart(cart);
       setValue(cart);
     }
