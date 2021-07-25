@@ -54,11 +54,17 @@ input[type=number] {
 }
 .main-sections__main-banner {
   min-height: 333px;
-  background-color: coral;
+  max-width: 1024px;
+  margin: auto;
+  padding: 0px 20px 30px;
+  background-color: white;
 }
 .main-sections__mosaic-grid {
   min-height: 1034px;
-  background-color: brown;
+  max-width: 1024px;
+  margin: auto;
+  padding: 0 20px;
+  background-color: white;
 }
 .main-sections__card-detail{
   min-height: 640px;
@@ -216,4 +222,39 @@ input[type=number] {
 }
 .bg-cyan {
   background-color: #30a7d7;
+}
+
+
+.bg-light-brown {
+  background-color: #C7AA79;
+}
+.bg-light-red {
+  background-color: #FF514F;
+}
+.bg-light-dark {
+  background-color: #313131;
+}
+.bg-purple {
+  background-color: #855ac9;
+}
+.bg-aqua {
+  background-color: #30a7d7;
+}
+.block1:hover.bg-aqua {
+  background-color: #1b82b1;
+}
+.block3:hover.bg-light-brown {
+  background-color: #b89355;
+}
+.block2:hover.bg-orange {
+  background-color: #da471b;
+}
+.block2:hover.bg-light-red {
+  background-color: #ff1f1c;
+}
+.block2:hover.bg-light-dark, .block4:hover.bg-light-dark {
+  background-color: #282828;
+}
+.block2:hover.bg-purple {
+  background-color: #734bb2;
 }

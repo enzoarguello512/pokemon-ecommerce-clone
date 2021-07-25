@@ -7,11 +7,9 @@ function TemplateApps({header, mainTitle, mainBanner, mosaicGrid, footer}) {
   return <>
     {header}
     <main className="main-sections">
-      <section className="container-xxl">
-        <div className="main-sections__title mb-3">{mainTitle}</div>
-      </section>
-      <section className="container-xxl main-sections__main-banner">{mainBanner}</section>
-      <section className="container-xxl">
+      <section className="container-xxl white-striped-background">
+        <div className="main-sections__title">{mainTitle}</div>
+        <div className="main-sections__main-banner">{mainBanner}</div>
         <div className="main-sections__mosaic-grid">{mosaicGrid}</div>
       </section>
     </main>
