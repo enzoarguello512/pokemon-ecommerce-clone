@@ -7,12 +7,18 @@ function TemplatePokedex({header, mainTitle, searcher, sortby, listedPokemons, f
   return <>
     {header}
     <main className="main-sections">
-      <section className="container-xxl">
-        <div className="main-sections__title mb-3">{mainTitle}</div>
+      <section className="container-xxl white-striped-background">
+        <div className="main-sections__title">{mainTitle}</div>
       </section>
-      <div className="container-xxl main-sections__pokedex-search">{searcher}</div>
-      <div className="container-xxl main-sections__sortby">{sortby}</div>
-      <div className="container-xxl main-sections__pokedex-results">{listedPokemons}</div>
+      <div className="container-xxl bg-darker-1">
+        <div className="main-sections__pokedex-search">{searcher}</div>
+      </div>
+      <div className="container-xxl white-striped-background">
+        <div className="main-sections__sortby">{sortby}</div>
+      </div>
+      <div className="container-xxl white-striped-background">
+        <div className="main-sections__pokedex-results">{listedPokemons}</div>
+      </div>
     </main>
     <footer className="main-footer">{footer}</footer>
   </>

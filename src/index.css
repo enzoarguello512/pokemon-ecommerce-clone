@@ -86,15 +86,24 @@ input[type=number] {
   background-color: white;
 }
 .main-sections__pokedex-search {
-  background-color: blue;
+  color: white;
+  padding: 30px 20px;
+  max-width: 1024px;
+  margin: auto;
   min-height: 250px;
 }
 .main-sections__sortby {
-  background-color: beige;
+  background-color: white;
+  padding: 30px 20px;
+  max-width: 1024px;
+  margin: auto;
   min-height: 130px;
 }
 .main-sections__pokedex-results {
-  background-color: teal;
+  background-color: white;
+  padding: 30px 20px;
+  max-width: 1024px;
+  margin: auto;
   min-height: 1140px;
 }
 /*.main-sections__order-detail {*/
