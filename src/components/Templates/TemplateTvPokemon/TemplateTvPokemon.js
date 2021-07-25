@@ -7,13 +7,13 @@ function TemplateTvPokemon({header, mainTitle, hero, newsColumn, news, footer}) 
   return <>
     {header}
     <main className="main-sections">
-      <section className="container-xxl">
-        <div className="main-sections__title mb-3">{mainTitle}</div>
-      </section>
-      <section className="container-xxl main-sections__main-info">
-        <div className="row">
-          <div className="col-6">{hero}</div>
-          <div className="col-6">{newsColumn}</div>
+      <section className="container-xxl white-striped-background">
+        <div className="main-sections__title">{mainTitle}</div>
+        <div className="main-sections__main-info">
+          <div className="row">
+            <div className="col-6">{hero}</div>
+            <div className="col-6">{newsColumn}</div>
+          </div>
         </div>
       </section>
       <section className="container-xxl main-sections__news">
