@@ -7,7 +7,7 @@ function TemplateHome({header, hero, news, newsColumn, slider, footer}) {
   return <>
     {header}
     <main className="main-sections">
-      <section className="container-xxl white-striped-background">
+      <section className="container-xxl white-striped-background pb-5">
         <div className="main-sections__main-info">
           <div className="row pt-4">
             <div className="col-7">

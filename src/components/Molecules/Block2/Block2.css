@@ -5,10 +5,21 @@
 .bg-light-red {
   background-color: #FF514F;
 }
+.bg-light-dark {
+  background-color: #313131;
+}
+.bg-purple {
+  background-color: #855ac9;
+}
 .block2:hover.bg-orange {
   background-color: #da471b;
 }
 .block2:hover.bg-light-red {
   background-color: #ff1f1c;
 }
-
+.block2:hover.bg-light-dark {
+  background-color: #282828;
+}
+.block2:hover.bg-purple {
+  background-color: #734bb2;
+}

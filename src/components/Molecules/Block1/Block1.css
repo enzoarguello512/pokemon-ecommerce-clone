@@ -1,0 +1,16 @@
+.block1 {
+  border-radius: .25rem!important;
+  margin: 0 0 20px;
+}
+.block1__img {
+  border-radius: 5px 0 0 5px;
+  width: 40%;
+  margin-bottom: 0;
+  max-width: 132px;
+}
+.bg-aqua {
+  background-color: #30a7d7;
+}
+.block1:hover.bg-aqua {
+  background-color: #1b82b1;
+}

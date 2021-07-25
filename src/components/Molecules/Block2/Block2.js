@@ -24,6 +24,8 @@ function Block2({mainTitle, bgColorClass, imgSrc, imgAlt, articleHref, colWidth,
 
 Block2.defaultProps = {
   bgColorClass: "bg-success",
+  colWidth: "",
+  marginWidth: "",
 };
 
 Block2.propTypes = {
@@ -31,8 +33,8 @@ Block2.propTypes = {
   imgSrc: PropTypes.string.isRequired,
   imgAlt: PropTypes.string.isRequired,
   articleHref: PropTypes.string.isRequired,
-  colWidth: PropTypes.string.isRequired,
-  marginWidth: PropTypes.string.isRequired,
+  colWidth: PropTypes.string,
+  marginWidth: PropTypes.string,
 };
 
 export default Block2
