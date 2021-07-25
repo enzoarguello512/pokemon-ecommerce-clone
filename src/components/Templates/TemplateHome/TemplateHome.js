@@ -3,21 +3,22 @@ import PropTypes from 'prop-types';
 
 require('./TemplateHome.css')
 
-function TemplateHome({header, mainTitle, hero, news, newsColumn, slider, footer}) {
+function TemplateHome({header, hero, news, newsColumn, slider, footer}) {
   return <>
     {header}
     <main className="main-sections">
-      <section className="container-xxl">
-        <div className="main-sections__title mb-3">{mainTitle}</div>
-      </section>
-      <section className="container-xxl main-sections__main-info">
-        <div className="row">
-          <div className="col-6">{hero}</div>
-          <div className="col-6">{newsColumn}</div>
+      <section className="container-xxl white-striped-background">
+        <div className="main-sections__main-info">
+          <div className="row pt-4">
+            <div className="col-7">
+              <div>{hero}</div>
+              <div className="row">{news}</div>
+            </div>
+            <div className="col-5">
+              {newsColumn}
+            </div>
+          </div>
         </div>
-      </section>
-      <section className="container-xxl main-sections__news">
-        <div>{news}</div>
       </section>
       <section className="container-xxl main-sections__slider">{slider}</section>
     </main>
@@ -27,7 +28,6 @@ function TemplateHome({header, mainTitle, hero, news, newsColumn, slider, footer
 
 TemplateHome.propTypes = {
   header: PropTypes.node.isRequired,
-  mainTitle: PropTypes.node.isRequired,
   hero: PropTypes.node.isRequired,
   news: PropTypes.node.isRequired,
   newsColumn: PropTypes.node.isRequired,

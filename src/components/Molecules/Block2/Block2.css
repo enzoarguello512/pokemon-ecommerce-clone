@@ -1,0 +1,14 @@
+.block2 {
+  border-radius: .25rem!important;
+  margin: 0 0 20px;
+}
+.bg-light-red {
+  background-color: #FF514F;
+}
+.block2:hover.bg-orange {
+  background-color: #da471b;
+}
+.block2:hover.bg-light-red {
+  background-color: #ff1f1c;
+}
+

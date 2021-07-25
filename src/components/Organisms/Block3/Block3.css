@@ -1,0 +1,16 @@
+.block3 {
+  border-radius: .25rem!important;
+  margin: 0 20px 20px;
+}
+.bg-light-brown {
+  background-color: #C7AA79;
+}
+.block3__desc {
+  color: #524022;
+  padding-bottom: 20px;
+  margin: 0;
+}
+
+.block3:hover.bg-light-brown {
+  background-color: #b89355;
+}

@@ -81,11 +81,9 @@ input[type=number] {
 }
 .main-sections__main-info {
   min-height: 650px;
-  background-color: sienna;
-}
-.main-sections__news {
-  min-height: 320px;
-  background-color: teal;
+  max-width: 1024px;
+  margin: auto;
+  background-color: white;
 }
 .main-sections__pokedex-search {
   background-color: blue;
@@ -190,4 +188,23 @@ input[type=number] {
 
 .fs-20 {
   font-size: 10em;
+}
+
+.bg-gray {
+  background-color: #919191;
+}
+.bg-red {
+  background-color: #E3350D;
+}
+.bg-orange {
+  background-color: #ee6b2f;
+}
+.bg-yellow {
+  background-color: #e6bc2f;
+}
+.bg-green {
+  background-color: #4dad5b;
+}
+.bg-cyan {
+  background-color: #30a7d7;
 }
