@@ -7,16 +7,16 @@ function TemplatePlayPokemon({header, mainTitle, hero, subHero, newsColumn, slid
   return <>
     {header}
     <main className="main-sections">
-      <section className="container-xxl">
-        <div className="main-sections__title mb-3">{mainTitle}</div>
-      </section>
-      <section className="container-xxl main-sections__main-info">
-        <div className="row">
-          <div className="col-6">
-            <div>{hero}</div>
-            <div>{subHero}</div>
+      <section className="container-xxl white-striped-background pb-5">
+        <div className="main-sections__title">{mainTitle}</div>
+        <div className="main-sections__main-info">
+          <div className="row">
+            <div className="col-8">
+              <div>{hero}</div>
+              <div className="row">{subHero}</div>
+            </div>
+            <div className="col-4">{newsColumn}</div>
           </div>
-          <div className="col-6">{newsColumn}</div>
         </div>
       </section>
       <section className="container-xxl main-sections__slider">{slider}</section>

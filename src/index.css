@@ -257,21 +257,32 @@ input[type=number] {
 .bg-light-green {
   background-color: #4dad5b;
 }
+
+/*Block 1*/
 .block1:hover.bg-aqua {
   background-color: #1b82b1;
 }
 .block1:hover.bg-gray-2 {
   background-color: #8b8b8b;
 }
+
+/*Block 1 left*/
 .block1-left:hover.bg-blue {
   background-color: #1847d7;
 }
+.block1-left:hover.bg-yellow {
+  background-color: #daa31c;
+}
+
+/*Block 3*/
 .block3:hover.bg-light-brown {
   background-color: #b89355;
 }
 .block3:hover.bg-light-green {
   background-color: #369143;
 }
+
+/*Block 2*/
 .block2:hover.bg-orange {
   background-color: #da471b;
 }
@@ -281,11 +292,17 @@ input[type=number] {
 .block2:hover.bg-light-dark, .block4:hover.bg-light-dark {
   background-color: #282828;
 }
-.block2:hover.bg-purple {
+.block2:hover.bg-purple, .block3:hover.bg-purple {
   background-color: #734bb2;
 }
 .block2:hover.bg-light-purple {
   background-color: #975fe2;
+}
+.block2:hover.bg-red {
+  background-color: #b32a0a;
+}
+.block2:hover.bg-blue {
+  background-color: #1847d7;
 }
 .bg-transition,
 .block1:hover.bg-transition,

@@ -14,9 +14,7 @@ function TemplateHome({header, hero, news, newsColumn, slider, footer}) {
               <div>{hero}</div>
               <div className="row">{news}</div>
             </div>
-            <div className="col-4">
-              {newsColumn}
-            </div>
+            <div className="col-4">{newsColumn}</div>
           </div>
         </div>
       </section>
