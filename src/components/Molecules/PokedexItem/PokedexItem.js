@@ -13,14 +13,16 @@ function PokedexItem({mainTitle, imgSrc, articleHref, tags, itemNumber}) {
           <Image imgClass="img-fluid rounded-top" src={imgSrc} alt={mainTitle} />
         </div>
       </A>
-      <div className="pb-2 text-secondary">{`N.º ${itemNumber}`}</div>
-      <h5 className="text-dark m-0 pb-2">{mainTitle}</h5>
+      <div className="px-3">
+        <div className="pb-2 text-secondary">{`N.º ${itemNumber}`}</div>
+        <h5 className="text-dark m-0 pb-2">{mainTitle}</h5>
 
-      {tags && tags.length > 0
-        ? <div>
-          {tags.map((elem, i) => <span key={i} className="badge bg-white border text-dark me-2">{elem}</span>)}
-        </div>
-        : null}
+        {tags && tags.length > 0
+          ? <div>
+            {tags.map((elem, i) => <span key={i} className="badge bg-white border text-dark me-2">{elem}</span>)}
+          </div>
+          : null}
+      </div>
     </li>
   )
 }
