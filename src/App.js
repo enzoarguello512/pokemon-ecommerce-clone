@@ -1,5 +1,4 @@
 import './../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import './../node_modules/bootstrap/dist/js/bootstrap.bundle.min';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 //COMPONENTS
