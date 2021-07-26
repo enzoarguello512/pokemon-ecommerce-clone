@@ -11,7 +11,7 @@ function Block1({mainTitle, bgColorClass, imgSrc, imgAlt, articleHref, colWidth,
       <div className={`block1 ${bgColorClass} ${marginWidth}`}>
         <A href={articleHref}>
           <div className="d-flex">
-            <Image imgClass="img-fluid rounded-top block1__img" src={imgSrc} alt={imgAlt} />
+            <Image imgClass="img-fluid block1__img" src={imgSrc} alt={imgAlt} />
             <div className="mx-4">
               <h4 className="text-white m-0 py-3">{mainTitle}</h4>
             </div>

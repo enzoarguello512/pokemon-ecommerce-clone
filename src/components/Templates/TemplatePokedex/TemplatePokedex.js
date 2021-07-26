@@ -15,8 +15,6 @@ function TemplatePokedex({header, mainTitle, searcher, sortby, listedPokemons, f
       </div>
       <div className="container-xxl white-striped-background">
         <div className="main-sections__sortby">{sortby}</div>
-      </div>
-      <div className="container-xxl white-striped-background">
         <div className="main-sections__pokedex-results">{listedPokemons}</div>
       </div>
     </main>

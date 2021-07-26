@@ -14,7 +14,7 @@ function Block1Left({mainTitle, bgColorClass, imgSrc, imgAlt, articleHref, colWi
             <div className="mx-4">
               <h4 className="text-white m-0 py-3">{mainTitle}</h4>
             </div>
-            <Image imgClass="img-fluid rounded-top block1-left__img" src={imgSrc} alt={imgAlt} />
+            <Image imgClass="img-fluid block1-left__img" src={imgSrc} alt={imgAlt} />
           </div>
         </A>
       </div>

@@ -1,0 +1,13 @@
+.pokedex-item {
+  display: block;
+  float: left;
+  position: relative;
+  margin: 0 .78125% 50px;
+  width: 23.4375%;
+}
+.pokedex-item__img-container {
+  background: #F2F2F2;
+  position: relative;
+  border-radius: 5px;
+  width: 100%;
+}
