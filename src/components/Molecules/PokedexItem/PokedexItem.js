@@ -33,7 +33,7 @@ PokedexItem.propTypes = {
   mainTitle: PropTypes.string.isRequired,
   imgSrc: PropTypes.string.isRequired,
   articleHref: PropTypes.string.isRequired,
-  tags: PropTypes.string,
+  tags: PropTypes.array,
   itemNumber: PropTypes.string,
 };
 

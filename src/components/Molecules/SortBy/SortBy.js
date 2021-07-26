@@ -14,7 +14,7 @@ function SortBy() {
       <div className="col-5">
         <select className="form-select mt-1" name="sortOrder" id="sortOrder">
           <option value="noSort">Ordernar por...</option>
-          <option value="numberAsc" selected>Número inferior</option>
+          <option value="numberAsc" defaultValue>Número inferior</option>
           <option value="numberDesc">Número superior</option>
           <option value="nameAsc">A-Z</option>
           <option value="nameDesc">Z-A</option>
