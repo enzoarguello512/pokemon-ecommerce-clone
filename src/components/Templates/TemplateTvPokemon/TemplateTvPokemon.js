@@ -11,13 +11,13 @@ function TemplateTvPokemon({header, mainTitle, hero, newsColumn, news, footer}) 
         <div className="main-sections__title">{mainTitle}</div>
         <div className="main-sections__main-info">
           <div className="row">
-            <div className="col-6">{hero}</div>
-            <div className="col-6">{newsColumn}</div>
+            <div className="col-8">{hero}</div>
+            <div className="col-4">{newsColumn}</div>
           </div>
         </div>
-      </section>
-      <section className="container-xxl main-sections__news">
-        <div>{news}</div>
+        <div className="main-sections__news">
+          <div className="row">{news}</div>
+        </div>
       </section>
     </main>
     <footer className="main-footer">{footer}</footer>

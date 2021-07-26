@@ -72,6 +72,12 @@ input[type=number] {
   margin: auto;
   background-color: white;
 }
+.main-sections__news {
+  min-height: 180px;
+  max-width: 1024px;
+  margin: auto;
+  background-color: white;
+}
 .main-sections__filters {
   min-height: 700px;
   max-width: 1024px;
@@ -86,7 +92,6 @@ input[type=number] {
   background-color: white;
 }
 .main-sections__main-info {
-  min-height: 650px;
   max-width: 1024px;
   margin: auto;
   background-color: white;
@@ -237,14 +242,35 @@ input[type=number] {
 .bg-purple {
   background-color: #855ac9;
 }
+.bg-light-purple {
+  background-color: #B38AEA;
+}
 .bg-aqua {
   background-color: #30a7d7;
+}
+.bg-gray-2 {
+  background-color: #a4a4a4;
+}
+.bg-blue {
+  background-color: #1b53ba;
+}
+.bg-light-green {
+  background-color: #4dad5b;
 }
 .block1:hover.bg-aqua {
   background-color: #1b82b1;
 }
+.block1:hover.bg-gray-2 {
+  background-color: #8b8b8b;
+}
+.block1-left:hover.bg-blue {
+  background-color: #1847d7;
+}
 .block3:hover.bg-light-brown {
   background-color: #b89355;
+}
+.block3:hover.bg-light-green {
+  background-color: #369143;
 }
 .block2:hover.bg-orange {
   background-color: #da471b;
@@ -257,4 +283,19 @@ input[type=number] {
 }
 .block2:hover.bg-purple {
   background-color: #734bb2;
+}
+.block2:hover.bg-light-purple {
+  background-color: #975fe2;
+}
+.bg-transition,
+.block1:hover.bg-transition,
+.block1-left:hover.bg-transition,
+.block2:hover.bg-transition,
+.block3:hover.bg-transition,
+.block4:hover.bg-transition {
+  -webkit-transition: background-color .1s linear;
+  -ms-transition: background-color .1s linear;
+  -moz-transition: background-color .1s linear;
+  -o-transition: background-color .1s linear;
+  transition: background-color .1s linear;
 }

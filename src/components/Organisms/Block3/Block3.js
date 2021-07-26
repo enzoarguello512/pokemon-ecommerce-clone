@@ -10,7 +10,7 @@ function Block3({mainTitle, desc, bgColorClass, imgSrc, imgAlt, articleHref}) {
     <div className={`block3 ${bgColorClass}`}>
       <A href={articleHref}>
         <div className="text-center">
-          <Image imgClass="img-fluid rounded-top" src={imgSrc} alt={imgAlt} />
+          <Image imgClass="img-fluid rounded-top w-100" src={imgSrc} alt={imgAlt} />
         </div>
         <div className="mx-4">
           <h4 className="text-white m-0 pt-4 pb-2">{mainTitle}</h4>

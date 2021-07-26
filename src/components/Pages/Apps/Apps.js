@@ -14,7 +14,7 @@ function Apps() {
       mainBanner={
         <Block4
           mainTitle="Aplicación TV Pokémon para dispositivos móviles"
-          bgColorClass="bg-light-dark"
+          bgColorClass="bg-light-dark bg-transition"
           imgSrc="/images/apps/pokemon-tv-app-872x245.jpg"
           imgAlt="pokemon-tv-app"
           articleHref="https://www.pokemon.com/el/app/tv-pokemon/"
