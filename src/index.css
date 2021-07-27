@@ -257,6 +257,9 @@ input[type=number] {
 .bg-light-green {
   background-color: #4dad5b;
 }
+.bg-light-gray {
+  background-color: #F2F2F2;
+}
 
 /*Block 1*/
 .block1:hover.bg-aqua {

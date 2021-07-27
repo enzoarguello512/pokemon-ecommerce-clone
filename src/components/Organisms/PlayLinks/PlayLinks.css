@@ -1,0 +1,22 @@
+.playlinks {
+  margin: 0 0 20px;
+}
+.playlinks__items {
+  border-bottom: solid 2px #adadad;
+  position: relative;
+  padding: 0;
+}
+.playlinks__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.playlinks__link:first-child:last-child {
+  color: #363226;
+  margin: 0;
+  padding: 0.5em 1em 0.5em 0.5em;
+}
+.playlinks__link:hover {
+  background-color: #3399fe !important;
+  color: #fff !important;
+}

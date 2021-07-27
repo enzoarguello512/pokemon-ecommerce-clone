@@ -7,6 +7,7 @@ import H1 from './../../Atoms/H1/H1'
 import Block3 from '../../Organisms/Block3/Block3';
 import Block2 from '../../Molecules/Block2/Block2';
 import Block1Left from '../../Molecules/Block1Left/Block1Left';
+import PlayLinks from '../../Organisms/PlayLinks/PlayLinks';
 
 function PlayPokemon() {
   return (
@@ -58,6 +59,7 @@ function PlayPokemon() {
             desc="¡Disfruta compitiendo en eventos Pokémon!"
             descTextColor="text-white"
           />
+          <PlayLinks />
           <Block1Left
             mainTitle="Encuentra un evento"
             bgColorClass="bg-yellow bg-transition"
