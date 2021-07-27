@@ -114,11 +114,6 @@ input[type=number] {
   margin: auto;
   min-height: 1140px;
 }
-/*.main-sections__order-detail {*/
-  /*min-height: 500px;*/
-  /*max-width: 1024px;*/
-  /*margin: auto;*/
-/*}*/
 
 
 
@@ -141,6 +136,13 @@ input[type=number] {
 
 
 
+/*------------ FONTS ------------ */
+.fs-20 {
+  font-size: 10em;
+}
+
+
+
 /*------------ BACKGROUNDS ------------ */
 .bg-facebook {
   background-color: #3b5998;
@@ -152,61 +154,13 @@ input[type=number] {
   background-color: #ff0000;
 }
 
-
-
-
 .white-striped-background {
   background: #fff url(https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png);
 }
+
 .bg-darker-1 {
   background-color: #313131;
 }
-
-.slick-slide .center__link {
- pointer-events: none;
- cursor: default;
-}
-.slick-slide.slick-current .center__link {
-  background-color: #232323;
-  border-radius: .25rem!important;
-  cursor: pointer;
-  pointer-events: auto;
-}
-
-.slick-slide .center__desc {
-  display: none;
-}
-.slick-slide.slick-current .center__desc {
-  display: block;
-}
-.slick-slide .center__image {
-  opacity: 0.4;
-}
-.slick-slide.slick-current .center__image {
-  opacity: 1;
-}
-.slick-prev, .slick-next {
-  background-color: #616161;
-  font-size: 0;
-  line-height: 0;
-  position: absolute;
-  top: 50%;
-  display: block;
-  width: 20px;
-  height: 100%;
-  padding: 0;
-  transform: translate(0, -50%);
-  cursor: pointer;
-  color: transparent;
-  border: none;
-  outline: none;
-  border-radius: 8px;
-}
-
-.fs-20 {
-  font-size: 10em;
-}
-
 .bg-gray {
   background-color: #919191;
 }
@@ -225,22 +179,8 @@ input[type=number] {
 .bg-cyan {
   background-color: #30a7d7;
 }
-
-
-.bg-light-brown {
-  background-color: #C7AA79;
-}
-.bg-light-red {
-  background-color: #FF514F;
-}
-.bg-light-dark {
-  background-color: #313131;
-}
 .bg-purple {
   background-color: #855ac9;
-}
-.bg-light-purple {
-  background-color: #B38AEA;
 }
 .bg-aqua {
   background-color: #30a7d7;
@@ -250,6 +190,18 @@ input[type=number] {
 }
 .bg-blue {
   background-color: #1b53ba;
+}
+.bg-light-brown {
+  background-color: #C7AA79;
+}
+.bg-light-red {
+  background-color: #FF514F;
+}
+.bg-light-purple {
+  background-color: #B38AEA;
+}
+.bg-light-dark {
+  background-color: #313131;
 }
 .bg-light-green {
   background-color: #4dad5b;
@@ -316,3 +268,48 @@ input[type=number] {
   -o-transition: background-color .1s linear;
   transition: background-color .1s linear;
 }
+
+
+
+/*------------ VENDORS ------------ */
+.slick-slide .center__link {
+ pointer-events: none;
+ cursor: default;
+}
+.slick-slide.slick-current .center__link {
+  background-color: #232323;
+  border-radius: .25rem!important;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.slick-slide .center__desc {
+  display: none;
+}
+.slick-slide.slick-current .center__desc {
+  display: block;
+}
+.slick-slide .center__image {
+  opacity: 0.4;
+}
+.slick-slide.slick-current .center__image {
+  opacity: 1;
+}
+.slick-prev, .slick-next {
+  background-color: #616161;
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 20px;
+  height: 100%;
+  padding: 0;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+}
+

@@ -26,7 +26,7 @@ function CartItem({item}) {
     if (count < item.stock && action === 'add') {
       setCount(count + 1);
     }
-    if (count > 0 && action === 'substract') {
+    if (count > 1 && action === 'substract') {
       setCount(count - 1);
     }
   }

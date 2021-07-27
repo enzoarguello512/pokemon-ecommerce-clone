@@ -36,8 +36,10 @@ function ItemCount({price, stock, initial, onAdd}) {
       <Button onClick={() => countHandler('add')}>+</Button>
     </div>
     <div className="d-grid gap-3 mt-4">
-      <Button onClick={() => onAdd(count)}>Agregar al carrito</Button>
-      <Link to="/cart" onClick={() => onAdd(count)} className="btn btn-primary bg-gradient px-4">Comprar ahora</Link>
+      <Button disabled={!(count >= 1)} onClick={() => onAdd(count)}>Agregar al carrito</Button>
+      {
+        count >= 1 && <Link to="/cart" onClick={() => onAdd(count)} className="btn btn-primary bg-gradient px-4">Comprar ahora</Link>
+      }
     </div>
   </>
 }
