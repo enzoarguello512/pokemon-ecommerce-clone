@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react"
 import PropTypes from 'prop-types';
 import ItemDetail from './../ItemDetail/ItemDetail';
 import H5 from './../../Atoms/H5/H5';
-import {getFirestore} from './../../../firebase';
+import {getFirestore} from '../../../firebase';
 import Error404Container from './../Error404Container/Error404Container';
 
 const db = getFirestore();

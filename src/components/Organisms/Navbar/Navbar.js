@@ -2,7 +2,7 @@ import React, {useContext} from "react"
 import CartWidget from "../../Molecules/CartWidget/CartWidget";
 import Image from "../../Atoms/Image/Image";
 import {Link} from "react-router-dom";
-import {categoriesContext} from './../../Contexts/GameCards/GameCards';
+import {categoriesContext} from '../../Contexts/GameCards/GameCards';
 
 require('./Navbar.css');
 
@@ -21,7 +21,7 @@ function Navbar() {
       <div className="container-xxl">
 
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"/>
         </button>
 
         <div className="collapse navbar-collapse" id="navbarScroll">

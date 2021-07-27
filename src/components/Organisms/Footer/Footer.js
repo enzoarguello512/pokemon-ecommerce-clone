@@ -40,17 +40,17 @@ function Footer() {
         <div className="col-4 footer__border-div fs-4">
           <A aClass="text-white footer__social-icons bg-facebook rounded" href="https://www.facebook.com/PokemonOficialLatAm/" ariaLabel="facebook icon">
             <div className="d-flex align-items-center justify-content-center h-100">
-              <i className="fab fa-facebook-f fa-fw"></i>
+              <i className="fab fa-facebook-f fa-fw"/>
             </div>
           </A>
           <A aClass="text-white footer__social-icons bg-youtube rounded" href="https://www.youtube.com/PokemonLATAM" ariaLabel="youtube icon">
             <div className="d-flex align-items-center justify-content-center h-100">
-              <i className="fab fa-youtube fa-fw"></i>
+              <i className="fab fa-youtube fa-fw"/>
             </div>
           </A>
           <A aClass="text-white footer__social-icons bg-twitter rounded" href="https://twitter.com/PokemonLATAM" ariaLabel="twitter icon">
             <div className="d-flex align-items-center justify-content-center h-100">
-              <i className="fab fa-twitter fa-fw"></i>
+              <i className="fab fa-twitter fa-fw"/>
             </div>
           </A>
         </div>

@@ -13,7 +13,7 @@ function Searcher() {
           <div className="d-flex justify-content-between mb-2">
             <Input inputClass="form-control w-75" id="searchPokedex" ariaLabel="searcher" />
             <Button btnClass="btn-orange text-white" type="submit">
-              <i className="fas fa-search"></i>
+              <i className="fas fa-search"/>
             </Button>
           </div>
         </form>

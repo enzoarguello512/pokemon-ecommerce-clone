@@ -1,6 +1,6 @@
 import React, {useEffect, useContext} from "react"
 import ItemList from "../ItemList/ItemList";
-import {categoriesContext} from './../../Contexts/GameCards/GameCards';
+import {categoriesContext} from '../../Contexts/GameCards/GameCards';
 
 require('./ItemListContainer.css');
 
@@ -15,7 +15,7 @@ function ItemListContainer({categories}) {
 
   return <>
     <div className="list-container">
-      <ItemList categories={categories}></ItemList>
+      <ItemList categories={categories}/>
     </div>
   </>;
 }

@@ -1,7 +1,7 @@
 import React, {useState, useContext, useEffect} from "react"
 import InputCheckbox from "../../Molecules/InputCheckbox/InputCheckbox";
 import Button from './../../Atoms/Button/Button';
-import {categoriesContext} from './../../Contexts/GameCards/GameCards';
+import {categoriesContext} from '../../Contexts/GameCards/GameCards';
 import {Link} from 'react-router-dom';
 import Image from "../../Atoms/Image/Image";
 
@@ -150,7 +150,7 @@ function ItemCategories({match}) {
       </div>
       <div className="col-12 text-center py-4">
         <Button btnClass="btn-orange text-white w-25" type="submit">
-          <i className="fas fa-search"></i>
+          <i className="fas fa-search"/>
           <span className="ms-2">Buscar</span>
         </Button>
       </div>

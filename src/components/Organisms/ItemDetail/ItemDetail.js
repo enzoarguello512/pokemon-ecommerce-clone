@@ -1,7 +1,7 @@
 import React, {useState, useContext, useRef} from "react"
 import Image from "../../Atoms/Image/Image";
 import ItemCount from './../../Molecules/ItemCount/ItemCount';
-import {CartContext} from './../../Contexts/CartContext/CartContext';
+import {CartContext} from '../../Contexts/CartContext/CartContext';
 import {Link} from 'react-router-dom';
 import * as bootstrap from 'bootstrap';
 
@@ -19,7 +19,7 @@ function ItemDetail({item}) {
 
   const onAdd = quantityToAdd => {
     const myToast = toastRef.current
-    let bsToast = bootstrap.Toast.getInstance(myToast)
+    let bsToast;
     bsToast = new Toast(myToast, {autohide: true, animation: true, delay: 4500})
     bsToast.show();
 
@@ -73,7 +73,7 @@ function ItemDetail({item}) {
               <div className="d-flex align-items-center justify-content-center">
                 {item.cardNumber}
                 <a href="https://www.pokemon.com/el/jcc-pokemon/cartas-pokemon/?p-bw=">
-                  <div className="series"></div>
+                  <div className="series"/>
                 </a>
               </div>
             </div>
@@ -89,11 +89,11 @@ function ItemDetail({item}) {
         <div className="toast" role="alert" aria-live="assertive" aria-atomic="true" ref={toastRef}>
           <div className="toast-header">
             <span className="me-2">
-              <i className="far fa-check-circle"></i>
+              <i className="far fa-check-circle"/>
             </span>
             <strong className="me-auto">{item.name}</strong>
             <small className="text-muted">Hace menos de 1 minuto</small>
-            <button type="button" className="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            <button type="button" className="btn-close" data-bs-dismiss="toast" aria-label="Close"/>
           </div>
           <div className="toast-body fw-bold text-center">{`${item.quantityOnCart}x unidades - Agregadas al carrito`}</div>
         </div>

@@ -1,6 +1,6 @@
 import React, {Suspense, useContext} from "react"
 import PropTypes from 'prop-types';
-import {categoriesContext} from './../../Contexts/GameCards/GameCards';
+import {categoriesContext} from '../../Contexts/GameCards/GameCards';
 
 const ItemListContainer = React.lazy(() => import('./../../Organisms/ItemListContainer/ItemListContainer'));
 

@@ -4,7 +4,7 @@ A mini e-commerce made mainly with react
 
 Deployment: [https://pokemon-ecommerce-clone.vercel.app/](https://pokemon-ecommerce-clone.vercel.app/)
 
-Inspired by the [official pokemon site](https://www.pokemon.com/el/) (Spanish version) (Project for educational purposes only!!!)
+Inspired by the [official pokemon site](https://www.pokemon.com/el/) (Spanish version) (<b>Project for educational purposes only!!!</b>)
 
 Some modifications were made to it to fulfill the purpose of being an e-commerce, it is not identical, but several classes of the original are used
 

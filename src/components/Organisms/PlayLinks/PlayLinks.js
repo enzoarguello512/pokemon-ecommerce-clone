@@ -14,25 +14,25 @@ function PlayLinks() {
           <li className="playlinks__items">
             <A aClass="playlinks__link" href="https://www.pokemon.com/el/play-pokemon/eventos-pokemon/torneos-pokemon/">
               <span>Serie de Campeonatos 2022</span>
-              <i className="fas fa-chevron-right"></i>
+              <i className="fas fa-chevron-right"/>
             </A>
           </li>
           <li className="playlinks__items">
             <A aClass="playlinks__link" href="https://www.pokemon.com/el/play-pokemon/listas-de-clasificacion/">
               <span>Lista de clasificación de Play! Pokémon</span>
-              <i className="fas fa-chevron-right"></i>
+              <i className="fas fa-chevron-right"/>
             </A>
           </li>
           <li className="playlinks__items">
             <A aClass="playlinks__link" href="https://www.pokemon.com/el/play-pokemon/sobre/reglas-y-recursos-de-torneos/">
               <span>Reglas y recursos</span>
-              <i className="fas fa-chevron-right"></i>
+              <i className="fas fa-chevron-right"/>
             </A>
           </li>
           <li className="playlinks__items rounded-bottom">
             <A aClass="playlinks__link" href="https://www.pokemon.com/el/play-pokemon/copa-de-jugadores-pokemon-iv/sobre/">
               <span>Copa de Jugadores IV</span>
-              <i className="fas fa-chevron-right"></i>
+              <i className="fas fa-chevron-right"/>
             </A>
           </li>
         </ul>

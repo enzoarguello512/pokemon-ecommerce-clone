@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react"
 import PropTypes from 'prop-types';
 import Item from './../../Molecules/Item/Item';
 import H5 from './../../Atoms/H5/H5';
-import {getFirestore} from './../../../firebase';
+import {getFirestore} from '../../../firebase';
 
 require('./ItemList.css');
 

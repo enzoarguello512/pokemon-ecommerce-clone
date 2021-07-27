@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react"
 import PropTypes from 'prop-types';
 import H1 from './../../Atoms/H1/H1';
 import Button from "./../../Atoms/Button/Button";
-import {getFirestore, convertTimestamp} from './../../../firebase';
+import {getFirestore, convertTimestamp} from '../../../firebase';
 
 require('./OrderDetail.css')
 
@@ -140,7 +140,7 @@ function OrderDetail({match}) {
             <tfoot className="table-light">
               <tr>
                 <td className="py-3" colSpan="5">
-                  <Button><i className="fas fa-certificate"></i> Ver ordenes</Button>
+                  <Button><i className="fas fa-certificate"/> Ver ordenes</Button>
                 </td>
               </tr>
             </tfoot>

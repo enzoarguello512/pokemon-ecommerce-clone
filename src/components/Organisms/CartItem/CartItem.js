@@ -4,7 +4,7 @@ import Button from "../../Atoms/Button/Button"
 import Input from './../../Atoms/Input/Input';
 import Image from './../../Atoms/Image/Image';
 import {Link} from 'react-router-dom';
-import {CartContext} from './../../Contexts/CartContext/CartContext';
+import {CartContext} from '../../Contexts/CartContext/CartContext';
 
 
 require('./CartItem.css')
@@ -36,7 +36,7 @@ function CartItem({item}) {
       value.replace(/\D/g, '');
       if (value === '') value = 0;
       setCount(parseInt(value))
-    };
+    }
   }
 
   return (

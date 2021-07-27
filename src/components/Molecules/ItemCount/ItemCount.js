@@ -24,7 +24,7 @@ function ItemCount({price, stock, initial, onAdd}) {
       value.replace(/\D/g, '');
       if (value === '') value = 0;
       setCount(parseInt(value))
-    };
+    }
   }
 
   return <>
