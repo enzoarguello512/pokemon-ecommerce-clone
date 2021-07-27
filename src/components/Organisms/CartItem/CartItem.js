@@ -67,7 +67,7 @@ function CartItem({item}) {
       <div className="col-3 rounded-end">
         <div className="text-end">
           <Button btnClass="btn-white text-danger border my-2" onClick={() => ctx.removeItem(item)}>
-            <i className="far fa-trash-alt"></i>
+            <i className="far fa-trash-alt" />
           </Button>
           <div className="fw-bold mt-2">{`${item.price * item.quantityOnCart}.00 $`}</div>
         </div>
