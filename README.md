@@ -26,8 +26,12 @@ The most current changes are in the [develop branch](https://github.com/Arguel/p
 
 4 - When the dependencies have finished installing/downloading, run the following command <code>npm start</code>
 
+5 - And voila!, If a new window does not open automatically, you can try going to the default port that is usually hosted at [http://localhost:3000/](http://localhost:3000/)
+
 ---
 ### Packages/dependencies used:
+To the packages that CRA (Create React App) already includes, the following are added:
+
 * [popperjs](https://www.npmjs.com/package/@popperjs/core) - works as a helper for bootstrap (mostly javascript)
 * [bootstrap](https://www.npmjs.com/package/bootstrap) - to speed up website design (mostly css)
 * [firebase](https://www.npmjs.com/package/firebase) - to be able to communicate with the remote server
