@@ -1,11 +1,11 @@
-import React, {useContext, useEffect, useState} from "react"
+import React, { useContext, useEffect, useState } from "react"
 import CartItem from "../CartItem/CartItem";
-import {CartContext} from '../../Contexts/CartContext/CartContext';
-import {Link} from 'react-router-dom';
+import { CartContext } from '../../Contexts/CartContext/CartContext';
+import { Link } from 'react-router-dom';
 import Button from "../../Atoms/Button/Button";
 import H1 from "../../Atoms/H1/H1";
 import ReactTooltip from 'react-tooltip';
-import {getFirestore, getFirestoreDate} from '../../../firebase';
+import { getFirestore, getFirestoreDate } from '../../../firebase';
 
 require('./CartSummary.css')
 
@@ -50,12 +50,34 @@ function CartSummary() {
       }
 
       orders.add(newOrder)
-        .then(({id}) => {
+        .then(({ id }) => {
           ctx.clearCart();
           window.location.href = `${window.location.href}/${id}`;
           setLoading(false);
         })
         .catch(err => console.log(err))
+
+      // After this, you need to update your items stock.
+      // To get all the categories if you are purchasing for multiple categories
+      // I was thinking on adding a category value on each item
+      // to match it with the actual categories of Firebase
+      // I leave you this code as example 
+      /* 
+      const itemsToUpdate = db.collection('items').where(
+        fb.firestore.FieldPath.documentId(), 'in', cart.map(i => i.id)
+      )
+
+      itemsToUpdate.get()
+        .then(collection => {
+          collection.docs.forEach(docSnapshot => {
+            batch.update(docSnapshot.ref, {
+              stock: docSnapshot.data().stock - cart.find(item => item.id === docSnapshot.id).qty
+            })
+          })
+          batch.commit().then(res => console.log('resultado batch', res)
+          ).catch(err => console.log(err))
+        })
+      */
     }
 
   }
@@ -86,7 +108,7 @@ function CartSummary() {
           : (
             <div className="pt-5 text-center ">
               <div className="mb-2">
-                <i className="fas fa-shopping-bag fa-3x"/>
+                <i className="fas fa-shopping-bag fa-3x" />
               </div>
               <h3 className="mb-3">El carrito esta vacio</h3>
               <Link to="/gamecards" className="btn btn-outline-primary">Visitar el catalogo</Link>
@@ -116,9 +138,9 @@ function CartSummary() {
                       <input type="text" className="form-control" id="cardNumber" placeholder="Número valido de tarjeta"
                         aria-describedby="cardNumber-feedback" required onChange={(e) => setCardNumberState(e.target.value)} />
                       <span className="input-group-text text-muted fs-5">
-                        <i className="fab fa-cc-visa mx-1 fa-fw"/>
-                        <i className="fab fa-cc-mastercard mx-1 fa-fw"/>
-                        <i className="fab fa-cc-amex mx-1 fa-fw"/>
+                        <i className="fab fa-cc-visa mx-1 fa-fw" />
+                        <i className="fab fa-cc-mastercard mx-1 fa-fw" />
+                        <i className="fab fa-cc-amex mx-1 fa-fw" />
                       </span>
                       <div id="cardNumber-feedback" className="invalid-feedback">
                         Por favor ingrese un número de tarjeta válido
@@ -142,7 +164,7 @@ function CartSummary() {
                   <div className="col-4 mb-3">
                     <label htmlFor="cardNumber" className="form-label" data-tip="Código CVV de tres dígitos en el reverso de su tarjeta">
                       <span className="me-1">CVV</span>
-                      <i className="fa fa-question-circle"/>
+                      <i className="fa fa-question-circle" />
                     </label>
                     <input type="text" className="form-control" id="cvvNumber" placeholder="CVV"
                       aria-describedby="cvvNumber-feedback" required onChange={(e) => setCvvNumberState(e.target.value)} />
@@ -170,7 +192,7 @@ function CartSummary() {
                     <div className="py-3 d-grid gap-2">
                       <Button btnClass="btn-primary bg-gradient d-flex" onClick={() => ctx.clearCart()}>
                         <div>
-                          <i className="far fa-times-circle fa-fw"/>
+                          <i className="far fa-times-circle fa-fw" />
                         </div>
                         <div className="flex-grow-1">Limpiar carrito</div>
                       </Button>
@@ -180,7 +202,7 @@ function CartSummary() {
                             ? (
                               <div className="d-flex">
                                 <div>
-                                  <i className="fas fa-lock fa-fw"/>
+                                  <i className="fas fa-lock fa-fw" />
                                 </div>
                                 <div className="flex-grow-1">Confirmar pago</div>
                               </div>

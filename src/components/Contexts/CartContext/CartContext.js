@@ -11,8 +11,9 @@ function CartProvider({children}) {
   const [totalQuantity, setTotalQuantity] = useState(0);
 
 
-  useEffect(() => {
-    setTotalQuantity(cart.reduce((acc, elem) => acc + elem.quantityOnCart, 0))
+  useEffect(() => {    
+    const verifyQuantityCart = cart && cart.length > 0 ? cart.reduce((acc, elem) => acc + elem.quantityOnCart, 0) : 0;
+    setTotalQuantity(verifyQuantityCart)
   }, [cart]);
 
   const addItem = (item) => {
