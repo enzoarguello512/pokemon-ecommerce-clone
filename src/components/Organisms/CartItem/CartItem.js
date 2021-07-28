@@ -1,15 +1,15 @@
-import React, {useContext, useEffect, useState} from "react"
+import React, { useContext, useEffect, useState } from "react"
 import PropTypes from 'prop-types';
 import Button from "../../Atoms/Button/Button"
 import Input from './../../Atoms/Input/Input';
 import Image from './../../Atoms/Image/Image';
-import {Link} from 'react-router-dom';
-import {CartContext} from '../../Contexts/CartContext/CartContext';
+import { Link } from 'react-router-dom';
+import { CartContext } from '../../Contexts/CartContext/CartContext';
 
 
 require('./CartItem.css')
 
-function CartItem({item}) {
+function CartItem({ item }) {
 
   let [count, setCount] = useState(item.quantityOnCart);
 
@@ -32,10 +32,12 @@ function CartItem({item}) {
   }
 
   const countInput = (value) => {
-    if (value >= 0 && value <= item.stock) {
+    if (value > 0 && value <= item.stock) {
       value.replace(/\D/g, '');
-      if (value === '') value = 0;
+      if (value === '' || value === 0) value = 1;
       setCount(parseInt(value))
+    } else {
+      setCount(item.quantityOnCart)
     }
   }
 
@@ -59,7 +61,7 @@ function CartItem({item}) {
           <label className="text-center">{`Cantidad: (max ${item.stock})`}</label>
           <div className="input-group justify-content-center">
             <Button btnClass="btn-red text-white border" onClick={() => countHandler('substract')}>-</Button>
-            <Input inputClass="form-control text-center border" ariaLabel="item quantity" value={count} onChange={e => {countInput(e.target.value)}} />
+            <Input inputClass="form-control text-center border" ariaLabel="item quantity" value={count} onChange={e => { countInput(e.target.value) }} />
             <Button btnClass="btn-red text-white border" onClick={() => countHandler('add')}>+</Button>
           </div>
         </div>
