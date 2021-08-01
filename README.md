@@ -41,6 +41,13 @@ To the packages that CRA (Create React App) already includes, the following are 
 * [slick-carousel](https://www.npmjs.com/package/slick-carousel) - required for react-slick
 * [react-tooltip](https://www.npmjs.com/package/react-tooltip) - more customizable alternative to bootstrap tooltips
 
+---
+### Credits
+* Pokemons icons made by [Roundicons Freebies](https://www.flaticon.com/authors/roundicons-freebies) from [www.flaticon.com](https://www.flaticon.com/)
+* Cart icon made by [Pixel perfect](https://www.flaticon.com/authors/pixel-perfect) from [www.flaticon.com](https://www.flaticon.com/)
+* [Repository contributors](https://github.com/Arguel/pokemon-ecommerce-clone/graphs/contributors)
+* [Dennis Vashuser](https://stackoverflow.com/users/7882470/dennis-vash)
+
 
 
 
