@@ -21,7 +21,7 @@ function Navbar() {
       <div className="container-xxl">
 
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"/>
+          <span className="navbar-toggler-icon" />
         </button>
 
         <div className="collapse navbar-collapse" id="navbarScroll">
@@ -88,7 +88,5 @@ function Navbar() {
     </nav>
   </>
 }
-
-//<div>Icons made by <a href="https://www.flaticon.com/authors/roundicons-freebies" title="Roundicons Freebies">Roundicons Freebies</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
 export default Navbar
