@@ -11,7 +11,7 @@ Inspired by the [official pokemon site](https://www.pokemon.com/el/) (Spanish ve
 
 Some modifications were made to it to fulfill the purpose of being an e-commerce, it is not identical, but several classes of the original are used
 
-The most current changes are in the [develop branch](https://github.com/Arguel/pokemon-ecommerce-clone/tree/develop), the responsive design still needs to be done
+The most current changes are in the [develop branch](https://github.com/enzoarguello512/pokemon-ecommerce-clone/tree/develop), the responsive design still needs to be done
 
 ---
 ### How to open/run the project
@@ -20,7 +20,7 @@ The most current changes are in the [develop branch](https://github.com/Arguel/p
 
 1 - Have [Node.js](https://nodejs.org/) installed (I recommend installing the LTS - Long Term Support)
 
-2 - Clone the repository, you can use the following command: <br/> <code> git clone https://github.com/Arguel/pokemon-ecommerce-clone.git </code>
+2 - Clone the repository, you can use the following command: <br/> <code> git clone https://github.com/enzoarguello512/pokemon-ecommerce-clone.git </code>
 
 3 - Navigate to the folder that was cloned and install the dependencies with <code>npm install</code>
 
@@ -45,7 +45,7 @@ To the packages that CRA (Create React App) already includes, the following are 
 ### Credits
 * Pokemons icons made by [Roundicons Freebies](https://www.flaticon.com/authors/roundicons-freebies) from [www.flaticon.com](https://www.flaticon.com/)
 * Cart icon made by [Pixel perfect](https://www.flaticon.com/authors/pixel-perfect) from [www.flaticon.com](https://www.flaticon.com/)
-* [Repository contributors](https://github.com/Arguel/pokemon-ecommerce-clone/graphs/contributors)
+* [Repository contributors](https://github.com/enzoarguello512/pokemon-ecommerce-clone/graphs/contributors)
 * [Dennis Vashuser](https://stackoverflow.com/users/7882470/dennis-vash)
 
 
