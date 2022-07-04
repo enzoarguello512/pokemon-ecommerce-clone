@@ -80,10 +80,10 @@ function Footer() {
     </div>
     <div className="text-center pb-3">
       <div className="text-secondary pb-1">
-        Made with <i class="fas fa-heart text-white"></i> by <A aClass="text-white" href="https://github.com/Arguel"><i class="fab fa-github"></i> Arguel</A> - Replicated from the <A aClass="text-white" href="https://www.pokemon.com/">official pokemon page</A>
+        Made with <i class="fas fa-heart text-white"></i> by <A aClass="text-white" href="https://github.com/enzoarguello512"><i class="fab fa-github"></i> enzoarguello512</A> - Replicated from the <A aClass="text-white" href="https://www.pokemon.com/">official pokemon page</A>
       </div>
       <div className="text-secondary">
-        And without forgetting other people, you can see the rest of the contributors for the content and information of the project in the <A aClass="text-white" href="https://github.com/Arguel/pokemon-ecommerce-clone">github repository</A>
+        And without forgetting other people, you can see the rest of the contributors for the content and information of the project in the <A aClass="text-white" href="https://github.com/enzoarguello512/pokemon-ecommerce-clone">github repository</A>
       </div>
     </div>
   </>
