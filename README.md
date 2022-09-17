@@ -5,13 +5,16 @@ A mini e-commerce made mainly with react
 ### Active deployments
 * Vercel deploy - [https://pokemon-ecommerce-clone.vercel.app/](https://pokemon-ecommerce-clone.vercel.app/)
 
----
 ### Info
 Inspired by the [official pokemon site](https://www.pokemon.com/el/) (Spanish version) (<b>Project for educational purposes only!!!</b>)
 
 Some modifications were made to it to fulfill the purpose of being an e-commerce, it is not identical, but several classes of the original are used
 
 The most current changes are in the [develop branch](https://github.com/enzoarguello512/pokemon-ecommerce-clone/tree/develop), the responsive design still needs to be done
+
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/75096734/190831814-f8adee02-c74a-4a1f-a8c6-c33db3180acd.png" alt="The Morfi SPA" height="800">
+</p>
 
 ---
 ### How to open/run the project
